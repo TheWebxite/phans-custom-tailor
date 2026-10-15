@@ -28,6 +28,7 @@ ICON = {
   'star': '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
   'bot': '<path d="M5 8h14v10H5zM12 4v4M9 13h.01M15 13h.01M9 16h6"/>',
   'gift': '<path d="M4 10h16v10H4zM3 7h18v3H3zM12 7v13M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0"/>',
+  'tryon': '<path d="M9 3h6l1 3h4v14H4V6h4z"/><circle cx="12" cy="13" r="3.5"/><path d="M18.5 3.5l.8 1.6 1.7.4-1.3 1.1.3 1.7-1.5-.8-1.5.8.3-1.7-1.3-1.1 1.7-.4z"/>',
   'group': '<circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 2-5 4-5s6 2 6 5"/>',
 }
 def icon(k): return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{ICON[k]}</svg>'
@@ -52,7 +53,7 @@ def deck(L):
   <div class="left"><div>
     <img class="logo" src="logo-white.png" alt="PHAN'S">
     <h1>{t("Đề xuất website mới cho Phan's Custom Tailor", "A new website for Phan's Custom Tailor")}</h1>
-    <p>{t("Bản mẫu (mock-up) để anh chị xem trước: website ba ngôn ngữ, thiết kế cho khách nước ngoài đặt may vest tại Sài Gòn.", "A working mock-up to preview: a three-language website designed for overseas customers who want a suit made in Saigon.")}</p></div>
+    <p>{t("Bản mẫu (mock-up) để anh chị xem trước: website ba ngôn ngữ có phòng thử đồ AI, thiết kế cho khách nước ngoài đặt may vest tại Sài Gòn.", "A working mock-up to preview: a three-language website with an AI fitting room, designed for overseas customers who want a suit made in Saigon.")}</p></div>
     <div class="links">
       <div>{t("Bản mẫu website mới", "New website mock-up")}: <a href="{LINK}">phans-custom-tailor-demo.vercel.app</a></div>
       <div>{t("Website hiện tại", "Current website")}: <a href="https://tailormadesuit.net/">tailormadesuit.net</a></div>
@@ -109,6 +110,22 @@ def deck(L):
     </div>
     {media('cap/hero.jpg')}
   </div></section>''')
+
+  # 4b AI fitting room (headline feature)
+  add(f'''<section class="slide">{head(t("Điểm nổi bật: Phòng thử đồ AI", "Highlight: AI fitting room"), t("Khách thử đồ ngay trên website, bằng camera của chính mình", "Customers try clothes on with their own camera, right on the website"))}
+  <div class="body split" style="bottom:92px">
+    <div class="text">
+      {pts([t("<b>Bấm “Try-On” trên bất kỳ sản phẩm nào</b>: AI mặc bộ đồ đó lên người khách qua camera điện thoại hoặc máy tính, chỉ trong vài giây.", "<b>Tap “Try-On” on any product</b>: the AI dresses the visitor in it through their phone or laptop camera within seconds."),
+            t("<b>Chuyển động theo cơ thể theo thời gian thực</b>: xoay người, giơ tay, cài cúc hay cúi gập người, vải và nếp gấp đều thay đổi theo.", "<b>Moves with the body in real time</b>: turn, raise an arm, button up or bend over, and the cloth and its folds follow."),
+            t("<b>So sánh nhanh</b>: đổi sang sản phẩm khác chỉ với một chạm, lưu và chia sẻ kết quả.", "<b>Quick comparisons</b>: switch to another piece in one tap, then save or share the result.")])}
+      {why(WHY, t("Khách nước ngoài chưa đến tiệm vẫn thấy mình mặc đồ của Phan's ra sao, nên tự tin đặt lịch hơn. Số đo thật vẫn lấy tại villa; AI giúp khách chọn kiểu dáng, màu và chất liệu.", "Overseas visitors see themselves in Phan's clothes before they arrive, so they book with more confidence. Real measurements are still taken at the villa; the AI helps them choose style, colour and cloth."))}
+    </div>
+    <div class="ba">
+      <figure><div class="media fill"><img src="cap/tryon_before.jpg" style="object-position:center" alt=""></div><figcaption><b>{t("Trước", "Before")}</b>: {t("hình ảnh từ camera", "the camera view")}</figcaption></figure>
+      <figure><div class="media fill"><img src="cap/tryon_after.jpg" style="object-position:center" alt=""></div><figcaption><b>{t("Sau", "After")}</b>: {t("thử áo blazer linen Cavani trong vài giây", "the Cavani linen blazer, seconds later")}</figcaption></figure>
+    </div>
+  </div>
+  <p class="note">{t("Ảnh minh hoạ dùng một ảnh mẫu thay cho camera thật. Anh chị có thể thử trực tiếp ở trang Cửa hàng của bản mẫu.", "Illustration: a sample photo stands in for a live camera. Try it yourselves on the mock-up's Shop page.")}</p></section>''')
 
   # 5 Language: where
   add(f'''<section class="slide">{head(t("Chuyển ngôn ngữ", "Switching language"), t("Khách đổi ngôn ngữ ở ba vị trí, trên máy tính và điện thoại", "Three places to switch language, on desktop and mobile"))}
@@ -186,7 +203,7 @@ def deck(L):
   # 11 Shop
   add(f'''<section class="slide">{head(t("Cửa hàng trực tuyến", "Online shop"), t("Bán vải Nobility và đồ may sẵn, quản lý bằng WooCommerce", "Sell Nobility cloth and ready-made pieces, managed in WooCommerce"))}
   <div class="body pair">
-    <figure><div class="media fill"><img src="cap/shop.jpg" style="object-position:left top" alt=""></div><figcaption>{t("Lọc theo loại, màu, giá.", "Filter by category, colour and price.")}</figcaption></figure>
+    <figure><div class="media fill"><img src="cap/tryon_context.jpg" style="object-position:left 40%" alt=""></div><figcaption>{t("Mỗi sản phẩm có nút “Try-On” để thử ngay trên người; lọc theo loại, màu, giá.", "Every product has a “Try-On” button to see it on yourself; filter by category, colour and price.")}</figcaption></figure>
     <figure><div class="media fill"><img src="cap/pdp.jpg" style="object-position:center top" alt=""></div><figcaption>{t("Mỗi sản phẩm có trang riêng, nút mua và hỏi qua WhatsApp. Ngoài áo blazer Cavani, các sản phẩm khác là mẫu minh hoạ.", "Each product has its own page with buy and WhatsApp buttons. Apart from the Cavani blazer, products are placeholders.")}</figcaption></figure>
   </div></section>''')
 
@@ -230,7 +247,7 @@ def deck(L):
       ('cal', t("Đặt lịch online 24/7", "Book online, 24/7"), t("Chọn giờ trống trên lịch, không cần chờ trả lời tin nhắn.", "Pick a free slot on the calendar without waiting for a reply.")),
       ('chat', t("WhatsApp, Zalo, Messenger một chạm", "One-tap WhatsApp, Zalo, Messenger"), t("Tin nhắn soạn sẵn bằng ngôn ngữ của khách.", "Pre-written messages in the visitor's language.")),
       ('tag', t("Giá và quy trình rõ ràng", "Clear prices and process"), t("Biết trước chi phí và số ngày cần ở Sài Gòn.", "Know the cost and how many days to stay before flying.")),
-      ('globe', t("Ba ngôn ngữ", "Three languages"), t("Đổi một chạm, vẫn giữ nguyên trang đang xem.", "Switch in one tap and stay on the same page."))])}</div>
+      ('tryon', t("Phòng thử đồ AI", "AI fitting room"), t("Thử đồ bằng camera, chuyển động theo cơ thể theo thời gian thực.", "Try clothes on by camera; they move with the body in real time."))])}</div>
     <div><p class="colhd">{t("Cho Phan's", "For Phan's")}</p>{tiles([
       ('form', t("Biểu mẫu thông minh", "Smart enquiry form"), t("Nhận yêu cầu qua email, kèm ngày khách ở Sài Gòn và đồ muốn may.", "Enquiries arrive by email with travel dates and garments wanted.")),
       ('cart', t("Tự quản lý cửa hàng", "Manage the shop yourselves"), t("Đăng sản phẩm, giá, hình qua WooCommerce, không cần biết lập trình.", "Add products, prices and photos in WooCommerce, no coding needed.")),
@@ -321,6 +338,8 @@ ul.pts.red li::before { background: var(--red); }
 table.mini { border-collapse: collapse; width: 100%; font-size: 13.5px; }
 table.mini td { padding: 8px 0; border-bottom: 1px solid var(--stone); vertical-align: top; }
 table.mini td:first-child { width: 96px; font-weight: 600; }
+.ba { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; min-height: 0; align-items: center; }
+.ba figure { height: 100%; }
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; min-height: 0; }
 /* language slide: menu left (large), dropdown + footer right */
 .langgrid { display: grid; grid-template-columns: 7fr 5fr; grid-template-rows: 1fr 1fr; gap: 16px 24px; bottom: 82px; }

@@ -42,6 +42,8 @@ ul.pts.red li::before { background: var(--red); }
 table.mini { border-collapse: collapse; width: 100%; font-size: 13.5px; }
 table.mini td { padding: 8px 0; border-bottom: 1px solid var(--stone); vertical-align: top; }
 table.mini td:first-child { width: 96px; font-weight: 600; }
+.ba { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; min-height: 0; align-items: center; }
+.ba figure { height: 100%; }
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; min-height: 0; }
 /* language slide: menu left (large), dropdown + footer right */
 .langgrid { display: grid; grid-template-columns: 7fr 5fr; grid-template-rows: 1fr 1fr; gap: 16px 24px; bottom: 82px; }

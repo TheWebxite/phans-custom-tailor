@@ -5,8 +5,9 @@
 - What: an unsolicited **proposal/pitch** — full revamp as a trilingual static site (English main at `/`, Vietnamese `/vi/`, Simplified Chinese `/zh/`), 72 pages, with a shop that will read products from a headless WooCommerce Store API later.
 - Demo URL: **https://phans-custom-tailor-demo.vercel.app** (Vercel project `phans-custom-tailor-demo`, team `thewebxiteai-6218s-projects` (thewebxite.ai account); noindex while `indexable` is false). Plan: demo on Vercel, later point to TWX hosting; WordPress only for the WooCommerce API/checkout (`shop.tailormadesuit.net`, unconfirmed).
 - Repo: **https://github.com/TheWebxite/phans-custom-tailor** (private, branch `main`), connected to the Vercel project — every push to `main` builds (`node build.mjs` → `dist/`, settings in root `vercel.json`) and goes live.
+- **AI fitting room** (headline selling point): Decart Anywear virtual try-on widget, one script tag in `documentHTML()` in `build.mjs` (`anywear.decart.ai/widget/latest/anywear.js?domain=phans-custom-tailor-demo.vercel.app`), added by teammate lautengsheng 2026-10-15. Adds "Try-On" badges on product photos and an "AI fitting room" pill; renders the garment on the visitor's camera feed in real time (follows body movement and folds).
 - Platform: dependency-free Node build (`build.mjs`) → static `dist/`. Self-hosted GSAP 3.13 (ScrollTrigger, SplitText) + three.js r170. Enquiry form via FormSubmit.
-- Pitch materials sent to the owners via WhatsApp/Zalo: Vietnamese + English PDF decks in `pitch/`.
+- Pitch materials sent to the owners via WhatsApp/Zalo: Vietnamese + English PDF decks in `pitch/` (17 slides; slide 5 is the AI fitting room).
 
 ## Key files
 - `phans-custom-tailor-claude-code-prompt.md` → original build brief (from the website-prompt-builder skill): business facts, truth rules, design direction, keyword map, sitemap, QA.
@@ -19,9 +20,10 @@
 - `scripts/` → `qa.py`, `shots.py`, `perf.py`, `copy-deck.py`, `prepare-images.py`. `qa/` → screenshots, `motion-home.webm`.
 - `_source/` → crawl of old site, blog extraction, stock photos + sources (`stock/stock.json`), `font-options/` (font comparison). Not deployed.
 - `dist/` → built site (deploy this; contains `.vercel/` link, `vercel.json`, `_hosting/` .htaccess/nginx redirects).
-- `pitch/` → `De-xuat-website-Phans-VI.pdf` (client, Vietnamese) and `Website-proposal-Phans-EN.pdf` (English), 16 slides each, built by `pitch/build_pdf.py` from one source; `de-xuat-website-phans.html` + `De-xuat-website-Phans-Custom-Tailor.pdf` are the older 14-slide first version (2026-10-13); `tin-nhan-gui-Phans.txt` → draft outreach message.
+- `pitch/` → `De-xuat-website-Phans-VI.pdf` (client, Vietnamese) and `Website-proposal-Phans-EN.pdf` (English), 17 slides each, built by `pitch/build_pdf.py` from one source; `de-xuat-website-phans.html` + `De-xuat-website-Phans-Custom-Tailor.pdf` are the older 14-slide first version (2026-10-13); `tin-nhan-gui-Phans.txt` → draft outreach message.
 
 ## Client preferences / rules
+- The AI fitting room is one of the main selling points of the pitch — feature it prominently (own slide, cover line, features tile). Frame it honestly: it shows style/colour/cloth on the visitor; real measurements are still taken at the villa.
 - Premium, editorial, in the spirit of **Suitsupply, Brioni, Sacoor Brothers** (references the user chose) — borrow feel only, never copy text/photos/layout. Must **not look AI-generated**; no emoji anywhere; no Unicode symbols as icons.
 - Keep the PHAN'S wordmark and "P" monogram; refresh everything else (drop old Montserrat/Tinos/Inter, grey #9b9b9b, red).
 - Palette: ink #141414, paper #f7f6f3, stone #d8d5cf, mute #5f5f5f, accent worsted navy #1e2a3a. Square corners, hairline rules.
@@ -44,11 +46,13 @@
 - Assistant memory note: `~/.claude/projects/-Users-hengzhexin-Desktop-Client-PhanCustom/memory/phans-vercel-deploy.md`.
 
 ## Open items
+- AI fitting room: on phones the "AI fitting room" pill is hidden (widget collapses to the left edge); entry is via the "Try-On" badges, which open it full screen — test on a real phone before the demo. Widget shows "6 free passes" per visitor; check Decart usage limits/costs and the `domain=` parameter if the site moves to tailormadesuit.net.
 - Old copy of the site (pre-mobile-fix) still live at https://phans-custom-tailor.vercel.app on the other Vercel account (hengzhexin-7856, team `zxheng`) — delete it or leave it; don't send that link.
 - Awaiting client response to the pitch.
 - Before launch (see `CONFIRM.md`): Facebook page, final domain, "since 2013", founder names, missing prices (blazer, waistcoat, overcoat, women's), VND vs USD, Tết closure dates, six sample shop products, 23 stock photos to replace with client photos, geo coordinates, FormSubmit activation, native review of VI/ZH translations, set `indexable: true`, strip CONFIRM/PLACEHOLDER comments, connect WooCommerce.
 
 ## Change log
+- 2026-10-15 — Pitch decks (VI + EN) now 17 slides: new slide 5 "AI fitting room" with before/after try-on (grey suit → Cavani linen blazer), cover line, shop slide shows Try-On badges, features tile. Try-on tested with a fake camera feed from a stock photo (one pass used).
 - 2026-10-15 — First Git deploy was blocked (commit author ZX not on the Vercel team); repo git identity set to TheWebxite <thewebxite.ai@gmail.com>.
 - 2026-10-15 — Pushed to GitHub (TheWebxite/phans-custom-tailor, private) and connected it to the Vercel project; deploys now run from Git pushes.
 - 2026-10-15 — Git repo initialised (main), `.gitignore`/`.vercelignore` set for Git deploys, build now writes root `vercel.json` (build `node build.mjs`, output `dist`); clean clone builds OK. Not pushed yet (no GitHub auth on this Mac).
