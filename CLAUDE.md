@@ -37,7 +37,7 @@
 
 ## Workflow notes
 - Edit copy in `src/i18n/*.json` → `node build.mjs` → `python3 scripts/copy-deck.py`. Preview: `cd dist && python3 -m http.server 4321` → http://localhost:4321. Run `python3 scripts/qa.py` (and `shots.py`, `perf.py`) after changes.
-- Deploy: commit and `git push` to `main` (Vercel builds from GitHub). Fallback: `node build.mjs` then `npx vercel deploy --prod --yes --scope thewebxiteai-6218s-projects` from the project root. GitHub CLI installed at `~/.local/bin/gh` (logged in as TheWebxite). The Vercel CLI installs slowly in the sandbox (install into a scratch folder, may need outside-sandbox approval). Vercel login is saved on this machine — never write tokens into the project; `.vercelignore` excludes `_hosting/` and `.env*`.
+- Deploy: commit and `git push` to `main` (Vercel builds from GitHub). Fallback: `node build.mjs` then `npx vercel deploy --prod --yes --scope thewebxiteai-6218s-projects` from the project root. GitHub CLI installed at `~/.local/bin/gh` (logged in as TheWebxite). Commits in this repo must be authored as `TheWebxite <thewebxite.ai@gmail.com>` (set in the repo's local git config) — Vercel blocks deploys from commit authors outside the team (e.g. the global `ZX <hengzhexin@gmail.com>` identity). The Vercel CLI installs slowly in the sandbox (install into a scratch folder, may need outside-sandbox approval). Vercel login is saved on this machine — never write tokens into the project; `.vercelignore` excludes `_hosting/` and `.env*`.
 - Don't test the live enquiry form during demos — it posts to the client's real email (FormSubmit activation). Use your own address in `config.forms.formsubmitEmail` for tests.
 - Pitch decks: edit `pitch/build_pdf.py`, which builds VI + EN HTML and PDFs from one source (needs network for Google Fonts).
 - User sends outreach as "Yong – TheWebxite" in Vietnamese via WhatsApp/Zalo; preferred to be upfront that TWX is a web agency.
@@ -49,6 +49,7 @@
 - Before launch (see `CONFIRM.md`): Facebook page, final domain, "since 2013", founder names, missing prices (blazer, waistcoat, overcoat, women's), VND vs USD, Tết closure dates, six sample shop products, 23 stock photos to replace with client photos, geo coordinates, FormSubmit activation, native review of VI/ZH translations, set `indexable: true`, strip CONFIRM/PLACEHOLDER comments, connect WooCommerce.
 
 ## Change log
+- 2026-10-15 — First Git deploy was blocked (commit author ZX not on the Vercel team); repo git identity set to TheWebxite <thewebxite.ai@gmail.com>.
 - 2026-10-15 — Pushed to GitHub (TheWebxite/phans-custom-tailor, private) and connected it to the Vercel project; deploys now run from Git pushes.
 - 2026-10-15 — Git repo initialised (main), `.gitignore`/`.vercelignore` set for Git deploys, build now writes root `vercel.json` (build `node build.mjs`, output `dist`); clean clone builds OK. Not pushed yet (no GitHub auth on this Mac).
 - 2026-10-15 — Redeployed latest build to thewebxite.ai Vercel (phans-custom-tailor-demo); old 14-slide deck re-rendered with the new demo link.
