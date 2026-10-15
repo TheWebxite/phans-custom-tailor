@@ -1039,7 +1039,7 @@ ${footer(ctx)}
 <script src="/assets/vendor/ScrollTrigger.min.js?v=3.13.0" defer></script>
 <script src="/assets/vendor/SplitText.min.js?v=3.13.0" defer></script>
 <script src="/assets/js/motion.js?v=${ASSET_V}" defer></script>
-<script src="https://anywear.decart.ai/widget/latest/anywear.js?domain=phans-custom-tailor.vercel.app" async></script>
+<script src="https://anywear.decart.ai/widget/latest/anywear.js?domain=phans-custom-tailor-demo.vercel.app" async></script>
 </body>
 </html>
 `;
