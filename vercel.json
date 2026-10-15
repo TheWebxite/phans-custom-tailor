@@ -1,0 +1,399 @@
+{
+  "buildCommand": "node build.mjs",
+  "outputDirectory": "dist",
+  "framework": null,
+  "trailingSlash": true,
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/pages/about-us",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/about-us/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/working-hours-appointments",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/working-hours-appointments/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/lien-he",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/lien-he/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/frequently-asked-questions-faqs",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/frequently-asked-questions-faqs/",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/frequently-asked-questions-faqs-1",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/frequently-asked-questions-faqs-1/",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/testimonials",
+      "destination": "/#reviews",
+      "permanent": true
+    },
+    {
+      "source": "/pages/testimonials/",
+      "destination": "/#reviews",
+      "permanent": true
+    },
+    {
+      "source": "/pages/your-appointment-is-confirmed",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/your-appointment-is-confirmed/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/the-bespoke-dress-shirt",
+      "destination": "/suits-and-pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/the-bespoke-dress-shirt/",
+      "destination": "/suits-and-pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/fabric-collection",
+      "destination": "/fabrics/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/fabric-collection/",
+      "destination": "/fabrics/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/vai-thuong-hieu-nobility",
+      "destination": "/vi/fabrics/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/vai-thuong-hieu-nobility/",
+      "destination": "/vi/fabrics/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/frontpage",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/frontpage/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/chinh-sach-doi-tra",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/chinh-sach-doi-tra/",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/chinh-sach-bao-mat",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/chinh-sach-bao-mat/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/dieu-khoan-dich-vu",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/dieu-khoan-dich-vu/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/nghe-thuat-bespoke-che-tac-bo-suit-2-manh-hoan-hao-cua-rieng-ban",
+      "destination": "/vi/journal/the-art-of-bespoke-crafting-your-perfect-2-piece-suit/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/nghe-thuat-bespoke-che-tac-bo-suit-2-manh-hoan-hao-cua-rieng-ban/",
+      "destination": "/vi/journal/the-art-of-bespoke-crafting-your-perfect-2-piece-suit/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/5-classic-suit-mistakes-how-to-fix-them-like-an-expert",
+      "destination": "/journal/5-classic-suit-mistakes-how-to-fix-them-like-an-expert/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/5-classic-suit-mistakes-how-to-fix-them-like-an-expert/",
+      "destination": "/journal/5-classic-suit-mistakes-how-to-fix-them-like-an-expert/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/summer-suiting-2025",
+      "destination": "/journal/summer-suiting-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/summer-suiting-2025/",
+      "destination": "/journal/summer-suiting-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/all",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/all/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/hot-products",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/hot-products/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/2-piece-suit",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/2-piece-suit/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/onsale",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/onsale/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/frontpage",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/frontpage/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/lining-fabric",
+      "destination": "/fabrics/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/lining-fabric/",
+      "destination": "/fabrics/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news",
+      "destination": "/journal/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/",
+      "destination": "/journal/",
+      "permanent": true
+    },
+    {
+      "source": "/account/login",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/account/login/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/account/register",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/account/register/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/account",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/account/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/cart/",
+      "destination": "/shop/",
+      "permanent": true
+    },
+    {
+      "source": "/search",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/search/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/the-wardrobe-workhorse-a-guide-to-the-versatile-blazer",
+      "destination": "/journal/the-wardrobe-workhorse-a-guide-to-the-versatile-blazer/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/the-wardrobe-workhorse-a-guide-to-the-versatile-blazer/",
+      "destination": "/journal/the-wardrobe-workhorse-a-guide-to-the-versatile-blazer/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/suit-jacket-vs-blazer-vs-sport-coat-a-gentleman-s-guide-phan-s-cu",
+      "destination": "/journal/suit-jacket-vs-blazer-vs-sport-coat-a-gentleman-s-guide-phan-s-cu/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/suit-jacket-vs-blazer-vs-sport-coat-a-gentleman-s-guide-phan-s-cu/",
+      "destination": "/journal/suit-jacket-vs-blazer-vs-sport-coat-a-gentleman-s-guide-phan-s-cu/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/what-is-a-suit-jacket-anatomy-fabrics-the-orphaning-rule",
+      "destination": "/journal/what-is-a-suit-jacket-anatomy-fabrics-the-orphaning-rule/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/what-is-a-suit-jacket-anatomy-fabrics-the-orphaning-rule/",
+      "destination": "/journal/what-is-a-suit-jacket-anatomy-fabrics-the-orphaning-rule/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/5-classic-suit-mistakes-how-to-fix-them-like-an-expert",
+      "destination": "/journal/5-classic-suit-mistakes-how-to-fix-them-like-an-expert/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/5-classic-suit-mistakes-how-to-fix-them-like-an-expert/",
+      "destination": "/journal/5-classic-suit-mistakes-how-to-fix-them-like-an-expert/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/summer-suiting-2025",
+      "destination": "/journal/summer-suiting-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/summer-suiting-2025/",
+      "destination": "/journal/summer-suiting-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/the-art-of-bespoke-crafting-your-perfect-2-piece-suit",
+      "destination": "/journal/the-art-of-bespoke-crafting-your-perfect-2-piece-suit/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/the-art-of-bespoke-crafting-your-perfect-2-piece-suit/",
+      "destination": "/journal/the-art-of-bespoke-crafting-your-perfect-2-piece-suit/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/the-story-of-nobility-weaving-heritage-technology-and-timeless-styl",
+      "destination": "/journal/the-story-of-nobility-weaving-heritage-technology-and-timeless-styl/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/the-story-of-nobility-weaving-heritage-technology-and-timeless-styl/",
+      "destination": "/journal/the-story-of-nobility-weaving-heritage-technology-and-timeless-styl/",
+      "permanent": true
+    },
+    {
+      "source": "/products/men-linen-blazer-green-linen-cavani-2-button-slim-fit",
+      "destination": "/shop/men-linen-blazer-green-linen-cavani-2-button-slim-fit/",
+      "permanent": true
+    },
+    {
+      "source": "/products/men-linen-blazer-green-linen-cavani-2-button-slim-fit/",
+      "destination": "/shop/men-linen-blazer-green-linen-cavani-2-button-slim-fit/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}

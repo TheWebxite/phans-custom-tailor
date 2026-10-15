@@ -1,0 +1,550 @@
+{
+  "lang": "en",
+  "htmlLang": "en",
+  "label": "English",
+  "short": "EN",
+  "ui": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "Language",
+    "book": "Book an appointment",
+    "bookShort": "Book",
+    "whatsapp": "Message us on WhatsApp",
+    "whatsappShort": "WhatsApp",
+    "zalo": "Chat on Zalo",
+    "messenger": "Messenger",
+    "call": "Call",
+    "email": "Email",
+    "from": "From",
+    "priceOnConsultation": "Price on consultation",
+    "getDirections": "Get directions",
+    "readArticle": "Read the article",
+    "allArticles": "All articles",
+    "minRead": "{n} min read",
+    "by": "By",
+    "tripadvisorAll": "Read all reviews on Tripadvisor",
+    "quotedFrom": "Quoted from Tripadvisor, spelling as written.",
+    "addToBag": "Add to bag",
+    "samplePrice": "Price to be confirmed",
+    "sampleNote": "Sample product",
+    "checkoutPending": "Online checkout is being connected. Message us on WhatsApp to order this piece today.",
+    "askMakeSuit": "Ask about making this into a suit",
+    "related": "Related pieces",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "backToShop": "Back to the shop",
+    "backToJournal": "Back to the journal",
+    "watchVideo": "Play video",
+    "videoNote": "Plays from YouTube",
+    "breadcrumbHome": "Home",
+    "waGeneral": "Hello Phan's Custom Tailor, I'd like to ask about a custom suit.",
+    "waProduct": "Hello Phan's Custom Tailor, I'm interested in {name}.",
+    "waFabric": "Hello Phan's Custom Tailor, I'd like to have {name} made into a suit.",
+    "waPricing": "Hello Phan's Custom Tailor, I'd like to ask about prices for a custom suit.",
+    "currency": "VND",
+    "opensNewTab": "opens in a new tab",
+    "cursorView": "View",
+    "cursorRead": "Read",
+    "scroll": "Scroll"
+  },
+  "nav": {
+    "home": "Home",
+    "process": "Bespoke process",
+    "pricing": "Suits & pricing",
+    "fabrics": "Fabrics",
+    "shop": "Shop",
+    "journal": "Journal",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "footer": {
+    "visit": "Visit the villa",
+    "address": [
+      "Villa, 08 D9 Street, Saigon Pearl",
+      "Bình Thạnh, Ho Chi Minh City",
+      "Vietnam"
+    ],
+    "hours": "Monday to Saturday, 9:00 AM to 7:00 PM",
+    "hoursNote": "Sundays and public holidays by appointment",
+    "contact": "Contact",
+    "explore": "Explore",
+    "follow": "Follow",
+    "rights": "Phan's Custom Tailor",
+    "proposal": "Proposal preview. Not yet live."
+  },
+  "bookBand": {
+    "title": "Visit the villa in Saigon Pearl",
+    "body": "Book ahead so Thinh or Thuong Phan can set the time aside for you. Parking for cars and motorbikes is right in front of the villa.",
+    "hoursLabel": "Opening hours",
+    "addressLabel": "Address"
+  },
+  "pages": {
+    "home": {
+      "slug": "",
+      "title": "Bespoke Tailor in Ho Chi Minh City | Phan's Custom Tailor",
+      "description": "Bespoke tailor in Ho Chi Minh City: suits, shirts and trousers cut and fitted by Thinh and Thuong Phan in a Saigon Pearl villa, ready in 5 working days."
+    },
+    "about": {
+      "slug": "about",
+      "title": "Architect-Trained Tailors in Saigon | Phan's Custom Tailor",
+      "description": "Thinh and Thuong Phan trained as architects before founding Phan's Custom Tailor. Meet the founders and visit the villa in Saigon Pearl."
+    },
+    "process": {
+      "slug": "bespoke-process",
+      "title": "How a Custom Suit Is Made | Phan's Custom Tailor",
+      "description": "How a custom suit is made at Phan's: consultation, over 20 measurements, a fitting and handover within 5 working days, with free lifetime alterations."
+    },
+    "pricing": {
+      "slug": "suits-and-pricing",
+      "title": "Custom Suit Prices in Ho Chi Minh City | Phan's",
+      "description": "Custom suit prices in Ho Chi Minh City: 2-piece from 6,800,000 VND, 3-piece from 8,400,000 VND, shirts from 1,300,000 VND. Alterations free for life."
+    },
+    "fabrics": {
+      "slug": "fabrics",
+      "title": "Suit Fabrics in Saigon: VBC, Holland & Sherry | Phan's",
+      "description": "Suit fabrics in Saigon from Vitale Barberis Canonico, Holland & Sherry and our own Nobility range, plus linen, cotton, wool and cashmere."
+    },
+    "shop": {
+      "slug": "shop",
+      "title": "Nobility Suit Fabric and Ready-Made Pieces | Phan's",
+      "description": "Buy Nobility suiting by the metre and ready-made pieces from Phan's Custom Tailor in Ho Chi Minh City."
+    },
+    "journal": {
+      "slug": "journal",
+      "title": "Menswear Style Guide | Phan's Custom Tailor",
+      "description": "A menswear style guide from Phan's Custom Tailor: blazers, suit jackets, summer fabrics and the details that make a suit fit."
+    },
+    "faq": {
+      "slug": "faq",
+      "title": "Getting a Suit Made in Vietnam: FAQ | Phan's",
+      "description": "Getting a suit made in Vietnam: how long it takes, what it costs, which fabrics we use and how to book. Answers from Phan's Custom Tailor."
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Tailor in Saigon Pearl, Bình Thạnh | Phan's Custom Tailor",
+      "description": "Visit our villa at 08 D9 Street, Saigon Pearl. Open Monday to Saturday, 9 AM to 7 PM. Book, WhatsApp or send an enquiry."
+    },
+    "thanks": {
+      "slug": "contact/thank-you",
+      "title": "Thank You | Phan's Custom Tailor",
+      "description": "We have your enquiry and will reply by email or WhatsApp."
+    },
+    "notFound": {
+      "title": "Page Not Found | Phan's Custom Tailor",
+      "description": "This page has moved."
+    }
+  },
+  "home": {
+    "kicker": "Bespoke tailor in Ho Chi Minh City",
+    "title": "Cut and fitted by the founders",
+    "sub": "Suits, shirts and trousers made to your measurements in a private villa in Saigon Pearl, ready within five working days.",
+    "heroMeta": [
+      "Monday to Saturday, 9 AM to 7 PM",
+      "Saigon Pearl, Bình Thạnh"
+    ],
+    "introTitle": "Two architects at the cutting table",
+    "introBody": "Thinh and Thuong Phan trained at the Ho Chi Minh City University of Architecture before taking up the family trade. They still meet every client, take the measurements and run the fittings themselves.",
+    "introLink": "Meet the founders",
+    "introCaption": "The fitting lounge at the villa in Saigon Pearl.",
+    "processTitle": "From first measurement to final fitting",
+    "processIntro": "Most visitors need three short visits: a consultation, a fitting and collection. A custom suit in Ho Chi Minh City takes five working days as standard.",
+    "processLink": "How the bespoke process works",
+    "pricesTitle": "Suits, shirts and trousers, with prices",
+    "pricesIntro": "Every price includes the fittings and lifetime free alterations. The final figure depends on the cloth you choose.",
+    "pricesLink": "See all prices",
+    "fabricsTitle": "Cloth from Italy, England and our own Nobility range",
+    "fabricsIntro": "Handle the books at your consultation and choose with the founders, from business worsteds to linen for the Saigon heat.",
+    "fabricsLink": "About our fabrics",
+    "reviewsTitle": "4.8 on Tripadvisor from 975 reviews",
+    "reviewsIntro": "What visitors wrote after their fittings.",
+    "journalTitle": "Notes from the cutting table",
+    "journalLink": "All articles",
+    "heroLinks": [
+      {
+        "label": "Suits",
+        "to": "pricing",
+        "img": "stock-man-suit-1"
+      },
+      {
+        "label": "Shirts",
+        "to": "pricing",
+        "img": "stock-shirt-detail-1"
+      },
+      {
+        "label": "Trousers",
+        "to": "pricing",
+        "img": "stock-trousers-1"
+      },
+      {
+        "label": "Women's tailoring",
+        "to": "pricing",
+        "hash": "pct-women-title",
+        "img": "stock-woman-suit-1"
+      },
+      {
+        "label": "Fabrics",
+        "to": "fabrics",
+        "img": "stock-fabric-swatches-1"
+      },
+      {
+        "label": "Book a fitting",
+        "to": "booking",
+        "img": "villa-lounge"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "title": "Book your appointment",
+      "short": "Reserve a private consultation online or on WhatsApp, ideally before you fly.",
+      "long": "Every order starts with a booked consultation, so Thinh or Thuong Phan can set the time aside for you alone. Book on the calendar or message us on WhatsApp, ideally before you arrive in Ho Chi Minh City."
+    },
+    {
+      "title": "Consultation and measurement",
+      "short": "Choose the cloth with the founders. We take over 20 measurements and draft your pattern.",
+      "long": "At the villa you talk through the occasion, how you like to wear a suit and the details you want. You choose the cloth together, then we take over 20 measurements and draft a pattern for your build."
+    },
+    {
+      "title": "First fitting",
+      "short": "Try the garment close to finished, and every line is adjusted before the rest of the order is made.",
+      "long": "Your first garment comes back close to finished. You try it on and move in it while we adjust the shoulders, length, waist and sleeves. This fitting confirms the fit before the rest of a multi-piece order is completed."
+    },
+    {
+      "title": "Finishing and handover",
+      "short": "Final adjustments, then a professional clean and press, ready to wear.",
+      "long": "After the fitting, the garment gets its final adjustments and is professionally dry-cleaned to clean and set its shape. It is handed over ready to wear, or packed for your flight."
+    },
+    {
+      "title": "Alterations for life",
+      "short": "Your pattern stays on file, and alterations on anything we make are free for life.",
+      "long": "We keep your pattern and measurements on file. If your build changes, bring the garment back: alterations on everything we make are free for life."
+    }
+  ],
+  "prices": {
+    "suit2": {
+      "name": "2-piece suit",
+      "desc": "Jacket and trousers cut from your own pattern."
+    },
+    "suit3": {
+      "name": "3-piece suit",
+      "desc": "Jacket, trousers and a matching waistcoat."
+    },
+    "trousers": {
+      "name": "Dress trousers",
+      "desc": "Cut to your seat, rise and preferred break."
+    },
+    "shirt": {
+      "name": "Tailored shirt",
+      "desc": "Collar, cuff and fit chosen at the consultation."
+    },
+    "blazer": {
+      "name": "Blazer or sport coat",
+      "desc": "Odd jackets in wool, linen or cotton."
+    },
+    "waistcoat": {
+      "name": "Waistcoat",
+      "desc": "Single or double-breasted, to wear with or without a suit."
+    },
+    "coat": {
+      "name": "Overcoat",
+      "desc": "For travel home to a colder climate."
+    }
+  },
+  "about": {
+    "kicker": "Architect-trained tailors in Saigon",
+    "title": "Two architects who became tailors",
+    "sub": "Phan's Custom Tailor is run by Thinh and Thuong Phan, who still measure, cut and fit for every client.",
+    "body": [
+      "Thinh and Thuong Phan graduated from the Ho Chi Minh City University of Architecture in 2003. They came back to the family trade with a different way of looking at a suit: as a structure built around one person.",
+      "That training still shapes the work. Proportion decides where a button sits and how long a jacket runs. Balance decides how a shoulder carries the cloth. Each cut is planned for the wearer's build, so the garment sits cleanly when you move, not only when you stand still.",
+      "Phan's has made clothes in Ho Chi Minh City since 2013, and today works from a private villa in Saigon Pearl, where consultations and fittings happen away from a busy shop floor."
+    ],
+    "sign": "Thuong & Thinh Phan",
+    "valuesTitle": "How we work",
+    "values": [
+      {
+        "title": "You work with the founders",
+        "body": "Thinh and Thuong Phan guide every client from the first consultation to the final fitting."
+      },
+      {
+        "title": "Quality controlled end to end",
+        "body": "We import the cloth, linings, buttons, interlinings and shoulder pads ourselves, and Thinh Phan trains the workroom tailors."
+      },
+      {
+        "title": "A private villa, not a shopfront",
+        "body": "Consultations and fittings happen in a quiet house in Saigon Pearl, with parking at the door."
+      },
+      {
+        "title": "Alterations free for life",
+        "body": "Every garment can be adjusted as you change, for as long as you wear it."
+      }
+    ],
+    "villaTitle": "The villa in Saigon Pearl",
+    "villaBody": "Cloth books, the cutting table and the fitting lounge are all under one roof, a few minutes from Landmark 81.",
+    "villaCaption1": "The fitting lounge.",
+    "villaCaption2": "Cloth books and the cutting table."
+  },
+  "process": {
+    "kicker": "How a custom suit is made",
+    "title": "From the first measurement to the final fitting",
+    "sub": "A Phan's suit is cut from a pattern drafted for you, then refined on your body. Here is each step, and how to fit it into a short stay.",
+    "tripTitle": "Planning around your trip",
+    "tripIntro": "Five working days is the standard turnaround. If your stay is shorter, tell us when you book and we will discuss a rush order at your consultation.",
+    "trip": [
+      {
+        "label": "Visit 1",
+        "body": "Consultation, cloth and measurements."
+      },
+      {
+        "label": "Visit 2",
+        "body": "First fitting, with adjustments made on you."
+      },
+      {
+        "label": "Visit 3",
+        "body": "Final check and collection, ready to wear or packed for travel."
+      }
+    ],
+    "lifetimeTitle": "Your pattern stays with us",
+    "lifetimeBody": "We keep your pattern and measurements on file, and alterations on anything we make are free for life."
+  },
+  "pricing": {
+    "kicker": "Custom suit prices in Ho Chi Minh City",
+    "title": "Suits, shirts and trousers, with prices",
+    "sub": "Starting prices for each garment, including every fitting and lifetime free alterations. The final price depends on the cloth.",
+    "tableCaption": "Starting prices in Vietnamese dong",
+    "colGarment": "Garment",
+    "colFrom": "From",
+    "includedTitle": "Included in every price",
+    "included": [
+      "A one-to-one consultation with Thinh or Thuong Phan",
+      "Over 20 measurements and a pattern drafted for you",
+      "Fittings until the fit is right",
+      "Professional cleaning and pressing before handover",
+      "Alterations free for life"
+    ],
+    "womenTitle": "Tailoring for women",
+    "womenBody": "Suits, trousers and skirts cut to measure, with the same fittings and lifetime alterations. Prices are quoted at your consultation.",
+    "occasionsTitle": "Suits for the occasion",
+    "occasions": [
+      {
+        "title": "Business",
+        "body": "Worsted wool in navy and grey that wears every day and travels well."
+      },
+      {
+        "title": "Weddings",
+        "body": "Suits for the groom and the wedding party. Book early so everyone can fit in a fitting."
+      },
+      {
+        "title": "Travel and heat",
+        "body": "Linen and cotton for Saigon, and wool or flannel to take home."
+      }
+    ],
+    "askTitle": "Not sure what to order?",
+    "askBody": "Tell us what you need and how long you are in the city, and we will suggest what fits the time."
+  },
+  "fabrics": {
+    "kicker": "Suit fabrics in Saigon",
+    "title": "Choose the cloth at the villa",
+    "sub": "Most of a suit's character comes from its cloth. At your consultation you handle the books from these mills and choose with the founders.",
+    "mills": [
+      {
+        "key": "vbc",
+        "name": "Vitale Barberis Canonico",
+        "origin": "Italy",
+        "body": "Italian worsteds for business suits, in the navies, greys and fine checks that wear every day."
+      },
+      {
+        "key": "hs",
+        "name": "Holland & Sherry",
+        "origin": "England",
+        "body": "A long-standing English cloth merchant, for suitings and jacketings with a richer handle."
+      },
+      {
+        "key": "nobility",
+        "name": "Nobility",
+        "origin": "Our own range",
+        "body": "Italian-inspired designs woven by Kindawool from Australian Merino: all-season pure wool, wool blends, autumn and winter flannel, and pure linen."
+      },
+      {
+        "key": "other",
+        "name": "Linen, cotton, wool and cashmere",
+        "origin": "Europe and South Korea",
+        "body": "Shirtings, linens and cashmere from other European and South Korean suppliers."
+      }
+    ],
+    "climateTitle": "Cloth for the climate",
+    "climate": [
+      {
+        "title": "For the Saigon heat",
+        "body": "Linen, cotton and open-weave wool breathe in the humidity and keep their shape better than you might expect."
+      },
+      {
+        "title": "For the trip home",
+        "body": "Worsted wool, flannel and cashmere blends for colder cities, offices and winter weddings."
+      }
+    ],
+    "trimsTitle": "The parts you don't see",
+    "trimsBody": "Linings, buttons, interlinings and shoulder pads are imported and chosen with you, because they decide how a jacket holds its shape.",
+    "shopTitle": "Nobility cloth in the shop",
+    "shopBody": "Buy Nobility suiting by the metre, or choose it at the villa to be made up for you.",
+    "shopLink": "Visit the shop",
+    "bookCaption": "Nobility swatch books at the villa."
+  },
+  "shop": {
+    "sortFeatured": "Featured",
+    "kicker": "Nobility suit fabric",
+    "title": "Nobility cloth and ready-to-wear pieces",
+    "sub": "Buy Nobility suiting by the metre, or a ready-made piece from the villa. Any fabric here can also be made up into a suit at your consultation.",
+    "filterTitle": "Filter",
+    "category": "Category",
+    "all": "All",
+    "colour": "Colour",
+    "price": "Price",
+    "anyPrice": "Any price",
+    "under3": "Under 3,000,000 VND",
+    "3to6": "3,000,000 to 6,000,000 VND",
+    "over6": "Over 6,000,000 VND",
+    "sort": "Sort by",
+    "sortNewest": "Newest",
+    "sortPriceAsc": "Price, low to high",
+    "sortPriceDesc": "Price, high to low",
+    "apply": "Show results",
+    "clear": "Clear filters",
+    "count": "{n} pieces",
+    "empty": "Nothing matches these filters.",
+    "proposalNote": "Proposal preview: apart from the Cavani linen blazer, the products shown are samples until the WooCommerce shop is connected.",
+    "attrs": "Details"
+  },
+  "journal": {
+    "kicker": "Menswear style guide",
+    "title": "Notes from the cutting table",
+    "sub": "Short guides from Thinh and Thuong Phan on cloth, cut and the details that make a suit fit.",
+    "relatedTitle": "More from the journal",
+    "ctaTitle": "Talk it through at the villa",
+    "ctaBody": "Bring the article, or just your questions, to a consultation with the founders."
+  },
+  "faq": {
+    "kicker": "Getting a suit made in Vietnam",
+    "title": "Questions before your first fitting",
+    "sub": "Short answers on time, prices, cloth and visiting the villa. If yours isn't here, message us on WhatsApp.",
+    "groups": [
+      {
+        "title": "Making a suit",
+        "items": [
+          {
+            "q": "What's the difference between bespoke and ready-to-wear?",
+            "a": "Ready-to-wear is made in standard sizes. A bespoke garment starts from a pattern drafted for your measurements and build, then is adjusted over fittings until it fits."
+          },
+          {
+            "q": "How long does it take to make a suit in Vietnam with Phan's?",
+            "a": "Five working days as standard, including the fittings. Rush orders are possible; we discuss timing at your consultation."
+          },
+          {
+            "q": "What fabrics do you use?",
+            "a": "Cloth from Vitale Barberis Canonico in Italy and Holland & Sherry in England, our own Nobility range, and wool, cotton, linen and cashmere from European and South Korean suppliers."
+          },
+          {
+            "q": "Do you tailor for women?",
+            "a": "Yes. We make suits, trousers and skirts for women, cut to measure with the same fittings and lifetime alterations."
+          }
+        ]
+      },
+      {
+        "title": "Prices and aftercare",
+        "items": [
+          {
+            "q": "How much does a tailored suit cost?",
+            "a": "From 6,800,000 VND for a 2-piece suit and 8,400,000 VND for a 3-piece. Dress trousers start at 2,200,000 VND and shirts at 1,300,000 VND. Every price includes lifetime free alterations."
+          },
+          {
+            "q": "Do you offer alterations?",
+            "a": "Yes, free for life on everything we make, even if your measurements change."
+          }
+        ]
+      },
+      {
+        "title": "Visiting the villa",
+        "items": [
+          {
+            "q": "Do I need a tailor appointment in Saigon?",
+            "a": "We recommend it, so the founders can give you their full attention. Book on our calendar or message us on WhatsApp."
+          },
+          {
+            "q": "Can I come on a Sunday or a public holiday?",
+            "a": "By prior appointment only. We close for about two weeks over Tết, the Lunar New Year, so message us first if you are visiting in late January or February."
+          },
+          {
+            "q": "Where are you, and is there parking?",
+            "a": "At a villa on D9 Street in Saigon Pearl, Bình Thạnh. There is parking for cars and motorbikes in front of the villa."
+          },
+          {
+            "q": "Can I reorder after I leave Vietnam?",
+            "a": "We keep your pattern and measurements on file."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Tailor in Saigon Pearl, Bình Thạnh",
+    "title": "Visit the villa in Saigon Pearl",
+    "sub": "Book a consultation first so the founders can set time aside for you. For anything else, message us or send an enquiry.",
+    "bookTitle": "Book a consultation",
+    "bookBody": "Choose a time on our calendar. You will be taken to our booking page.",
+    "chatTitle": "Message us",
+    "chatBody": "WhatsApp is the quickest way to reach us from abroad.",
+    "directTitle": "Call or email",
+    "visitTitle": "Address",
+    "hoursTitle": "Opening hours",
+    "parkingTitle": "Parking",
+    "parkingBody": "Parking for cars and motorbikes directly in front of the villa.",
+    "holidayTitle": "Tết and public holidays",
+    "holidayBody": "We close for about two weeks over Tết, the Lunar New Year, and on some public holidays. If your trip falls in late January or February, message us before you book.",
+    "formTitle": "Send an enquiry",
+    "formIntro": "Tell us what you would like made and when you are in the city. We reply by email, or on WhatsApp if you leave a number.",
+    "mapTitle": "Map of Phan's Custom Tailor in Saigon Pearl"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "WhatsApp or phone",
+    "phoneHint": "Include your country code, for example +44",
+    "country": "Country",
+    "garments": "What would you like made?",
+    "garmentOptions": [
+      "2-piece suit",
+      "3-piece suit",
+      "Trousers",
+      "Shirt",
+      "Coat or blazer",
+      "Women's tailoring",
+      "Not sure yet"
+    ],
+    "dates": "Dates in Ho Chi Minh City",
+    "arrive": "Arrive",
+    "leave": "Leave",
+    "message": "Message",
+    "optional": "optional",
+    "submit": "Send enquiry",
+    "sending": "Sending...",
+    "errName": "Please enter your name.",
+    "errEmail": "Please enter an email address we can reply to, like name@example.com.",
+    "errPhone": "Enter a number with at least 8 digits, or leave this empty.",
+    "errMessage": "Please tell us a little about what you need.",
+    "errDates": "Your leave date is before your arrival date.",
+    "errSend": "Your enquiry could not be sent. Please try again, or message us on WhatsApp.",
+    "subject": "New enquiry from the website (English)",
+    "chatInstead": "Prefer to chat?"
+  },
+  "thanks": {
+    "title": "Thank you, we have your enquiry",
+    "body": "We will reply by email, or on WhatsApp if you left a number. If your trip is soon, book a consultation now so your time is held.",
+    "back": "Back to the home page"
+  },
+  "notFound": {
+    "title": "This page has moved",
+    "body": "Our website has a new layout, so some old addresses no longer work. These pages are a good place to start."
+  }
+}

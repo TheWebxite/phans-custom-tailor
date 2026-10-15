@@ -1,0 +1,15 @@
+{
+  "name": "phans-custom-tailor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:launch": "INDEXABLE=true node build.mjs",
+    "serve": "cd dist && python3 -m http.server 4321",
+    "qa": "python3 scripts/qa.py",
+    "qa:shots": "python3 scripts/qa.py --shots",
+    "images": "python3 scripts/prepare-images.py",
+    "copy": "python3 scripts/copy-deck.py",
+    "deploy": "npm run build && npx vercel deploy dist"
+  }
+}

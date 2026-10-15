@@ -1,0 +1,26 @@
+{
+  "source": "Tripadvisor",
+  "url": "https://www.tripadvisor.com/Attraction_Review-g293925-d4795476-Reviews-Phan_s_Custom_Tailor-Ho_Chi_Minh_City.html",
+  "rating": "4.8",
+  "count": 975,
+  "asOf": "October 2026",
+  "confirm": "Tripadvisor figures as of October 2026; refresh before launch",
+  "items": [
+    { "name": "Korey E.", "place": "Chicago", "date": "2026-08", "featured": true,
+      "quote": "Prices are incredible, turnaround time was expeditious - a full custom tailored suit in five days, with multiple fittings and great attention to detail." },
+    { "name": "Benjamin C.", "place": "Vancouver", "date": "2026-06",
+      "quote": "Finding a truly exceptional tailor is a rare feat, but finding one that pairs flawless technical precision with genuinely warm, selfless hospitality is nearly impossible." },
+    { "name": "Benjamin C.", "place": "", "date": "2025-10",
+      "quote": "They were patient, thoughtful, and meticulous—making me feel like I was their only client." },
+    { "name": "Elikem D.", "place": "", "date": "2026-08",
+      "quote": "Wide selection of designs and materials for suit composition and accessories. Would certainly recommend to anyone visiting HCM." },
+    { "name": "Vincent L.", "place": "", "date": "2026-01",
+      "quote": "Phan's Custom Tailor created 6 pairs of pants for me. ... They are my favorite pairs now and i wear them every day." },
+    { "name": "Korey E.", "place": "Chicago", "date": "2026-08",
+      "quote": "plenty of fabric choices, pushing back when things wouldn't work well together" },
+    { "name": "Alexander K.", "place": "Corfu", "date": "2025-11",
+      "quote": "Perfect service from A-Z." },
+    { "name": "Liangyu G.", "place": "", "date": "2026-03",
+      "quote": "not only did they come through with the short timeline I had, the suit turned out great!" }
+  ]
+}

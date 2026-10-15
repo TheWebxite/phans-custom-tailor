@@ -1,0 +1,564 @@
+{
+ "_note": "Proposal data in the WooCommerce Store API product shape (/wp-json/wc/store/v1/products). Images starting with img: are local files in assets/img. Only the Cavani blazer is a real product (from the old site); everything with \"sample\": true is a placeholder until WooCommerce is connected. pct_i18n holds translations for the proposal only.",
+ "terms": {
+  "categories": {
+   "nobility-fabrics": {
+    "en": "Nobility fabrics",
+    "vi": "Vải Nobility",
+    "zh": "Nobility 面料"
+   },
+   "ready-made": {
+    "en": "Ready-made",
+    "vi": "May sẵn",
+    "zh": "成衣"
+   }
+  },
+  "colours": {
+   "navy": {
+    "en": "Navy",
+    "vi": "Xanh navy",
+    "zh": "藏青"
+   },
+   "grey": {
+    "en": "Grey",
+    "vi": "Xám",
+    "zh": "灰色"
+   },
+   "charcoal": {
+    "en": "Charcoal",
+    "vi": "Xám than",
+    "zh": "炭灰"
+   },
+   "green": {
+    "en": "Green",
+    "vi": "Xanh lá",
+    "zh": "绿色"
+   },
+   "white": {
+    "en": "White",
+    "vi": "Trắng",
+    "zh": "白色"
+   }
+  },
+  "attributes": {
+   "Composition": {
+    "en": "Composition",
+    "vi": "Thành phần",
+    "zh": "成分"
+   },
+   "Colour": {
+    "en": "Colour",
+    "vi": "Màu",
+    "zh": "颜色"
+   },
+   "Sold by": {
+    "en": "Sold by",
+    "vi": "Đơn vị bán",
+    "zh": "销售单位"
+   },
+   "Size": {
+    "en": "Size",
+    "vi": "Kích cỡ",
+    "zh": "尺码"
+   },
+   "Details": {
+    "en": "Details",
+    "vi": "Chi tiết",
+    "zh": "细节"
+   },
+   "Brand": {
+    "en": "Brand",
+    "vi": "Thương hiệu",
+    "zh": "品牌"
+   }
+  }
+ },
+ "products": [
+  {
+   "id": 1113707129,
+   "name": "Men Linen Blazer - Green Linen Cavani 2 Button Slim Fit",
+   "slug": "men-linen-blazer-green-linen-cavani-2-button-slim-fit",
+   "date_created": "2023-10-04",
+   "sample": false,
+   "short_description": "<p>A two-button linen blazer in green with a notch lapel, double vent and half-canvas construction.</p>",
+   "description": "<p>Two button, notch lapel, double vent, half canvas.</p><p>Dry cleaning is better for linen than a washing machine: the gentler process helps the weave keep its structure. In storage, cedar or lavender near the jacket helps keep moths away.</p>",
+   "prices": {
+    "price": "5400000",
+    "currency_code": "VND",
+    "currency_minor_unit": 0
+   },
+   "images": [
+    {
+     "src": "img:cavani-blazer",
+     "alt": "Green linen two-button blazer worn with a white shirt"
+    }
+   ],
+   "categories": [
+    {
+     "id": 2,
+     "name": "Ready-made",
+     "slug": "ready-made"
+    }
+   ],
+   "attributes": [
+    {
+     "name": "Brand",
+     "terms": [
+      {
+       "name": "Cavani",
+       "slug": "cavani"
+      }
+     ]
+    },
+    {
+     "name": "Composition",
+     "terms": [
+      {
+       "name": "Linen",
+       "slug": "linen"
+      }
+     ]
+    },
+    {
+     "name": "Colour",
+     "terms": [
+      {
+       "name": "Green",
+       "slug": "green"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "terms": [
+      {
+       "name": "M",
+       "slug": "m"
+      },
+      {
+       "name": "L",
+       "slug": "l"
+      },
+      {
+       "name": "XL",
+       "slug": "xl"
+      },
+      {
+       "name": "XXL",
+       "slug": "xxl"
+      }
+     ]
+    }
+   ],
+   "is_in_stock": true,
+   "pct_i18n": {
+    "vi": {
+     "name": "Áo blazer linen nam - Linen xanh lá Cavani 2 cúc, dáng slim fit",
+     "short_description": "<p>Áo blazer linen hai cúc màu xanh lá, ve áo chữ K, xẻ hai bên tà và cấu trúc half canvas.</p>",
+     "description": "<p>Hai cúc, ve áo chữ K, xẻ đôi, half canvas.</p><p>Với vải linen, giặt khô tốt hơn giặt máy vì quy trình nhẹ nhàng giúp sợi vải giữ được cấu trúc. Khi cất giữ, đặt gỗ tuyết tùng hoặc oải hương gần áo để tránh mối mọt.</p>"
+    },
+    "zh": {
+     "name": "男士亚麻西装外套 - Cavani 绿色亚麻双扣修身款",
+     "short_description": "<p>绿色亚麻双扣西装外套，平驳领，双开衩，半麻衬结构。</p>",
+     "description": "<p>双扣、平驳领、双开衩、半麻衬。</p><p>亚麻面料更适合干洗而非机洗，温和的方式有助于保持织物结构。存放时在衣物旁放置雪松木或薰衣草，可防虫蛀。</p>"
+    }
+   }
+  },
+  {
+   "id": 9001,
+   "name": "Nobility All Seasons Pure Wool, Navy",
+   "slug": "nobility-all-seasons-pure-wool-navy",
+   "date_created": "2026-09-01",
+   "sample": true,
+   "short_description": "<p>100% Australian Merino suiting for year-round business suits.</p>",
+   "description": "<p>From Nobility's All Seasons Pure Wool line: fine Merino that resists creasing and stays comfortable from the air-conditioned office to the street. Sold by the metre, or made up at the villa.</p>",
+   "prices": {
+    "price": "0",
+    "currency_code": "VND",
+    "currency_minor_unit": 0
+   },
+   "images": [
+    {
+     "src": "img:stock-wool-texture-1",
+     "alt": "Folded navy check and grey wool suitings"
+    }
+   ],
+   "categories": [
+    {
+     "id": 1,
+     "name": "Nobility fabrics",
+     "slug": "nobility-fabrics"
+    }
+   ],
+   "attributes": [
+    {
+     "name": "Composition",
+     "terms": [
+      {
+       "name": "100% Merino wool",
+       "slug": "merino"
+      }
+     ]
+    },
+    {
+     "name": "Colour",
+     "terms": [
+      {
+       "name": "Navy",
+       "slug": "navy"
+      }
+     ]
+    },
+    {
+     "name": "Sold by",
+     "terms": [
+      {
+       "name": "Metre",
+       "slug": "metre"
+      }
+     ]
+    }
+   ],
+   "is_in_stock": true,
+   "pct_i18n": {
+    "vi": {
+     "name": "Nobility All Seasons len nguyên chất, xanh navy",
+     "short_description": "<p>Vải 100% len Merino Úc cho suit công sở mặc quanh năm.</p>",
+     "description": "<p>Thuộc dòng All Seasons Pure Wool của Nobility: len Merino mịn, ít nhăn, dễ chịu từ văn phòng máy lạnh ra đến ngoài phố. Bán theo mét, hoặc may tại villa.</p>"
+    },
+    "zh": {
+     "name": "Nobility 四季纯羊毛，藏青",
+     "short_description": "<p>100% 澳大利亚美利奴羊毛，适合四季穿着的商务西装。</p>",
+     "description": "<p>出自 Nobility 四季纯羊毛系列：细腻的美利奴羊毛抗皱，从空调办公室到户外都舒适。可按米购买，或在别墅量身定制。</p>"
+    }
+   }
+  },
+  {
+   "id": 9002,
+   "name": "Nobility All Seasons Wool Blend, Mid Grey",
+   "slug": "nobility-all-seasons-wool-blend-mid-grey",
+   "date_created": "2026-08-20",
+   "sample": true,
+   "short_description": "<p>A hard-wearing wool blend for suits that work every day.</p>",
+   "description": "<p>From Nobility's All Seasons Wool Blends line, blended for durability. A practical choice for a first business suit. Sold by the metre, or made up at the villa.</p>",
+   "prices": {
+    "price": "0",
+    "currency_code": "VND",
+    "currency_minor_unit": 0
+   },
+   "images": [
+    {
+     "src": "img:stock-fabric-swatches-2",
+     "alt": "Swatch card of grey and navy suiting cloths"
+    }
+   ],
+   "categories": [
+    {
+     "id": 1,
+     "name": "Nobility fabrics",
+     "slug": "nobility-fabrics"
+    }
+   ],
+   "attributes": [
+    {
+     "name": "Composition",
+     "terms": [
+      {
+       "name": "Wool blend",
+       "slug": "wool-blend"
+      }
+     ]
+    },
+    {
+     "name": "Colour",
+     "terms": [
+      {
+       "name": "Grey",
+       "slug": "grey"
+      }
+     ]
+    },
+    {
+     "name": "Sold by",
+     "terms": [
+      {
+       "name": "Metre",
+       "slug": "metre"
+      }
+     ]
+    }
+   ],
+   "is_in_stock": true,
+   "pct_i18n": {
+    "vi": {
+     "name": "Nobility All Seasons len pha, xám vừa",
+     "short_description": "<p>Vải len pha bền chắc cho bộ suit mặc hằng ngày.</p>",
+     "description": "<p>Thuộc dòng All Seasons Wool Blends của Nobility, được pha để tăng độ bền. Lựa chọn thực tế cho bộ suit công sở đầu tiên. Bán theo mét, hoặc may tại villa.</p>"
+    },
+    "zh": {
+     "name": "Nobility 四季羊毛混纺，中灰",
+     "short_description": "<p>耐穿的羊毛混纺面料，适合日常穿着的西装。</p>",
+     "description": "<p>出自 Nobility 四季羊毛混纺系列，混纺以提升耐用性。第一套商务西装的务实之选。可按米购买，或在别墅量身定制。</p>"
+    }
+   }
+  },
+  {
+   "id": 9003,
+   "name": "Nobility Autumn and Winter Flannel, Charcoal",
+   "slug": "nobility-flannel-charcoal",
+   "date_created": "2026-08-10",
+   "sample": true,
+   "short_description": "<p>Soft wool flannel for colder cities and winter weddings.</p>",
+   "description": "<p>From Nobility's Fall and Winter Flannel line. A warmer cloth to take home if you live somewhere colder than Saigon. Sold by the metre, or made up at the villa.</p>",
+   "prices": {
+    "price": "0",
+    "currency_code": "VND",
+    "currency_minor_unit": 0
+   },
+   "images": [
+    {
+     "src": "img:stock-stitching-2",
+     "alt": "Sewing machine stitching dark wool cloth"
+    }
+   ],
+   "categories": [
+    {
+     "id": 1,
+     "name": "Nobility fabrics",
+     "slug": "nobility-fabrics"
+    }
+   ],
+   "attributes": [
+    {
+     "name": "Composition",
+     "terms": [
+      {
+       "name": "Wool flannel",
+       "slug": "flannel"
+      }
+     ]
+    },
+    {
+     "name": "Colour",
+     "terms": [
+      {
+       "name": "Charcoal",
+       "slug": "charcoal"
+      }
+     ]
+    },
+    {
+     "name": "Sold by",
+     "terms": [
+      {
+       "name": "Metre",
+       "slug": "metre"
+      }
+     ]
+    }
+   ],
+   "is_in_stock": true,
+   "pct_i18n": {
+    "vi": {
+     "name": "Nobility flannel thu đông, xám than",
+     "short_description": "<p>Vải flannel len mềm cho xứ lạnh và tiệc cưới mùa đông.</p>",
+     "description": "<p>Thuộc dòng Fall and Winter Flannel của Nobility. Một loại vải ấm hơn để mang về nếu bạn sống ở nơi lạnh hơn Sài Gòn. Bán theo mét, hoặc may tại villa.</p>"
+    },
+    "zh": {
+     "name": "Nobility 秋冬法兰绒，炭灰",
+     "short_description": "<p>柔软的羊毛法兰绒，适合寒冷城市和冬季婚礼。</p>",
+     "description": "<p>出自 Nobility 秋冬法兰绒系列。如果您居住的地方比西贡寒冷，这是值得带回家的保暖面料。可按米购买，或在别墅量身定制。</p>"
+    }
+   }
+  },
+  {
+   "id": 9004,
+   "name": "Nobility Pure Linen, Green",
+   "slug": "nobility-pure-linen-green",
+   "date_created": "2026-07-28",
+   "sample": true,
+   "short_description": "<p>Pure linen for summer jackets and suits in the Saigon heat.</p>",
+   "description": "<p>From Nobility's Pure Linen line for summer. Linen breathes in humid weather and softens with wear. Sold by the metre, or made up at the villa.</p>",
+   "prices": {
+    "price": "0",
+    "currency_code": "VND",
+    "currency_minor_unit": 0
+   },
+   "images": [
+    {
+     "src": "img:linen-swatch",
+     "alt": "Green linen swatch with its fabric label"
+    }
+   ],
+   "categories": [
+    {
+     "id": 1,
+     "name": "Nobility fabrics",
+     "slug": "nobility-fabrics"
+    }
+   ],
+   "attributes": [
+    {
+     "name": "Composition",
+     "terms": [
+      {
+       "name": "100% linen",
+       "slug": "linen"
+      }
+     ]
+    },
+    {
+     "name": "Colour",
+     "terms": [
+      {
+       "name": "Green",
+       "slug": "green"
+      }
+     ]
+    },
+    {
+     "name": "Sold by",
+     "terms": [
+      {
+       "name": "Metre",
+       "slug": "metre"
+      }
+     ]
+    }
+   ],
+   "is_in_stock": true,
+   "pct_i18n": {
+    "vi": {
+     "name": "Nobility linen nguyên chất, xanh lá",
+     "short_description": "<p>Vải linen nguyên chất cho áo khoác và suit mùa hè giữa cái nóng Sài Gòn.</p>",
+     "description": "<p>Thuộc dòng Pure Linen mùa hè của Nobility. Linen thoáng khí trong thời tiết ẩm và mềm dần khi mặc. Bán theo mét, hoặc may tại villa.</p>"
+    },
+    "zh": {
+     "name": "Nobility 纯亚麻，绿色",
+     "short_description": "<p>纯亚麻面料，适合西贡炎热天气下的夏季外套和西装。</p>",
+     "description": "<p>出自 Nobility 夏季纯亚麻系列。亚麻在潮湿天气中透气，越穿越柔软。可按米购买，或在别墅量身定制。</p>"
+    }
+   }
+  },
+  {
+   "id": 9005,
+   "name": "Grey Wool Blazer",
+   "slug": "grey-wool-blazer",
+   "date_created": "2026-07-15",
+   "sample": true,
+   "short_description": "<p>A light grey wool blazer with a soft shoulder, for warm days and evenings.</p>",
+   "description": "<p>A ready-to-wear light grey blazer in breathable wool, finished at the villa. Sleeve length can be adjusted before you collect.</p>",
+   "prices": {
+    "price": "0",
+    "currency_code": "VND",
+    "currency_minor_unit": 0
+   },
+   "images": [
+    {
+     "src": "img:stock-man-suit-2",
+     "alt": "Lapel and pocket square of a light grey wool jacket"
+    }
+   ],
+   "categories": [
+    {
+     "id": 2,
+     "name": "Ready-made",
+     "slug": "ready-made"
+    }
+   ],
+   "attributes": [
+    {
+     "name": "Composition",
+     "terms": [
+      {
+       "name": "Wool",
+       "slug": "wool"
+      }
+     ]
+    },
+    {
+     "name": "Colour",
+     "terms": [
+      {
+       "name": "Grey",
+       "slug": "grey"
+      }
+     ]
+    }
+   ],
+   "is_in_stock": true,
+   "pct_i18n": {
+    "vi": {
+     "name": "Áo blazer len xám",
+     "short_description": "<p>Áo blazer len xám nhạt, vai mềm, cho ngày nắng và buổi tối.</p>",
+     "description": "<p>Áo blazer may sẵn màu xám nhạt bằng len thoáng khí, hoàn thiện tại villa. Có thể chỉnh độ dài tay áo trước khi nhận.</p>"
+    },
+    "zh": {
+     "name": "浅灰羊毛西装外套",
+     "short_description": "<p>浅灰色羊毛西装外套，柔软肩线，适合温暖的白天和夜晚。</p>",
+     "description": "<p>透气羊毛制成的浅灰色成衣西装外套，在别墅完成收尾。取衣前可调整袖长。</p>"
+    }
+   }
+  },
+  {
+   "id": 9006,
+   "name": "White Poplin Dress Shirt",
+   "slug": "white-poplin-dress-shirt",
+   "date_created": "2026-07-01",
+   "sample": true,
+   "short_description": "<p>A crisp cotton poplin shirt with a cutaway collar.</p>",
+   "description": "<p>A ready-made white dress shirt in cotton poplin. For a shirt cut to your measurements, see our tailored shirts from 1,300,000 VND.</p>",
+   "prices": {
+    "price": "0",
+    "currency_code": "VND",
+    "currency_minor_unit": 0
+   },
+   "images": [
+    {
+     "src": "img:stock-shirt-detail-2",
+     "alt": "White and coloured dress shirts on wooden hangers"
+    }
+   ],
+   "categories": [
+    {
+     "id": 2,
+     "name": "Ready-made",
+     "slug": "ready-made"
+    }
+   ],
+   "attributes": [
+    {
+     "name": "Composition",
+     "terms": [
+      {
+       "name": "100% cotton",
+       "slug": "cotton"
+      }
+     ]
+    },
+    {
+     "name": "Colour",
+     "terms": [
+      {
+       "name": "White",
+       "slug": "white"
+      }
+     ]
+    }
+   ],
+   "is_in_stock": true,
+   "pct_i18n": {
+    "vi": {
+     "name": "Áo sơ mi poplin trắng",
+     "short_description": "<p>Áo sơ mi cotton poplin phẳng phiu với cổ cutaway.</p>",
+     "description": "<p>Áo sơ mi trắng may sẵn bằng cotton poplin. Nếu muốn áo may theo số đo, xem áo sơ mi may đo từ 1.300.000 ₫.</p>"
+    },
+    "zh": {
+     "name": "白色府绸正装衬衫",
+     "short_description": "<p>挺括的纯棉府绸衬衫，配宽角领。</p>",
+     "description": "<p>纯棉府绸白色成衣正装衬衫。如需按您的尺寸定制，请看我们的定制衬衫，1,300,000 越南盾起。</p>"
+    }
+   }
+  }
+ ]
+}

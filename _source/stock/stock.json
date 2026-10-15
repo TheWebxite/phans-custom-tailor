@@ -1,0 +1,232 @@
+[
+  {
+    "file": "hero-workroom-1.jpg",
+    "slot": "1 Hero: workroom / hands on suit cloth",
+    "unsplash_page_url": "https://unsplash.com/photos/oshVSMH6JZQ",
+    "photographer": "SIL Group",
+    "description": "A tailor's hands cut dark navy suiting cloth with shears beside a wooden ruler on the cutting table.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1335
+  },
+  {
+    "file": "hero-workroom-2.jpg",
+    "slot": "1 Hero: workroom / hands on suit cloth",
+    "unsplash_page_url": "https://unsplash.com/photos/HIrP05jnXNs",
+    "photographer": "Arawark chen",
+    "description": "A quiet sewing atelier with rows of wooden worktables, sewing machines, irons and canvas dress forms marked with red guide lines.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1331
+  },
+  {
+    "file": "hero-workroom-3.jpg",
+    "slot": "1 Hero: workroom (alt, portrait) / swatch and button selection",
+    "unsplash_page_url": "https://unsplash.com/photos/U4Ewfl8ewq0",
+    "photographer": "Yasamine June",
+    "description": "A tailor places horn buttons on a book of grey and navy suiting swatches to compare options.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 3019
+  },
+  {
+    "file": "chalk-scissors-1.jpg",
+    "slot": "5 Chalk marks on cloth (also works as portrait hero)",
+    "unsplash_page_url": "https://unsplash.com/photos/ksLWYYmK-0k",
+    "photographer": "Salvador Godoy",
+    "description": "A tailor in a checked shirt and tape measure handles chalk-marked tweed jacket pieces on a wooden workbench.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 3000
+  },
+  {
+    "file": "fitting-1.jpg",
+    "slot": "2 Tailor fitting a jacket on a person",
+    "unsplash_page_url": "https://unsplash.com/photos/eLfDCe9Prr8",
+    "photographer": "Tai's Captures",
+    "description": "A tailor's hands adjust the lapel and front of a grey jacket during a fitting.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1333
+  },
+  {
+    "file": "fitting-2.jpg",
+    "slot": "2 Tailor fitting a jacket on a person",
+    "unsplash_page_url": "https://unsplash.com/photos/Ri3KQSmrvn8",
+    "photographer": "Lisa Marie Theck",
+    "description": "Black-and-white photo of a man in a tailored jacket adjusting his shirt cuff during a fitting, seen past another man's shoulder.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 3000
+  },
+  {
+    "file": "fabric-swatches-1.jpg",
+    "slot": "3 Swatch books (suiting)",
+    "unsplash_page_url": "https://unsplash.com/photos/SLipZqBFLHU",
+    "photographer": "Yasamine June",
+    "description": "A suiting swatch book of blue, grey and charcoal wool samples on a wooden table with a glass magnifier.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1325
+  },
+  {
+    "file": "fabric-swatches-2.jpg",
+    "slot": "3 Swatch books (suiting)",
+    "unsplash_page_url": "https://unsplash.com/photos/Vxuk3rhzVxc",
+    "photographer": "Yasamine June",
+    "description": "Close-up of chalk-stripe, houndstooth and solid grey and navy suiting swatches under a glass magnifier.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1325
+  },
+  {
+    "file": "fabric-swatches-3.jpg",
+    "slot": "3 Swatch books (client choosing cloth)",
+    "unsplash_page_url": "https://unsplash.com/photos/-6haRt0Ntyc",
+    "photographer": "Yasamine June",
+    "description": "A seated man in shirt and tie leans over open suiting swatch books laid on a wooden table.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 3019
+  },
+  {
+    "file": "wool-texture-1.jpg",
+    "slot": "4 Wool suiting texture",
+    "unsplash_page_url": "https://unsplash.com/photos/kwpJY3RbObo",
+    "photographer": "Victor Volkov",
+    "description": "Folded layers of navy check, mid-grey and light grey wool suiting cloth.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 2667
+  },
+  {
+    "file": "wool-texture-2.jpg",
+    "slot": "4 Wool suiting texture",
+    "unsplash_page_url": "https://unsplash.com/photos/t3mSDMjd9ZY",
+    "photographer": "Victor Volkov",
+    "description": "Folded layers of tan, houndstooth and dark brown wool suiting cloth.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 2667
+  },
+  {
+    "file": "man-suit-1.jpg",
+    "slot": "6 Man in well-fitted suit",
+    "unsplash_page_url": "https://unsplash.com/photos/bFYoyKivbmg",
+    "photographer": "Samantha Gades",
+    "description": "A man in a light grey three-piece suit buttons his jacket outdoors, face cropped out of frame.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1335
+  },
+  {
+    "file": "man-suit-2.jpg",
+    "slot": "6 Man in suit, lapel detail",
+    "unsplash_page_url": "https://unsplash.com/photos/MujZAKea8Lw",
+    "photographer": "Hardini Lestari",
+    "description": "Close-up of a light grey suit jacket lapel with a striped tie and a navy polka-dot pocket square.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1333
+  },
+  {
+    "file": "woman-suit-1.jpg",
+    "slot": "7 Woman in tailored suit",
+    "unsplash_page_url": "https://unsplash.com/photos/UuFX_dLxDSQ",
+    "photographer": "Alekon pictures",
+    "description": "A woman in a camel tailored trouser suit and sunglasses stands in a stone doorway in sunlight.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 2500
+  },
+  {
+    "file": "woman-suit-2.jpg",
+    "slot": "7 Woman in tailored suit",
+    "unsplash_page_url": "https://unsplash.com/photos/Tmqu835ZNZY",
+    "photographer": "Mirko di Micco",
+    "description": "A woman fastens the belt of a brown check tailored jacket worn over a white shirt.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 2834
+  },
+  {
+    "file": "shirt-detail-1.jpg",
+    "slot": "8 Dress shirt detail",
+    "unsplash_page_url": "https://unsplash.com/photos/Y_E0Or3TUpg",
+    "photographer": "Nick Karvounis",
+    "description": "A man fastens a silver cufflink on the French cuff of a white dress shirt worn under a navy waistcoat.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1429
+  },
+  {
+    "file": "shirt-detail-2.jpg",
+    "slot": "8 Dress shirt detail",
+    "unsplash_page_url": "https://unsplash.com/photos/kY8hmUQV9Ek",
+    "photographer": "Nimble Made",
+    "description": "Collars of white, light blue and pink dress shirts hanging on wooden hangers.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1333
+  },
+  {
+    "file": "linen-1.jpg",
+    "slot": "9 Linen in warm climate",
+    "unsplash_page_url": "https://unsplash.com/photos/6dwlLzbMYhM",
+    "photographer": "Fotógrafo Samuel Cruz",
+    "description": "Three men in cream linen shirts, jacket and trousers look out from a sunny balcony over a coastal city.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1333
+  },
+  {
+    "file": "linen-2.jpg",
+    "slot": "9 Linen fabric texture",
+    "unsplash_page_url": "https://unsplash.com/photos/xTaOPMa6wAE",
+    "photographer": "Annie Spratt",
+    "description": "Flat close-up of natural beige linen fabric texture.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1552
+  },
+  {
+    "file": "trousers-1.jpg",
+    "slot": "10 Trousers detail / hem",
+    "unsplash_page_url": "https://unsplash.com/photos/kg3N8vqvMd8",
+    "photographer": "Clem Onojeghuo",
+    "description": "Grey houndstooth trousers with a cuffed hem break over polished tan leather shoes.",
+    "orientation": "portrait",
+    "width": 2000,
+    "height": 3000
+  },
+  {
+    "file": "pressing-1.jpg",
+    "slot": "10 Pressing",
+    "unsplash_page_url": "https://unsplash.com/photos/Bf8ojHnEvVc",
+    "photographer": "Dzulfikar Alkautsar",
+    "description": "A hand presses a white cotton shirt with a small steam iron.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1333
+  },
+  {
+    "file": "stitching-1.jpg",
+    "slot": "11 Hand stitching",
+    "unsplash_page_url": "https://unsplash.com/photos/5ZQn_gWKvLE",
+    "photographer": "Elio Santos",
+    "description": "Close-up of weathered hands sewing light linen fabric with a needle and thread.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1333
+  },
+  {
+    "file": "stitching-2.jpg",
+    "slot": "11 Sewing machine",
+    "unsplash_page_url": "https://unsplash.com/photos/jNKv4QohAk0",
+    "photographer": "Alexander Andrews",
+    "description": "Sewing machine presser foot and white thread over dark wool twill cloth.",
+    "orientation": "landscape",
+    "width": 2000,
+    "height": 1335
+  }
+]

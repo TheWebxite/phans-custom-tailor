@@ -1,0 +1,219 @@
+{
+ "villa-lounge": {
+  "w": 1360,
+  "h": 907,
+  "small": true,
+  "mid": false,
+  "origin": "client"
+ },
+ "showroom": {
+  "w": 1280,
+  "h": 749,
+  "small": true,
+  "mid": false,
+  "origin": "client"
+ },
+ "campaign-group": {
+  "w": 2000,
+  "h": 1125,
+  "small": true,
+  "mid": true,
+  "origin": "client"
+ },
+ "hs-cloth-navy": {
+  "w": 1920,
+  "h": 550,
+  "small": true,
+  "mid": true,
+  "origin": "client (Holland & Sherry cloth image)"
+ },
+ "linen-swatch": {
+  "w": 2000,
+  "h": 1606,
+  "small": true,
+  "mid": true,
+  "origin": "client"
+ },
+ "nobility-books": {
+  "w": 1024,
+  "h": 573,
+  "small": true,
+  "mid": false,
+  "origin": "client"
+ },
+ "cavani-blazer": {
+  "w": 1500,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "client (shop product image)"
+ },
+ "stock-hero-workroom-1": {
+  "w": 2000,
+  "h": 1335,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/oshVSMH6JZQ / SIL Group"
+ },
+ "stock-hero-workroom-2": {
+  "w": 2000,
+  "h": 1331,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/HIrP05jnXNs / Arawark chen"
+ },
+ "stock-hero-workroom-3": {
+  "w": 1325,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/U4Ewfl8ewq0 / Yasamine June"
+ },
+ "stock-chalk-scissors-1": {
+  "w": 1333,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/ksLWYYmK-0k / Salvador Godoy"
+ },
+ "stock-fitting-1": {
+  "w": 2000,
+  "h": 1333,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/eLfDCe9Prr8 / Tai's Captures"
+ },
+ "stock-fitting-2": {
+  "w": 1333,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/Ri3KQSmrvn8 / Lisa Marie Theck"
+ },
+ "stock-fabric-swatches-1": {
+  "w": 2000,
+  "h": 1325,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/SLipZqBFLHU / Yasamine June"
+ },
+ "stock-fabric-swatches-2": {
+  "w": 2000,
+  "h": 1325,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/Vxuk3rhzVxc / Yasamine June"
+ },
+ "stock-fabric-swatches-3": {
+  "w": 1325,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/-6haRt0Ntyc / Yasamine June"
+ },
+ "stock-wool-texture-1": {
+  "w": 1500,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/kwpJY3RbObo / Victor Volkov"
+ },
+ "stock-wool-texture-2": {
+  "w": 1500,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/t3mSDMjd9ZY / Victor Volkov"
+ },
+ "stock-man-suit-1": {
+  "w": 2000,
+  "h": 1335,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/bFYoyKivbmg / Samantha Gades"
+ },
+ "stock-man-suit-2": {
+  "w": 2000,
+  "h": 1333,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/MujZAKea8Lw / Hardini Lestari"
+ },
+ "stock-woman-suit-1": {
+  "w": 1600,
+  "h": 2000,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/UuFX_dLxDSQ / Alekon pictures"
+ },
+ "stock-woman-suit-2": {
+  "w": 1411,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/Tmqu835ZNZY / Mirko di Micco"
+ },
+ "stock-shirt-detail-1": {
+  "w": 2000,
+  "h": 1429,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/Y_E0Or3TUpg / Nick Karvounis"
+ },
+ "stock-shirt-detail-2": {
+  "w": 2000,
+  "h": 1333,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/kY8hmUQV9Ek / Nimble Made"
+ },
+ "stock-linen-1": {
+  "w": 2000,
+  "h": 1333,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/6dwlLzbMYhM / Fot\u00f3grafo Samuel Cruz"
+ },
+ "stock-linen-2": {
+  "w": 2000,
+  "h": 1552,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/xTaOPMa6wAE / Annie Spratt"
+ },
+ "stock-trousers-1": {
+  "w": 1333,
+  "h": 2000,
+  "small": true,
+  "mid": false,
+  "origin": "unsplash: https://unsplash.com/photos/kg3N8vqvMd8 / Clem Onojeghuo"
+ },
+ "stock-pressing-1": {
+  "w": 2000,
+  "h": 1333,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/Bf8ojHnEvVc / Dzulfikar Alkautsar"
+ },
+ "stock-stitching-1": {
+  "w": 2000,
+  "h": 1333,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/5ZQn_gWKvLE / Elio Santos"
+ },
+ "stock-stitching-2": {
+  "w": 2000,
+  "h": 1335,
+  "small": true,
+  "mid": true,
+  "origin": "unsplash: https://unsplash.com/photos/jNKv4QohAk0 / Alexander Andrews"
+ },
+ "hs-cloth-navy-gl": {
+  "w": 1420,
+  "h": 550,
+  "small": false,
+  "mid": false,
+  "origin": "client (cropped texture for the WebGL cloth)"
+ }
+}

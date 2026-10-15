@@ -1,0 +1,33 @@
+{
+  "siteUrl": "https://tailormadesuit.net",
+  "indexable": false,
+  "languages": [
+    "en",
+    "vi",
+    "zh"
+  ],
+  "contact": {
+    "phoneDisplay": "+84 826 977 888",
+    "phoneHref": "tel:+84826977888",
+    "whatsapp": "84826977888",
+    "zalo": "https://zalo.me/0826977888",
+    "messenger": "https://m.me/108520260558644",
+    "email": "info@phantailor.com",
+    "booking": "https://koalendar.com/e/phantailor",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phan%27s+Custom+Tailor%2C+08+D9%2C+Saigon+Pearl%2C+Ho+Chi+Minh+City",
+    "mapsEmbed": "https://www.google.com/maps?q=Phan%27s+Custom+Tailor,+Ho+Chi+Minh+City&output=embed"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/phanstailor/",
+    "facebook": "https://www.facebook.com/phanstailor/",
+    "tripadvisor": "https://www.tripadvisor.com/Attraction_Review-g293925-d4795476-Reviews-Phan_s_Custom_Tailor-Ho_Chi_Minh_City.html"
+  },
+  "forms": {
+    "formsubmitEmail": "info@phantailor.com"
+  },
+  "shop": {
+    "storeApiBase": "",
+    "wooBase": "https://shop.tailormadesuit.net",
+    "checkoutEnabled": false
+  }
+}

@@ -1,0 +1,12 @@
+# build output and local tooling
+dist/
+node_modules/
+.vercel/
+.env*
+.DS_Store
+
+# QA screenshots and pitch working files (regenerate with scripts/shots.py and pitch/build_pdf.py)
+qa/
+pitch/check/
+pitch/shots/
+pitch/cap/*.png

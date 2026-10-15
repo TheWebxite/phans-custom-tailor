@@ -1,0 +1,73 @@
+
+@page { size: 1280px 720px; margin: 0; }
+:root { --ink:#141414; --paper:#f7f6f3; --stone:#d8d5cf; --mute:#5f5f5f; --navy:#1e2a3a; --red:#e0362b; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Be Vietnam Pro", system-ui, sans-serif; color: var(--ink); font-size: 14.5px; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; background:#777; }
+.slide { width: 1280px; height: 720px; background: var(--paper); position: relative; overflow: hidden; break-after: page; padding: 46px 64px 0; }
+.slide:last-child { break-after: auto; }
+/* fixed header band so every slide body starts at the same line */
+.hd { height: 128px; }
+.kicker { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--mute); margin-bottom: 10px; }
+h2 { font-family: "Prata", Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.2; max-width: 1050px; }
+.body { position: absolute; left: 64px; right: 64px; top: 182px; bottom: 58px; }
+.foot { position: absolute; left: 64px; right: 64px; bottom: 20px; display: flex; justify-content: space-between; font-size: 10.5px; color: var(--mute); border-top: 1px solid var(--stone); padding-top: 9px; }
+.note { position: absolute; left: 64px; right: 64px; bottom: 50px; font-size: 12.5px; color: var(--mute); }
+/* layouts: text 440 | gap 44 | media 668 */
+.split { display: grid; grid-template-columns: 440px 1fr; gap: 44px; }
+.split > .text { justify-content: center; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.text, .col { display: flex; flex-direction: column; gap: 18px; }
+.stack { display: grid; grid-template-rows: 1fr 1fr; gap: 14px; min-height: 0; }
+.media { background: #fff; border: 1px solid var(--stone); box-shadow: 0 14px 34px rgba(20,20,20,.09); overflow: hidden; height: 100%; min-height: 0; }
+.media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.media.dark { background: #141414; }
+figure { display: flex; flex-direction: column; min-height: 0; gap: 8px; }
+figure .media { flex: 1; }
+figcaption { font-size: 12px; color: var(--mute); line-height: 1.45; }
+.lead { font-size: 15.5px; color: #2b2b2b; }
+ul.pts { list-style: none; counter-reset: pt; display: grid; gap: 11px; }
+ul.pts li { position: relative; padding-left: 30px; font-size: 14px; }
+ul.pts li b { font-weight: 600; }
+ul.pts li::before { counter-increment: pt; content: counter(pt); position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 10.5px; font-weight: 600; display: grid; place-items: center; }
+ul.pts.red li::before { background: var(--red); }
+.why { border-left: 3px solid var(--navy); padding: 3px 0 3px 15px; font-size: 13.5px; color: #2b2b2b; }
+.why b { display: block; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--navy); margin-bottom: 3px; }
+.badge { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--red); color: #fff; font-size: 11px; font-weight: 600; margin-right: 8px; vertical-align: -5px; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 30px; align-content: start; padding-top: 6px; }
+.stat { font-family: "Prata", serif; font-size: 44px; line-height: 1; }
+.stat small { display: block; font-family: "Be Vietnam Pro"; font-size: 12.5px; color: var(--mute); margin-top: 8px; line-height: 1.4; }
+.span2 { grid-column: 1 / -1; }
+table.mini { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+table.mini td { padding: 8px 0; border-bottom: 1px solid var(--stone); vertical-align: top; }
+table.mini td:first-child { width: 96px; font-weight: 600; }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; min-height: 0; }
+/* language slide: menu left (large), dropdown + footer right */
+.langgrid { display: grid; grid-template-columns: 7fr 5fr; grid-template-rows: 1fr 1fr; gap: 16px 24px; bottom: 82px; }
+.lg-a { grid-row: 1 / 3; }
+.phones { display: flex; justify-content: flex-end; gap: 22px; align-items: flex-start; }
+.phone { width: 212px; border-radius: 26px; border: 7px solid #141414; overflow: hidden; background: #141414; box-shadow: 0 14px 34px rgba(20,20,20,.16); }
+.phone img { display: block; width: 100%; }
+.colhd { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; }
+.tiles { display: grid; gap: 12px; grid-auto-rows: 1fr; height: calc(100% - 26px); }
+.cols2 > div:not(:has(.colhd)) .tiles { height: calc(100% - 30px); }
+.tile { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--stone); padding: 13px 16px; }
+.tile .ic { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; }
+.tile .ic svg { width: 20px; height: 20px; }
+.tile h3 { font-size: 15.5px; font-weight: 600; margin-bottom: 2px; }
+.tile p { font-size: 13px; color: var(--mute); line-height: 1.4; }
+.biglink { font-family: "Prata", serif; font-size: 25px; }
+.biglink a, a { color: var(--navy); }
+.sig { font-size: 13px; color: var(--mute); }
+/* cover */
+.cover { padding: 0; display: flex; background: var(--ink); color: #fff; }
+.cover .left { width: 46%; padding: 60px 56px 48px 64px; display: flex; flex-direction: column; justify-content: space-between; }
+.cover .right { width: 54%; position: relative; }
+.cover .right img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 30%; }
+.cover h1 { font-family: "Prata", serif; font-weight: 400; font-size: 42px; line-height: 1.14; margin: 26px 0 18px; }
+.cover p { color: rgba(255,255,255,.85); font-size: 15.5px; max-width: 430px; }
+.logo { width: 160px; }
+.links { font-size: 13px; color: rgba(255,255,255,.85); display: grid; gap: 6px; }
+.links a { color: #fff; }
+.links .date { margin-top: 10px; color: rgba(255,255,255,.55); }

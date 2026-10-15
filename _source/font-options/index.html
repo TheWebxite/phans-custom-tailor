@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Font options – Phan's Custom Tailor</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Hanken+Grotesk:wght@300;400;500;600&family=Noto+Serif+Display:wght@300;400;500&family=Archivo:wght@300;400;500&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500&family=Cormorant+Garamond:wght@500&family=Be+Vietnam+Pro:wght@300;500&display=swap">
+<style>
+body{margin:0;background:#f7f6f3;color:#141414;font-family:system-ui}
+.opt{display:grid;grid-template-columns:1.15fr 1fr;border-bottom:1px solid #d8d5cf}
+.label{grid-column:1/-1;padding:28px 40px 0;font:500 13px/1.4 system-ui;letter-spacing:.12em;text-transform:uppercase;color:#5f5f5f}
+.label b{color:#141414;font-size:22px;letter-spacing:0;text-transform:none;display:block;margin-top:4px;font-weight:600}
+.hero{position:relative;margin:20px 0 40px 40px;min-height:430px;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero::after{content:"";position:absolute;inset:0;background:rgba(14,14,14,.45)}
+.hero div{position:relative;z-index:1;padding:36px}
+.k{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-bottom:16px}
+h1{margin:0;font-weight:400;font-size:58px;line-height:1.04;max-width:9em}
+.sub{margin:18px 0 22px;font-size:16px;line-height:1.6;max-width:30em;opacity:.92}
+.btn{display:inline-block;background:#fff;color:#141414;padding:13px 22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.side{padding:20px 40px 40px}
+h2{margin:0 0 18px;font-weight:400;font-size:40px;line-height:1.08}
+.row{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #d8d5cf;padding:14px 0}
+.row span:first-child{font-size:24px}.row span:last-child{font-size:15px}
+p.body{font-size:16px;line-height:1.7;color:#2b2b2b;margin:18px 0}
+.vi{font-size:30px;line-height:1.2;margin:22px 0 6px}.zh{font-size:15px;color:#5f5f5f}
+/* A: Prata + Hanken Grotesk */
+#a .serif{font-family:Prata,serif}#a{font-family:"Hanken Grotesk",sans-serif;font-weight:400}#a h1{font-size:54px}
+/* B: Noto Serif Display + Archivo */
+#b .serif{font-family:"Noto Serif Display",serif;font-weight:300}#b{font-family:Archivo,sans-serif;font-weight:400}#b h1{font-size:64px;letter-spacing:-.01em}
+/* C: Old Standard TT + IBM Plex Sans */
+#c .serif{font-family:"Old Standard TT",serif}#c{font-family:"IBM Plex Sans",sans-serif;font-weight:400}
+/* D: all sans (Hanken Grotesk) */
+#d .serif{font-family:"Hanken Grotesk",sans-serif;font-weight:300;letter-spacing:-.02em}#d{font-family:"Hanken Grotesk",sans-serif}#d h1{font-size:60px;line-height:1}
+/* current */
+#z .serif{font-family:"Cormorant Garamond",serif;font-weight:500}#z{font-family:"Be Vietnam Pro",sans-serif;font-weight:300}
+@media(max-width:900px){.opt{grid-template-columns:1fr}.hero{margin:20px 20px 0}.side{padding:24px 20px 40px}h1{font-size:42px!important}}
+</style></head><body>
+<section class="opt" id="a"><p class="label">Option A<b>Prata + Hanken Grotesk</b><span style="text-transform:none;letter-spacing:0;font-size:15px">Fashion-house Didone. High contrast, sharp hairlines, closest to Brioni and old tailoring labels.</span></p>
+<div class="hero"><img src="hero.webp" alt=""><div><span class="k">Bespoke tailor in Ho Chi Minh City</span><h1 class="serif">Cut and fitted by the founders</h1><p class="sub">Suits, shirts and trousers made to your measurements in a private villa in Saigon Pearl, ready within five working days.</p><span class="btn">Book an appointment</span></div></div>
+<div class="side"><h2 class="serif">Suits, shirts and trousers, with prices</h2>
+<div class="row"><span class="serif">2-piece suit</span><span>from 6,800,000 VND</span></div><div class="row"><span class="serif">3-piece suit</span><span>from 8,400,000 VND</span></div><div class="row"><span class="serif">Tailored shirt</span><span>from 1,300,000 VND</span></div>
+<p class="body">Thinh and Thuong Phan trained at the Ho Chi Minh City University of Architecture before taking up the family trade.</p>
+<p class="vi serif">Hai nhà sáng lập tự tay cắt và thử</p><p class="zh">由创始人亲自剪裁试身 (Chinese uses system fonts in every option)</p></div></section><section class="opt" id="b"><p class="label">Option B<b>Noto Serif Display + Archivo</b><span style="text-transform:none;letter-spacing:0;font-size:15px">Light, tall magazine serif (Vogue / editorial) with a clean grotesk. Quiet and expensive.</span></p>
+<div class="hero"><img src="hero.webp" alt=""><div><span class="k">Bespoke tailor in Ho Chi Minh City</span><h1 class="serif">Cut and fitted by the founders</h1><p class="sub">Suits, shirts and trousers made to your measurements in a private villa in Saigon Pearl, ready within five working days.</p><span class="btn">Book an appointment</span></div></div>
+<div class="side"><h2 class="serif">Suits, shirts and trousers, with prices</h2>
+<div class="row"><span class="serif">2-piece suit</span><span>from 6,800,000 VND</span></div><div class="row"><span class="serif">3-piece suit</span><span>from 8,400,000 VND</span></div><div class="row"><span class="serif">Tailored shirt</span><span>from 1,300,000 VND</span></div>
+<p class="body">Thinh and Thuong Phan trained at the Ho Chi Minh City University of Architecture before taking up the family trade.</p>
+<p class="vi serif">Hai nhà sáng lập tự tay cắt và thử</p><p class="zh">由创始人亲自剪裁试身 (Chinese uses system fonts in every option)</p></div></section><section class="opt" id="c"><p class="label">Option C<b>Old Standard TT + IBM Plex Sans</b><span style="text-transform:none;letter-spacing:0;font-size:15px">19th-century book face, like a tailor's ledger or Savile Row trade card. Most heritage, least trendy.</span></p>
+<div class="hero"><img src="hero.webp" alt=""><div><span class="k">Bespoke tailor in Ho Chi Minh City</span><h1 class="serif">Cut and fitted by the founders</h1><p class="sub">Suits, shirts and trousers made to your measurements in a private villa in Saigon Pearl, ready within five working days.</p><span class="btn">Book an appointment</span></div></div>
+<div class="side"><h2 class="serif">Suits, shirts and trousers, with prices</h2>
+<div class="row"><span class="serif">2-piece suit</span><span>from 6,800,000 VND</span></div><div class="row"><span class="serif">3-piece suit</span><span>from 8,400,000 VND</span></div><div class="row"><span class="serif">Tailored shirt</span><span>from 1,300,000 VND</span></div>
+<p class="body">Thinh and Thuong Phan trained at the Ho Chi Minh City University of Architecture before taking up the family trade.</p>
+<p class="vi serif">Hai nhà sáng lập tự tay cắt và thử</p><p class="zh">由创始人亲自剪裁试身 (Chinese uses system fonts in every option)</p></div></section><section class="opt" id="d"><p class="label">Option D<b>Hanken Grotesk only</b><span style="text-transform:none;letter-spacing:0;font-size:15px">No serif at all: a modern grotesk throughout, like Suitsupply. The logo carries the classic feel.</span></p>
+<div class="hero"><img src="hero.webp" alt=""><div><span class="k">Bespoke tailor in Ho Chi Minh City</span><h1 class="serif">Cut and fitted by the founders</h1><p class="sub">Suits, shirts and trousers made to your measurements in a private villa in Saigon Pearl, ready within five working days.</p><span class="btn">Book an appointment</span></div></div>
+<div class="side"><h2 class="serif">Suits, shirts and trousers, with prices</h2>
+<div class="row"><span class="serif">2-piece suit</span><span>from 6,800,000 VND</span></div><div class="row"><span class="serif">3-piece suit</span><span>from 8,400,000 VND</span></div><div class="row"><span class="serif">Tailored shirt</span><span>from 1,300,000 VND</span></div>
+<p class="body">Thinh and Thuong Phan trained at the Ho Chi Minh City University of Architecture before taking up the family trade.</p>
+<p class="vi serif">Hai nhà sáng lập tự tay cắt và thử</p><p class="zh">由创始人亲自剪裁试身 (Chinese uses system fonts in every option)</p></div></section><section class="opt" id="z"><p class="label">Option Current<b>Cormorant Garamond + Be Vietnam Pro</b><span style="text-transform:none;letter-spacing:0;font-size:15px">For comparison.</span></p>
+<div class="hero"><img src="hero.webp" alt=""><div><span class="k">Bespoke tailor in Ho Chi Minh City</span><h1 class="serif">Cut and fitted by the founders</h1><p class="sub">Suits, shirts and trousers made to your measurements in a private villa in Saigon Pearl, ready within five working days.</p><span class="btn">Book an appointment</span></div></div>
+<div class="side"><h2 class="serif">Suits, shirts and trousers, with prices</h2>
+<div class="row"><span class="serif">2-piece suit</span><span>from 6,800,000 VND</span></div><div class="row"><span class="serif">3-piece suit</span><span>from 8,400,000 VND</span></div><div class="row"><span class="serif">Tailored shirt</span><span>from 1,300,000 VND</span></div>
+<p class="body">Thinh and Thuong Phan trained at the Ho Chi Minh City University of Architecture before taking up the family trade.</p>
+<p class="vi serif">Hai nhà sáng lập tự tay cắt và thử</p><p class="zh">由创始人亲自剪裁试身 (Chinese uses system fonts in every option)</p></div></section>
+</body></html>

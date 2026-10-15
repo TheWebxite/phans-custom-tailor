@@ -1,0 +1,12 @@
+{
+  "note": "From prices in VND. Include the full tailoring process and lifetime free alterations. Source: client FAQ on tailormadesuit.net.",
+  "items": [
+    { "key": "suit2", "from": 6800000 },
+    { "key": "suit3", "from": 8400000 },
+    { "key": "trousers", "from": 2200000 },
+    { "key": "shirt", "from": 1300000 },
+    { "key": "blazer", "from": null, "confirm": "Price not on the current site" },
+    { "key": "waistcoat", "from": null, "confirm": "Price not on the current site" },
+    { "key": "coat", "from": null, "confirm": "Price not on the current site" }
+  ]
+}

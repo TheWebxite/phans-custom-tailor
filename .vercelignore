@@ -1,0 +1,8 @@
+# Git deployments build from source: keep build.mjs, src/, assets/ and package.json
+_source/
+qa/
+pitch/
+docs/
+scripts/
+dist/
+*.md
