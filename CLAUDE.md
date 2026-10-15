@@ -43,11 +43,13 @@
 - Assistant memory note: `~/.claude/projects/-Users-hengzhexin-Desktop-Client-PhanCustom/memory/phans-vercel-deploy.md`.
 
 ## Open items
+- GitHub: local repo ready (branch `main`, root `vercel.json` builds from Git, project root linked to Vercel `phans-custom-tailor-demo`). Waiting for the user to sign in to GitHub on this Mac (no gh CLI / SSH key / saved login) — then create private repo, push, and connect it to the Vercel project.
 - Old copy of the site (pre-mobile-fix) still live at https://phans-custom-tailor.vercel.app on the other Vercel account (hengzhexin-7856, team `zxheng`) — delete it or leave it; don't send that link.
 - Awaiting client response to the pitch.
 - Before launch (see `CONFIRM.md`): Facebook page, final domain, "since 2013", founder names, missing prices (blazer, waistcoat, overcoat, women's), VND vs USD, Tết closure dates, six sample shop products, 23 stock photos to replace with client photos, geo coordinates, FormSubmit activation, native review of VI/ZH translations, set `indexable: true`, strip CONFIRM/PLACEHOLDER comments, connect WooCommerce.
 
 ## Change log
+- 2026-10-15 — Git repo initialised (main), `.gitignore`/`.vercelignore` set for Git deploys, build now writes root `vercel.json` (build `node build.mjs`, output `dist`); clean clone builds OK. Not pushed yet (no GitHub auth on this Mac).
 - 2026-10-15 — Redeployed latest build to thewebxite.ai Vercel (phans-custom-tailor-demo); old 14-slide deck re-rendered with the new demo link.
 - 2026-10-15 — Moved the demo to the thewebxite.ai Vercel account: project `phans-custom-tailor-demo` in team `thewebxiteai-6218s-projects`, live at https://phans-custom-tailor-demo.vercel.app (includes the 2026-10-14 mobile fixes). Updated the link in both PDF decks (rebuilt with real fonts), the outreach message draft and README.
 - 2026-10-14 — Mobile audit + fixes (shorter pages, compact process steps, squarer photos, simplified footer); not yet deployed due to network outage. Pitch decks rebuilt as 16-slide VI + EN PDFs from `pitch/build_pdf.py`.
