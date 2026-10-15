@@ -41,17 +41,17 @@ Open http://localhost:4321.
 
 ## Deploy the proposal to Vercel
 
-The live proposal is at **https://phans-custom-tailor-demo.vercel.app**. It's Vercel project `phans-custom-tailor-demo` on team `thewebxiteai-6218s-projects`.
+Live proposal: **https://phans-custom-tailor-demo.vercel.app**. It's Vercel project `phans-custom-tailor-demo` in the thewebxite.ai team (`thewebxiteai-6218s-projects`).
+
+The code is at **https://github.com/TheWebxite/phans-custom-tailor** (private), connected to that Vercel project. To deploy:
 
 ```
-node build.mjs                 # keeps dist/.vercel, so redeploys go to the same project
-cd dist && npx vercel deploy --prod --yes --scope thewebxiteai-6218s-projects
+git add -A && git commit -m "…" && git push
 ```
 
-The build writes three Vercel files into `dist/`:
-- `dist/vercel.json` holds the 301 redirects from the old Haravan URLs (with and without a trailing slash).
-- The same `vercel.json` adds a `noindex` header while `indexable` is false. Every page also carries a `noindex` meta tag.
-- `dist/.vercelignore` keeps `_hosting/` and any `.env*` files out of the upload.
+Vercel builds every push to `main` using the root `vercel.json` (`node build.mjs`, output `dist/`), which also holds the redirects and the `noindex` header. The build regenerates `vercel.json`, so commit it whenever it changes. `.vercelignore` keeps `_source/`, `qa/` and `pitch/` out of the build upload.
+
+Manual fallback from the project root: `npx vercel deploy --prod --yes --scope thewebxiteai-6218s-projects`.
 
 ## Launch on our hosting
 
