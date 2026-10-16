@@ -56,6 +56,7 @@
 - Before launch (see `CONFIRM.md`): Facebook page, final domain, "since 2013", founder names, missing prices (blazer, waistcoat, overcoat, women's), VND vs USD, Tết closure dates, six sample shop products, 23 stock photos to replace with client photos, geo coordinates, FormSubmit activation, native review of VI/ZH translations, set `indexable: true`, strip CONFIRM/PLACEHOLDER comments, connect WooCommerce.
 
 ## Change log
+- 2026-10-17 — Call briefing PDF for Kimlien (VI + EN, 5 pages A4: summary, context, call order, domain/hosting diagram, positions, Q&A, don't-promise, checklist, pre-call message appendix) built by `pitch/build_briefing.py`.
 - 2026-10-17 — Finalised pre-call message (catalogue-only shop, Koalendar booking, phanscustomtailor.com recommended, AI fitting room left out) and wrote Kimlien's call briefing (VI + EN): plain-language glossary, our positions, likely questions + answers, don't-promise list, info checklist.
 - 2026-10-16 — Drafted pre-call message to anh Thịnh (VI + EN): collaboration scope, how hosting/domain/shop work in plain terms, what changes at switch-over, info needed, next steps.
 - 2026-10-15 — Pitch decks (VI + EN) now 17 slides: new slide 5 "AI fitting room" with before/after try-on (grey suit → Cavani linen blazer), cover line, shop slide shows Try-On badges, features tile. Try-on tested with a fake camera feed from a stock photo (one pass used).
