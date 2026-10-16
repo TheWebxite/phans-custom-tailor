@@ -1,0 +1,79 @@
+CALL BRIEFING: ANH THỊNH (PHAN'S CUSTOM TAILOR)
+English check copy of briefing-cuoc-goi-Kimlien.txt (Kimlien gets the Vietnamese one).
+
+A. QUICK CONTEXT
+• Client: Thinh Phan, co-founder of Phan's Custom Tailor (bespoke tailor in a villa in Saigon Pearl, Binh Thanh). Many overseas customers: 4.8 on Tripadvisor (975 reviews), 4.9 on Google (1,115 reviews).
+• Us: TheWebxite (TWX), a software and AI company in Malaysia run by Yong. Yong built the demo; Kimlien speaks with the client in Vietnamese.
+• Demo: https://phans-custom-tailor-demo.vercel.app/ (a preview, not the official site yet).
+• Thinh replied very positively, correctly guessed we used AI (Claude), mentioned he's working with a separate Web 3D team, and asked what kind of collaboration we have in mind.
+
+B. GOALS FOR THE CALL
+1) Understand what Thinh wants from the new site.
+2) Agree the phase 1 scope (section D).
+3) Collect the information in section G.
+4) Say Yong will send a quote and timeline after the call. No prices agreed on the call.
+
+C. PLAIN-LANGUAGE EXPLANATIONS
+• Domain: the website's address, like a street address (e.g. phanscustomtailor.com). Paid yearly, owned by the business.
+• Hosting: the "house" the website lives in: the server that stores content and photos so the site is open 24/7. The domain is the address; hosting is the house at that address.
+• Pointing the domain (DNS): when moving house, we change the directions so the old address leads to the new house. We do this; we only need access to the domain account.
+• https / the padlock in the browser: the site is secure. Included, free.
+• Redirects: old Google links automatically lead to the matching new pages, so Phan's keeps its search ranking.
+• Haravan: the platform behind the current site (software and hosting in one). Keep it until the new site is live, then stop it.
+• Vercel: where the demo runs; a global server network, so the site loads fast in any country.
+• Koalendar: the booking tool Phan's already uses. The new site just links to it.
+• Payment gateway: a service that lets customers pay online by card or wallet. In Vietnam usually OnePay or VNPay. (Razorpay from Malaysia doesn't serve Vietnamese businesses.)
+• Maintenance: after launch we monitor, update, back up, fix issues and make small content changes.
+
+D. OUR POSITION (AGREED WITH YONG)
+1) Phase 1 scope: three-language site (English main, Vietnamese, Chinese); prices; process; fabrics; booking; WhatsApp and Zalo; showcase shop; old articles moved over; Google optimisation.
+2) Domain: Phan's already owns phanscustomtailor.com (on Google Maps) and tailormadesuit.net. We suggest phanscustomtailor.com as the main address since it matches the brand; tailormadesuit.net forwards to it. No new domain needed. If he prefers tailormadesuit.net as main, we do it the other way round. The domain always stays in Phan's name.
+3) Hosting: TWX handles it all: buying and managing hosting, security, backups, maintenance. Hosting and maintenance costs will be in the quote.
+4) Booking: keep the Koalendar calendar he already uses; the site's booking buttons link to it. No new booking system; he manages his calendar as today.
+5) Shop: phase 1 is showcase only. Customers browse cloth and ready-made pieces, then ask about price on WhatsApp/Zalo or book a visit. No cart, no login, no online payment.
+   Why: selling online needs someone handling orders daily, packing, international shipping, returns, and signing up for a payment gateway (OnePay, VNPay). For made-to-measure, customers still come to the villa to be measured, so a showcase is enough. If he wants online sales later, that's phase 2.
+6) Customer accounts and cart on the old site: not needed in phase 1 (the old shop has only one product).
+7) Timeline: about 1 week after we receive everything in section G.
+8) Web 3D team: complementary, not competing. The website is the main home; their 3D experience can go on a page or section inside it. We're happy to coordinate with them.
+9) Using AI: be upfront. TWX is a software and AI company; AI makes us faster and better, but design, testing and support are done by real people.
+
+E. QUESTIONS HE MAY ASK, WITH SUGGESTED ANSWERS
+• "How much?" → "Yong will send a detailed quote right after this call, based on what you choose today." (No numbers.)
+• "Any monthly fee?" → "Yes, hosting and maintenance; Yong will list it in the quote."
+• "How long?" → "About 1 week after you send all the photos and information."
+• "Can we edit content ourselves?" → "Just message us what to change and we update it under maintenance. If you'd like to edit it yourselves, we can discuss that." (Don't promise a self-edit admin panel.)
+• "Will this affect our Google ranking?" → "No, old links forward to the new pages."
+• "Will email be interrupted?" → "No, info@phantailor.com stays as it is."
+• "When do we stop Haravan?" → "Once the new site is running smoothly; until then Haravan keeps working."
+• "Who owns the domain?" → "Always Phan's. We only need access to point it."
+• "Can customers buy and pay online?" → "Yes, but we suggest doing it later (phase 2), because it needs someone to handle orders and international shipping. In phase 1 customers browse, then message or book."
+• "What's the AI fitting room on the demo, is it included?" → "It's a feature we're testing. We're still assessing cost and reliability, so it isn't in the proposal yet; Yong will follow up." (Don't bring it up yourself.)
+• "What about the 3D team?" → see D8.
+• "Where is TWX, how do you work?" → "We're in Malaysia and work online via Zalo/WhatsApp and email; I support in Vietnamese."
+• "Who translated the Chinese?" → "We did. You just need someone to read through the Vietnamese."
+• For any hard technical question → "I'll note it and Yong will answer in writing right after the call."
+
+F. DON'T PROMISE ON THE CALL
+• No specific price.
+• No online selling or payment in phase 1.
+• Don't introduce or promise the AI fitting room.
+• No fixed launch date before we have all the information.
+• No self-edit admin panel.
+• Don't suggest buying a new domain (Phan's already has one).
+
+G. INFORMATION TO COLLECT (tick when received)
+[ ] Who manages phanscustomtailor.com and tailormadesuit.net, and how to give us access (login account). Which address he wants as the main one.
+[ ] Real photos: villa, the founders, finished garments, cloth; original logo file.
+[ ] Missing prices: blazer, waistcoat, overcoat, women's garments. Show VND, USD or another currency.
+[ ] Founding year (old site says "since 2013"), Tết and holiday closures, standard turnaround (5 working days?), and whether customers can reorder from abroad.
+[ ] Someone at Phan's to read through the Vietnamese text.
+[ ] Koalendar link, official Facebook page (facebook.com/phanstailor or /phantailor), Google Business access.
+[ ] Main contact person at Phan's and preferred channel (Zalo, WhatsApp, email).
+[ ] Contact for the Web 3D team, if he wants us to coordinate.
+
+H. AFTER THE CALL, SEND YONG
+• Which scope Thinh agreed to, and anything he wants added or removed.
+• Which domain he chose as main.
+• Any questions we couldn't answer.
+• Which section G items we have, or when they'll come.
+• When he'd like the quote.

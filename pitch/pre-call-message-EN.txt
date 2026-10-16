@@ -2,48 +2,49 @@
 
 Hi Thinh,
 
-This is Yong, Kimlien's friend, who made the website demo for Phan's. Thank you for taking the time to look at it and for such positive feedback. As you noticed, the TheWebxite team uses new-generation AI tools such as Claude in our design and development work, combined with our experience building websites for international customers.
+This is Yong, Kimlien's friend, who made the website demo for Phan's. Thank you for taking the time to look at it and for such positive feedback. As you noticed, TheWebxite is a software and AI company: we use new-generation AI tools such as Claude in our design and development, combined with our experience building websites for international customers.
 
-Before our call tomorrow, here is a short summary so you can look through it in advance.
+Before the call, here is a short summary so you can look through it in advance. Kimlien will speak with you directly in Vietnamese.
 
 1. WHAT WE'RE PROPOSING
-TheWebxite proposes turning the demo into Phan's official website: three languages (English, Vietnamese, Chinese), prices, the tailoring process, online booking, WhatsApp/Zalo, an online shop for Nobility cloth and ready-made pieces, the AI fitting room, moving the articles over from the old website, and making Phan's easy to find on Google.
+TheWebxite proposes turning the demo into Phan's official website:
+• Three languages: English, Vietnamese, Chinese.
+• Prices, the tailoring process, fabric information.
+• Appointments through the Koalendar calendar you already use, plus WhatsApp and Zalo buttons.
+• A showcase shop for Nobility cloth and ready-made pieces: customers browse, then ask about price on WhatsApp/Zalo or book a visit to the villa. No online payment needed at the start.
+• Moving the articles over from the old website, and making Phan's easy to find on Google.
 
-About the Web 3D project you're working on: the two fit together. The website is Phan's main "home" online, and the 3D experience can sit inside it, for example as its own page or a section on the home page. We're happy to work with the 3D team so it all feels like one experience.
+About the Web 3D project: the two fit together. The website is Phan's main "home" online, and the 3D experience can sit inside it, for example as its own page. We're happy to work with the 3D team.
 
-2. WHERE THE WEBSITE WILL LIVE (HOSTING)
-Put simply:
-• The domain name (e.g. tailormadesuit.net) is like a street address: customers type it to find Phan's.
+2. DOMAIN AND HOSTING
+• A domain is like a street address: customers type it to find Phan's. Phan's already owns phanscustomtailor.com (used on Google Maps) and tailormadesuit.net. We suggest phanscustomtailor.com as the main address because it matches the brand, with tailormadesuit.net forwarding to it automatically. So there's no need to buy a new domain.
 • Hosting is the "house" the website lives in: where all the content and photos are stored so the site is open 24/7.
+• The current site runs on Haravan. The new one will be hosted and managed by TheWebxite on a global server network, so it loads quickly for overseas customers and they can see everything before they travel to Saigon.
+• We handle the technical side: security (https), backups, updates and maintenance. The domain stays in Phan's name.
 
-The current website runs on Haravan. The new website will be hosted and managed by TheWebxite. The demo you saw runs on Vercel, a global server network, so it loads quickly for overseas visitors too. We handle all the technical side (security with https, backups and updates), so you don't need to manage any servers.
+3. WILL SWITCHING AFFECT ANYTHING?
+• Customers typing the old address still reach the new website.
+• Old links already on Google forward to the matching new pages, so no search traffic is lost.
+• The email info@phantailor.com is not affected.
+• The old website keeps running until the new one is ready; only then do you need to stop the Haravan plan.
 
-The online shop will use WooCommerce, a very widely used shop system. You or your staff simply log in to its admin page to add products, prices and photos and to see orders, with no coding needed.
-
-3. WILL SWITCHING TO THE NEW WEBSITE AFFECT ANYTHING?
-• The domain stays the same: customers still type the same address.
-• Old links already on Google will automatically go to the matching new pages, so no search traffic is lost.
-• The email info@phantailor.com is not affected: we only change the website settings, not email.
-• The old website keeps running normally until the new one is ready; only then do you need to stop the Haravan plan.
-
-4. INFORMATION WE NEED FROM YOU BEFORE WE START
-• Domain: where tailormadesuit.net was bought and who manages it; whether the official site should use tailormadesuit.net or phantailor.com.
+4. INFORMATION WE NEED
+• Domain: who manages phanscustomtailor.com and tailormadesuit.net (the login account), and which address you'd like as the main one.
 • Photos: real photos of the villa, of you both, finished garments and cloth; the original logo file if you have it.
-• Prices: blazer, waistcoat, overcoat and women's garments; whether to show USD prices as well.
-• Online shop: the products you want to sell (name, price, sizes, photos), payment methods (VNPay, MoMo, international cards) and whether you ship.
-• Content to confirm: the year you started, Tết and holiday closing dates, turnaround time, and reorders after customers return home.
-• Translations: someone at Phan's to read through the Vietnamese and Chinese text.
-• Accounts: the Koalendar booking link you use, your official Facebook page, and access to Google Business (map and reviews).
+• Prices: blazer, waistcoat, overcoat and women's garments; show prices in VND only, or also USD or another currency.
+• Content to confirm: founding year, Tết and holiday closures, turnaround time, and reorders after customers return home.
+• Translation: someone at Phan's to read through the Vietnamese text.
+• Accounts: the Koalendar booking link, the official Facebook page, and Google Business access (map and reviews).
 
 5. NEXT STEPS
-1) Call tomorrow: agree on what you'd like us to do.
-2) We send a quote and a timeline.
+1) Call: agree on what you'd like us to do.
+2) We send a quote and timeline.
 3) You send the information in section 4.
-4) We finish the content and the shop, and test everything carefully on computers and phones.
-5) You approve the final version and the website goes live; we show you and your staff how to manage products.
-6) After launch: we continue to support, maintain and update the site.
+4) We finish and test on computers and phones, about 1 week after receiving everything.
+5) You approve the final version and the site goes live.
+6) After launch: ongoing support, maintenance and updates.
 
-Tomorrow we can talk through anything you're interested in, including working with the Web 3D team. Please let me know what time suits you.
+On the call we can talk through anything you're interested in, including working with the Web 3D team. Please let me know what time suits you.
 
 Thank you!
 Yong – TheWebxite
