@@ -1,0 +1,47 @@
+Chào anh Thịnh,
+
+Em là Yong, bạn của Kimlien, người làm bản demo website cho Phan's. Cảm ơn anh đã dành thời gian xem và phản hồi rất tích cực. Đúng như anh nhận xét, đội ngũ TheWebxite có ứng dụng các công cụ AI thế hệ mới như Claude trong quá trình thiết kế và lập trình, kết hợp với kinh nghiệm làm website cho khách hàng quốc tế.
+
+Trước buổi gọi ngày mai, em xin tóm tắt ngắn gọn để anh tiện nắm trước ạ.
+
+1. ĐỊNH HƯỚNG HỢP TÁC
+TheWebxite đề xuất hoàn thiện bản demo thành website chính thức của Phan's: ba ngôn ngữ (Anh, Việt, Trung), bảng giá, quy trình may, đặt lịch online, WhatsApp/Zalo, cửa hàng online cho vải Nobility và đồ may sẵn, phòng thử đồ AI, chuyển các bài viết từ website cũ sang và tối ưu để khách dễ tìm thấy Phan's trên Google.
+
+Về dự án Web 3D anh đang làm: hai phần này bổ sung cho nhau. Website là "ngôi nhà" chính của Phan's trên mạng, còn trải nghiệm 3D có thể đặt ngay bên trong website, ví dụ một trang riêng hoặc một mục trên trang chủ. Bên em sẵn sàng phối hợp với đội 3D để mọi thứ liền mạch.
+
+2. WEBSITE SẼ ĐƯỢC LƯU TRỮ Ở ĐÂU (HOSTING)
+Nói đơn giản:
+• Tên miền (ví dụ tailormadesuit.net) giống như địa chỉ nhà: khách gõ địa chỉ này để tìm đến Phan's.
+• Hosting là "ngôi nhà" chứa website: nơi lưu toàn bộ nội dung và hình ảnh để website mở được 24/7.
+
+Website hiện tại đang chạy trên Haravan. Website mới sẽ do TheWebxite lưu trữ và quản lý. Bản demo anh đang xem chạy trên Vercel, một mạng máy chủ toàn cầu, nên khách ở nước ngoài mở web vẫn nhanh. Bên em lo toàn bộ phần kỹ thuật: bảo mật (https), sao lưu và cập nhật, anh không cần tự quản lý máy chủ.
+
+Riêng cửa hàng online sẽ dùng WooCommerce, một hệ thống bán hàng rất phổ biến. Anh hoặc nhân viên chỉ cần đăng nhập vào trang quản lý để tự thêm sản phẩm, giá, hình ảnh và xem đơn hàng, không cần biết lập trình.
+
+3. CHUYỂN SANG WEBSITE MỚI CÓ ẢNH HƯỞNG GÌ KHÔNG
+• Giữ nguyên tên miền: khách vẫn gõ địa chỉ cũ.
+• Các đường dẫn cũ đang có trên Google sẽ tự chuyển sang trang mới tương ứng, nên không mất khách tìm kiếm.
+• Email info@phantailor.com không bị ảnh hưởng: bên em chỉ thay đổi phần website, không động đến email.
+• Website cũ vẫn chạy bình thường cho đến khi website mới hoàn tất, sau đó anh mới cần ngừng gói Haravan.
+
+4. THÔNG TIN CẦN ANH CUNG CẤP TRƯỚC KHI BẮT ĐẦU
+• Tên miền: tailormadesuit.net được mua ở đâu và ai đang quản lý; website chính thức sẽ dùng tailormadesuit.net hay phantailor.com.
+• Hình ảnh: ảnh thật của villa, của anh chị, sản phẩm hoàn thiện và vải; file logo gốc nếu có.
+• Giá: giá áo blazer, gilê, măng tô và đồ may cho nữ; có muốn hiển thị thêm giá USD không.
+• Cửa hàng online: danh sách sản phẩm muốn bán (tên, giá, size, hình), cách thanh toán (VNPay, MoMo, thẻ quốc tế) và có giao hàng hay không.
+• Nội dung cần xác nhận: năm thành lập, lịch nghỉ Tết và lễ, thời gian may, việc đặt may lại khi khách đã về nước.
+• Bản dịch: một người bên Phan's đọc lại giúp phần tiếng Việt và tiếng Trung.
+• Tài khoản: link đặt lịch Koalendar đang dùng, trang Facebook chính thức, quyền truy cập Google Business (bản đồ và đánh giá).
+
+5. CÁC BƯỚC TIẾP THEO
+1) Gọi điện ngày mai: thống nhất các phần anh muốn làm.
+2) Bên em gửi báo giá và lịch trình cụ thể.
+3) Anh gửi các thông tin ở mục 4.
+4) Bên em hoàn thiện nội dung, cửa hàng và kiểm tra kỹ trên cả máy tính lẫn điện thoại.
+5) Anh duyệt bản cuối, website chạy chính thức; bên em hướng dẫn anh và nhân viên cách quản lý sản phẩm.
+6) Sau khi chạy: bên em tiếp tục hỗ trợ, bảo trì và cập nhật.
+
+Ngày mai mình trao đổi thêm những phần anh quan tâm, kể cả việc phối hợp với đội Web 3D nhé. Anh cho em biết khung giờ nào thuận tiện ạ.
+
+Cảm ơn anh!
+Yong – TheWebxite
