@@ -3,7 +3,7 @@ English check copy of briefing-cuoc-goi-Kimlien.txt (Kimlien gets the Vietnamese
 
 A. QUICK CONTEXT
 • Client: Thinh Phan, co-founder of Phan's Custom Tailor (bespoke tailor in a villa in Saigon Pearl, Binh Thanh). Many overseas customers: 4.8 on Tripadvisor (975 reviews), 4.9 on Google (1,115 reviews).
-• Us: TheWebxite (TWX), a software and AI company in Malaysia run by Yong. Yong built the demo; Kimlien speaks with the client in Vietnamese.
+• Us: TheWebxite (TWX), a software and AI company in Malaysia run by Xin. Xin built the demo; Kimlien speaks with the client in Vietnamese.
 • Demo: https://phans-custom-tailor-demo.vercel.app/ (a preview, not the official site yet).
 • Thinh replied very positively, correctly guessed we used AI (Claude), mentioned he's working with a separate Web 3D team, and asked what kind of collaboration we have in mind.
 
@@ -11,7 +11,7 @@ B. GOALS FOR THE CALL
 1) Understand what Thinh wants from the new site.
 2) Agree the phase 1 scope (section D).
 3) Collect the information in section G.
-4) Say Yong will send a quote and timeline after the call. No prices agreed on the call.
+4) Say Xin will send a quote and timeline after the call. No prices agreed on the call.
 
 C. PLAIN-LANGUAGE EXPLANATIONS
 • Domain: the website's address, like a street address (e.g. phanscustomtailor.com). Paid yearly, owned by the business.
@@ -38,8 +38,8 @@ D. OUR POSITION (AGREED WITH YONG)
 9) Using AI: be upfront. TWX is a software and AI company; AI makes us faster and better, but design, testing and support are done by real people.
 
 E. QUESTIONS HE MAY ASK, WITH SUGGESTED ANSWERS
-• "How much?" → "Yong will send a detailed quote right after this call, based on what you choose today." (No numbers.)
-• "Any monthly fee?" → "Yes, hosting and maintenance; Yong will list it in the quote."
+• "How much?" → "Xin will send a detailed quote right after this call, based on what you choose today." (No numbers.)
+• "Any monthly fee?" → "Yes, hosting and maintenance; Xin will list it in the quote."
 • "How long?" → "About 1 week after you send all the photos and information."
 • "Can we edit content ourselves?" → "Just message us what to change and we update it under maintenance. If you'd like to edit it yourselves, we can discuss that." (Don't promise a self-edit admin panel.)
 • "Will this affect our Google ranking?" → "No, old links forward to the new pages."
@@ -47,11 +47,11 @@ E. QUESTIONS HE MAY ASK, WITH SUGGESTED ANSWERS
 • "When do we stop Haravan?" → "Once the new site is running smoothly; until then Haravan keeps working."
 • "Who owns the domain?" → "Always Phan's. We only need access to point it."
 • "Can customers buy and pay online?" → "Yes, but we suggest doing it later (phase 2), because it needs someone to handle orders and international shipping. In phase 1 customers browse, then message or book."
-• "What's the AI fitting room on the demo, is it included?" → "It's a feature we're testing. We're still assessing cost and reliability, so it isn't in the proposal yet; Yong will follow up." (Don't bring it up yourself.)
+• "What's the AI fitting room on the demo, is it included?" → "It's a feature we're testing. We're still assessing cost and reliability, so it isn't in the proposal yet; Xin will follow up." (Don't bring it up yourself.)
 • "What about the 3D team?" → see D8.
 • "Where is TWX, how do you work?" → "We're in Malaysia and work online via Zalo/WhatsApp and email; I support in Vietnamese."
 • "Who translated the Chinese?" → "We did. You just need someone to read through the Vietnamese."
-• For any hard technical question → "I'll note it and Yong will answer in writing right after the call."
+• For any hard technical question → "I'll note it and Xin will answer in writing right after the call."
 
 F. DON'T PROMISE ON THE CALL
 • No specific price.

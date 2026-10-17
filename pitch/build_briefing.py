@@ -45,37 +45,36 @@ def build(L):
   top = f'''<header class="top">
     <p class="kicker">{t("Tài liệu nội bộ · Dành cho Kimlien", "Internal · For Kimlien")}</p>
     <h1>{t("Briefing cuộc gọi với anh Thịnh", "Call briefing: Thinh Phan")}</h1>
-    <p class="sub">Phan's Custom Tailor · {t("chuẩn bị bởi Yong, TheWebxite · 17/10/2026", "prepared by Yong, TheWebxite · 17 Oct 2026")}</p>
+    <p class="sub">Phan's Custom Tailor · {t("chuẩn bị bởi Xin, TheWebxite · 17/10/2026", "prepared by Xin, TheWebxite · 17 Oct 2026")}</p>
     <div class="links"><div><b>{t("Bản demo", "Demo")}</b> <a href="{DEMO}">phans-custom-tailor-demo.vercel.app</a></div>
       <div><b>{t("Website hiện tại", "Current site")}</b> <a href="https://tailormadesuit.net/">tailormadesuit.net</a></div></div>
   </header>
   <div class="summary"><h3>{t("Tóm tắt 30 giây", "The 30-second version")}</h3>
-  {ul([t("Anh Thịnh thích bản demo và muốn trao đổi hợp tác.", "Thinh likes the demo and wants to talk about working together."),
-       t("Đề xuất: biến bản demo thành website chính thức, 3 ngôn ngữ, khoảng <b>1 tuần</b> sau khi có đủ thông tin.", "Proposal: turn the demo into the official 3-language site, about <b>1 week</b> after we have all the information."),
+  {ul([t("Đề xuất: biến bản demo thành website chính thức, 3 ngôn ngữ, khoảng <b>1 tuần</b> sau khi có đủ thông tin.", "Proposal: turn the demo into the official 3-language site, about <b>1 week</b> after we have all the information."),
        t("Dùng tên miền <b>phanscustomtailor.com</b> (Phan's đã sở hữu), không mua tên miền mới; email không thay đổi.", "Use <b>phanscustomtailor.com</b> (Phan's already owns it), no new domain; email unchanged."),
        t("TWX lo hosting, bảo mật, sao lưu và bảo trì. Đặt lịch giữ <b>Koalendar</b> hiện tại.", "TWX handles hosting, security, backups and maintenance. Booking stays on the current <b>Koalendar</b>."),
        t("Cửa hàng chỉ <b>trưng bày</b> ở giai đoạn 1: khách nhắn WhatsApp/Zalo hoặc đặt lịch, chưa thanh toán online.", "Shop is <b>showcase only</b> in phase 1: customers message on WhatsApp/Zalo or book; no online payment yet."),
-       t("<b>Không báo giá</b> trong cuộc gọi; Yong gửi báo giá sau. <b>Không nhắc</b> phòng thử đồ AI.", "<b>No prices</b> on the call; Yong sends the quote afterwards. <b>Don't mention</b> the AI fitting room.")])}</div>'''
+       t("<b>Không báo giá</b> trong cuộc gọi; Xin gửi báo giá sau. <b>Không nhắc</b> phòng thử đồ AI.", "<b>No prices</b> on the call; Xin sends the quote afterwards. <b>Don't mention</b> the AI fitting room.")])}</div>'''
 
-  s1 = section(1, t("Bối cảnh", "Context"), ul([
-    t("<b>Khách:</b> anh Phan Thịnh, đồng sáng lập Phan's Custom Tailor, tiệm may đo vest trong một villa ở Saigon Pearl, Bình Thạnh. Rất nhiều khách nước ngoài: 4,8 điểm Tripadvisor (975 đánh giá), 4,9 điểm Google (1.115 đánh giá).", "<b>Client:</b> Thinh Phan, co-founder of Phan's Custom Tailor, a bespoke tailor in a villa in Saigon Pearl, Binh Thanh. Many overseas customers: 4.8 on Tripadvisor (975 reviews), 4.9 on Google (1,115 reviews)."),
-    t("<b>Chúng ta:</b> TheWebxite (TWX), công ty phần mềm và AI ở Malaysia, do Yong điều hành. Yong làm bản demo; Kimlien trao đổi bằng tiếng Việt.", "<b>Us:</b> TheWebxite (TWX), a software and AI company in Malaysia run by Yong. Yong built the demo; Kimlien speaks with the client in Vietnamese."),
-    t("<b>Anh Thịnh trả lời:</b> rất bất ngờ và đánh giá cao bản demo; đoán đúng là bên mình dùng AI (Claude); đang làm việc với một đội <b>Web 3D</b> khác; hỏi mình muốn hợp tác theo hướng nào.", "<b>Thinh's reply:</b> impressed by the demo; correctly guessed we used AI (Claude); is working with a separate <b>Web 3D</b> team; asked what kind of collaboration we have in mind."),
-    t("Bản demo chỉ là bản xem thử: một số sản phẩm, ảnh và bản dịch là mẫu minh hoạ.", "The demo is a preview: some products, photos and translations are placeholders.")]))
+  s1 = section(1, t("Anh Thịnh nêu 3 điểm, mình trả lời thế nào", "Thinh raised 3 points: how we answer"), table([
+    (t("Đoán bên mình dùng AI (Claude)", "Guessed we used AI (Claude)"), t("Nói thẳng là đúng. AI giúp làm nhanh và chất lượng hơn; thiết kế, kiểm tra và hỗ trợ do người thật làm.", "Confirm it. AI makes us faster and better; design, testing and support are done by real people.")),
+    (t("Đang làm với một đội Web 3D khác", "Working with a separate Web 3D team"), t("Bổ sung, không cạnh tranh: website là “ngôi nhà” chính, phần 3D đặt vào một trang hoặc mục bên trong. Bên mình sẵn sàng phối hợp.", "Complementary, not competing: the website is the main home, the 3D work sits on a page or section inside it. We're happy to coordinate.")),
+    (t("Hỏi hợp tác theo hướng nào", "Asked what kind of collaboration"), t("Đề xuất giai đoạn 1 ở mục 4: hoàn thiện demo thành website chính thức, TWX lo hosting và bảo trì.", "The phase 1 proposal in section 4: turn the demo into the official site, TWX handles hosting and maintenance.")),
+  ], [t("Anh Thịnh nói", "Thinh said"), t("Mình trả lời", "Our answer")], 'qa'))
 
   s2 = section(2, t("Mục tiêu và trình tự cuộc gọi", "Goals and running order"),
     '<div class="cols"><div>' + f'<h4>{t("Mục tiêu", "Goals")}</h4>' + ol([
       t("Hiểu anh Thịnh muốn gì cho website mới.", "Understand what Thinh wants from the new site."),
       t("Thống nhất phạm vi giai đoạn 1 (mục 4).", "Agree the phase 1 scope (section 4)."),
-      t("Xin các thông tin ở mục 7.", "Collect the information in section 7."),
-      t("Hẹn Yong gửi báo giá và lịch trình sau cuộc gọi.", "Say Yong will send a quote and timeline after the call.")]) + '</div><div>' + f'<h4>{t("Gợi ý trình tự (khoảng 30 phút)", "Suggested order (about 30 min)")}</h4>' + ol([
-      t("Cảm ơn anh đã phản hồi; giới thiệu ngắn về TWX.", "Thank him for replying; short intro to TWX."),
+      t("Lấy các thông tin ở mục 7.", "Collect the information in section 7."),
+      t("Hẹn Xin gửi báo giá và lịch trình sau cuộc gọi.", "Say Xin will send a quote and timeline after the call.")]) + '</div><div>' + f'<h4>{t("Gợi ý trình tự (khoảng 30 phút)", "Suggested order (about 30 min)")}</h4>' + ol([
+      t("Cảm ơn anh đã xem demo và phản hồi.", "Thank him for looking at the demo and replying."),
       t("Hỏi anh: mục tiêu cho website mới, khách chính là ai, điều anh chưa hài lòng ở website cũ.", "Ask: his goals for the new site, his main customers, what he dislikes about the old site."),
       t("Trình bày đề xuất (mục 4) và cách phối hợp với đội 3D.", "Present the proposal (section 4) and how we'd work with the 3D team."),
       t("Giải thích tên miền và hosting bằng hình ở mục 3.", "Explain domain and hosting with the diagram in section 3."),
       t("Trả lời câu hỏi (mục 5).", "Answer his questions (section 5)."),
       t("Đi qua checklist thông tin (mục 7).", "Go through the information checklist (section 7)."),
-      t("Chốt bước tiếp theo: Yong gửi báo giá; anh gửi thông tin.", "Agree next steps: Yong sends the quote; he sends the information.")]) + '</div></div>')
+      t("Chốt bước tiếp theo: Xin gửi báo giá; anh gửi thông tin.", "Agree next steps: Xin sends the quote; he sends the information.")]) + '</div></div>')
 
   gl = [
     (t("Tên miền (domain)", "Domain"), t("Địa chỉ website, như địa chỉ nhà, ví dụ phanscustomtailor.com. Mua theo năm, đứng tên chủ doanh nghiệp.", "The website's address, like a street address, e.g. phanscustomtailor.com. Paid yearly, owned by the business.")),
@@ -84,7 +83,6 @@ def build(L):
     (t("https (ổ khoá)", "https (padlock)"), t("Website được bảo mật. Có sẵn, miễn phí.", "The site is secure. Included, free.")),
     (t("Chuyển hướng (redirect)", "Redirects"), t("Link cũ trên Google tự dẫn sang trang mới tương ứng, nên Phan's không mất thứ hạng tìm kiếm.", "Old Google links lead to the matching new pages, so Phan's keeps its search ranking.")),
     ("Haravan", t("Nền tảng của website cũ (vừa phần mềm vừa hosting). Giữ đến khi website mới chạy, sau đó mới ngừng.", "The platform behind the old site (software and hosting in one). Keep it until the new site is live, then stop it.")),
-    ("Vercel", t("Nơi đang chạy bản demo: mạng máy chủ toàn cầu, khách ở nước nào mở cũng nhanh.", "Where the demo runs: a global server network, fast in any country.")),
     ("Koalendar", t("Công cụ đặt lịch Phan's đang dùng. Website mới chỉ cần gắn link sang đó.", "The booking tool Phan's already uses. The new site just links to it.")),
     (t("Cổng thanh toán", "Payment gateway"), t("Dịch vụ cho khách trả tiền online bằng thẻ, ví. Ở Việt Nam thường dùng OnePay, VNPay. Chỉ cần nếu bán online (giai đoạn 2).", "A service for paying online by card or wallet. In Vietnam usually OnePay or VNPay. Only needed for online sales (phase 2).")),
     (t("Bảo trì", "Maintenance"), t("Sau khi website chạy: theo dõi, cập nhật, sao lưu, sửa lỗi và chỉnh nội dung nhỏ.", "After launch: monitoring, updates, backups, fixes and small content changes.")),
@@ -103,13 +101,12 @@ def build(L):
     t("<b>Tài khoản khách và giỏ hàng</b> trên website cũ: không cần nữa ở giai đoạn 1 (website cũ chỉ có 1 sản phẩm).", "<b>Customer accounts and cart</b> on the old site: not needed in phase 1 (the old shop has one product)."),
     t("<b>Thời gian:</b> khoảng 1 tuần sau khi nhận đủ thông tin ở mục 7.", "<b>Timeline:</b> about 1 week after we receive everything in section 7."),
     t("<b>Đội Web 3D:</b> bổ sung, không cạnh tranh. Website là “ngôi nhà” chính; trải nghiệm 3D có thể đặt vào một trang hoặc một mục trong website. Bên mình sẵn sàng phối hợp kỹ thuật.", "<b>Web 3D team:</b> complementary, not competing. The website is the main home; their 3D experience can go on a page or section inside it. We're happy to coordinate."),
-    t("<b>Việc dùng AI:</b> nói thẳng là có. TWX là công ty phần mềm và AI, dùng AI để làm nhanh và chất lượng hơn; thiết kế, kiểm tra và hỗ trợ đều do người thật làm.", "<b>Using AI:</b> be upfront. TWX is a software and AI company; AI makes us faster and better, but design, testing and support are done by real people."),
   ]
-  s4 = section(4, t("Lập trường của bên mình (đã thống nhất với Yong)", "Our position (agreed with Yong)"), ol(pos))
+  s4 = section(4, t("Lập trường của bên mình (đã thống nhất với Xin)", "Our position (agreed with Xin)"), ol(pos))
 
   qa = [
-    (t("Chi phí bao nhiêu?", "How much?"), t("“Yong sẽ gửi báo giá chi tiết ngay sau cuộc gọi, tuỳ các phần anh chọn hôm nay.” Không nói con số.", "“Yong will send a detailed quote right after this call, based on what you choose today.” No numbers.")),
-    (t("Có phí hàng tháng không?", "Any monthly fee?"), t("“Có phí hosting và bảo trì; Yong sẽ ghi rõ trong báo giá.”", "“Yes, hosting and maintenance; Yong will list it in the quote.”")),
+    (t("Chi phí bao nhiêu?", "How much?"), t("“Xin sẽ gửi báo giá chi tiết ngay sau cuộc gọi, tuỳ các phần anh chọn hôm nay.” Không nói con số.", "“Xin will send a detailed quote right after this call, based on what you choose today.” No numbers.")),
+    (t("Có phí hàng tháng không?", "Any monthly fee?"), t("“Có phí hosting và bảo trì; Xin sẽ ghi rõ trong báo giá.”", "“Yes, hosting and maintenance; Xin will list it in the quote.”")),
     (t("Bao lâu thì xong?", "How long?"), t("“Khoảng 1 tuần sau khi bên anh gửi đủ hình ảnh và thông tin.”", "“About 1 week after you send all the photos and information.”")),
     (t("Bên anh tự sửa nội dung được không?", "Can we edit content ourselves?"), t("“Anh chỉ cần nhắn nội dung cần đổi, bên em cập nhật trong gói bảo trì. Nếu anh muốn tự sửa, mình bàn thêm.” Không hứa trang quản trị.", "“Just message us what to change and we update it under maintenance. If you'd like to edit it yourselves, we can discuss.” Don't promise an admin panel.")),
     (t("Có ảnh hưởng thứ hạng Google không?", "Will it affect our Google ranking?"), t("“Không, các link cũ sẽ tự chuyển sang trang mới.”", "“No, old links forward to the new pages.”")),
@@ -117,11 +114,10 @@ def build(L):
     (t("Khi nào tắt Haravan?", "When do we stop Haravan?"), t("“Sau khi website mới chạy ổn định; trước đó Haravan vẫn hoạt động bình thường.”", "“Once the new site runs smoothly; until then Haravan keeps working.”")),
     (t("Tên miền thuộc về ai?", "Who owns the domain?"), t("“Luôn đứng tên Phan's. Bên em chỉ cần quyền để trỏ tên miền.”", "“Always Phan's. We only need access to point it.”")),
     (t("Bán hàng, thanh toán online được không?", "Can customers buy and pay online?"), t("“Được, nhưng bên em đề xuất làm ở giai đoạn 2, vì cần người xử lý đơn và giao hàng quốc tế. Giai đoạn 1 khách xem mẫu rồi nhắn hoặc đặt lịch.”", "“Yes, but we suggest phase 2, since it needs someone handling orders and international shipping. In phase 1 customers browse, then message or book.”")),
-    (t("Phòng thử đồ AI trên demo có kèm không?", "Is the AI fitting room on the demo included?"), t("“Đó là tính năng bên em đang thử nghiệm; còn đánh giá chi phí và độ ổn định nên chưa đưa vào đề xuất. Yong sẽ báo sau.” Đừng tự giới thiệu.", "“It's a feature we're testing; we're still assessing cost and reliability, so it isn't in the proposal yet. Yong will follow up.” Don't bring it up yourself.")),
+    (t("Phòng thử đồ AI trên demo có kèm không?", "Is the AI fitting room on the demo included?"), t("“Đó là tính năng bên em đang thử nghiệm; còn đánh giá chi phí và độ ổn định nên chưa đưa vào đề xuất. Xin sẽ báo sau.” Đừng tự giới thiệu.", "“It's a feature we're testing; we're still assessing cost and reliability, so it isn't in the proposal yet. Xin will follow up.” Don't bring it up yourself.")),
     (t("Còn đội 3D thì sao?", "What about the 3D team?"), t("Xem mục 4, ý 9.", "See section 4, point 9.")),
-    (t("TWX ở đâu, làm việc thế nào?", "Where is TWX, how do you work?"), t("“Công ty ở Malaysia, làm việc online qua Zalo/WhatsApp và email; em hỗ trợ tiếng Việt.”", "“We're in Malaysia and work online via Zalo/WhatsApp and email; I support in Vietnamese.”")),
     (t("Tiếng Trung ai dịch?", "Who translated the Chinese?"), t("“Bên em đã dịch sẵn. Bên anh chỉ cần một người đọc lại phần tiếng Việt.”", "“We did. You just need someone to read through the Vietnamese.”")),
-    (t("Câu hỏi kỹ thuật khó", "A hard technical question"), t("“Em ghi lại và nhờ Yong trả lời bằng văn bản ngay sau cuộc gọi.”", "“I'll note it and Yong will answer in writing right after the call.”")),
+    (t("Câu hỏi kỹ thuật khó", "A hard technical question"), t("“Em ghi lại và nhờ Xin trả lời bằng văn bản ngay sau cuộc gọi.”", "“I'll note it and Xin will answer in writing right after the call.”")),
   ]
   s5 = section(5, t("Câu anh Thịnh có thể hỏi và gợi ý trả lời", "Likely questions and suggested answers"), table(qa, [t("Câu hỏi", "Question"), t("Gợi ý trả lời", "Suggested answer")], 'qa'))
 
@@ -143,26 +139,17 @@ def build(L):
     t("Người liên hệ chính bên Phan's và kênh liên lạc (Zalo, WhatsApp, email).", "Main contact at Phan's and preferred channel (Zalo, WhatsApp, email)."),
     t("Liên hệ đội Web 3D, nếu anh muốn hai bên phối hợp.", "Contact for the Web 3D team, if he wants us to coordinate."),
   ]
-  s7 = section(7, t("Thông tin cần xin (đánh dấu khi có)", "Information to collect (tick when received)"), ul(ck, 'check'))
+  s7 = section(7, t("Thông tin cần lấy từ anh Thịnh (đánh dấu khi có)", "Information to collect (tick when received)"), ul(ck, 'check'))
 
-  s8 = section(8, t("Sau cuộc gọi, gửi Yong", "After the call, send Yong"), ul([
+  s8 = section(8, t("Sau cuộc gọi, gửi Xin", "After the call, send Xin"), ul([
     t("Anh Thịnh đồng ý phạm vi nào, muốn thêm hoặc bỏ gì.", "Which scope Thinh agreed to, and anything to add or remove."),
     t("Tên miền nào làm chính.", "Which domain he chose as main."),
     t("Câu hỏi mình chưa trả lời được.", "Any questions we couldn't answer."),
     t("Thông tin ở mục 7 đã có hoặc khi nào gửi.", "Which section 7 items we have, or when they'll come."),
     t("Khi nào anh muốn nhận báo giá.", "When he'd like the quote.")]) +
-    f'<p class="note">{t("Liên hệ Yong qua WhatsApp nếu cần hỏi gấp trong cuộc gọi.", "Message Yong on WhatsApp if something urgent comes up during the call.")}</p>')
+    f'<p class="note">{t("Liên hệ Xin qua WhatsApp nếu cần hỏi gấp trong cuộc gọi.", "Message Xin on WhatsApp if something urgent comes up during the call.")}</p>')
 
-  # appendix: the pre-call message the client has already received
-  src = 'tin-nhan-truoc-cuoc-goi.txt' if L == 'vi' else 'pre-call-message-EN.txt'
-  lines = open(src, encoding='utf-8').read().strip().split('\n')
-  if lines[0].startswith('('): lines = lines[1:]
-  msg = ''.join(f'<p>{e(x)}</p>' if x.strip() else '<p class="gap"></p>' for x in lines)
-  app = f'''<section class="appendix"><h2><span class="n">+</span>{t("Phụ lục: tin nhắn Yong đã gửi anh Thịnh", "Appendix: the message Yong sent Thinh")}</h2>
-  <p class="lead">{t("Anh Thịnh đã đọc tin nhắn này trước cuộc gọi. Nội dung trao đổi nên khớp với tin nhắn.", "Thinh has read this before the call. What we say should match it.")}</p>
-  <div class="msg">{msg}</div></section>'''
-
-  body = top + s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + app
+  body = top + s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8
   return f'''<!doctype html><html lang="{L}"><head><meta charset="utf-8"><title>{t("Briefing cuộc gọi – Phan's", "Call briefing – Phan's")}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Prata&display=swap">
 <style>{CSS}</style></head><body>{body}</body></html>'''

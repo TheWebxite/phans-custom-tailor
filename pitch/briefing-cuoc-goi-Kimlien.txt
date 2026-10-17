@@ -1,17 +1,17 @@
 BRIEFING CHO CUỘC GỌI VỚI ANH THỊNH (PHAN'S CUSTOM TAILOR)
-Dành cho Kimlien. Bản tiếng Anh để Yong kiểm tra: pre-call-briefing-EN.txt
+Dành cho Kimlien. Bản tiếng Anh để Xin kiểm tra: pre-call-briefing-EN.txt
 
 A. BỐI CẢNH NHANH
 • Khách: anh Phan Thịnh, đồng sáng lập Phan's Custom Tailor (tiệm may đo vest trong một villa ở Saigon Pearl, Bình Thạnh). Rất nhiều khách nước ngoài: 4,8 điểm Tripadvisor (975 đánh giá), 4,9 điểm Google (1.115 đánh giá).
-• Chúng ta: TheWebxite (TWX), công ty phần mềm và AI ở Malaysia, do Yong điều hành. Yong làm bản demo; Kimlien trao đổi bằng tiếng Việt.
+• Chúng ta: TheWebxite (TWX), công ty phần mềm và AI ở Malaysia, do Xin điều hành. Xin làm bản demo; Kimlien trao đổi bằng tiếng Việt.
 • Bản demo: https://phans-custom-tailor-demo.vercel.app/ (đây là bản xem thử, chưa phải website chính thức).
 • Anh Thịnh trả lời rất tích cực, đoán đúng là bên mình dùng AI (Claude), đang làm việc với một đội Web 3D khác, và hỏi mình muốn hợp tác theo hướng nào.
 
 B. MỤC TIÊU CUỘC GỌI
 1) Hiểu anh Thịnh muốn gì cho website mới.
 2) Thống nhất phạm vi giai đoạn 1 (mục D).
-3) Xin các thông tin ở mục G.
-4) Hẹn Yong gửi báo giá và lịch trình sau cuộc gọi. Không chốt giá trong cuộc gọi.
+3) Lấy các thông tin ở mục G.
+4) Hẹn Xin gửi báo giá và lịch trình sau cuộc gọi. Không chốt giá trong cuộc gọi.
 
 C. GIẢI THÍCH CÁC KHÁI NIỆM BẰNG LỜI DỄ HIỂU
 • Tên miền (domain): địa chỉ website, như địa chỉ nhà. Ví dụ phanscustomtailor.com. Mua theo năm, đứng tên chủ doanh nghiệp.
@@ -38,8 +38,8 @@ D. LẬP TRƯỜNG CỦA BÊN MÌNH (ĐÃ THỐNG NHẤT VỚI YONG)
 9) Việc dùng AI: nói thẳng là có. TWX là công ty phần mềm và AI, dùng AI để làm nhanh và chất lượng hơn, nhưng thiết kế, kiểm tra và hỗ trợ đều do người thật làm.
 
 E. CÂU ANH THỊNH CÓ THỂ HỎI VÀ GỢI Ý TRẢ LỜI
-• "Chi phí bao nhiêu?" → "Yong sẽ gửi báo giá chi tiết ngay sau cuộc gọi, tuỳ các phần anh chọn hôm nay." (Không nói con số.)
-• "Có phí hàng tháng không?" → "Có phí hosting và bảo trì; Yong sẽ ghi rõ trong báo giá."
+• "Chi phí bao nhiêu?" → "Xin sẽ gửi báo giá chi tiết ngay sau cuộc gọi, tuỳ các phần anh chọn hôm nay." (Không nói con số.)
+• "Có phí hàng tháng không?" → "Có phí hosting và bảo trì; Xin sẽ ghi rõ trong báo giá."
 • "Bao lâu thì xong?" → "Khoảng 1 tuần sau khi bên anh gửi đủ hình ảnh và thông tin."
 • "Bên anh có tự sửa nội dung được không?" → "Anh chỉ cần nhắn bên em nội dung cần đổi, bên em cập nhật trong gói bảo trì. Nếu anh muốn tự sửa, mình sẽ bàn thêm." (Đừng hứa có trang quản trị tự sửa.)
 • "Có ảnh hưởng thứ hạng Google không?" → "Không, các link cũ sẽ tự chuyển sang trang mới."
@@ -47,11 +47,11 @@ E. CÂU ANH THỊNH CÓ THỂ HỎI VÀ GỢI Ý TRẢ LỜI
 • "Khi nào tắt Haravan?" → "Sau khi website mới chạy ổn định; trước đó Haravan vẫn hoạt động bình thường."
 • "Tên miền thuộc về ai?" → "Luôn đứng tên Phan's. Bên em chỉ cần quyền để trỏ tên miền."
 • "Có bán hàng, thanh toán online được không?" → "Được, nhưng bên em đề xuất làm sau (giai đoạn 2), vì cần người xử lý đơn và giao hàng quốc tế. Giai đoạn 1 khách xem mẫu rồi nhắn hoặc đặt lịch."
-• "Phòng thử đồ AI trên bản demo là gì, có kèm không?" → "Đó là tính năng bên em đang thử nghiệm. Bên em còn đang đánh giá chi phí và độ ổn định nên chưa đưa vào đề xuất; Yong sẽ báo thêm sau." (Đừng tự giới thiệu tính năng này nếu anh không hỏi.)
+• "Phòng thử đồ AI trên bản demo là gì, có kèm không?" → "Đó là tính năng bên em đang thử nghiệm. Bên em còn đang đánh giá chi phí và độ ổn định nên chưa đưa vào đề xuất; Xin sẽ báo thêm sau." (Đừng tự giới thiệu tính năng này nếu anh không hỏi.)
 • "Còn đội 3D thì sao?" → mục D8.
 • "TWX ở đâu, làm việc thế nào?" → "Công ty ở Malaysia, làm việc online qua Zalo/WhatsApp và email; em hỗ trợ tiếng Việt."
 • "Tiếng Trung ai dịch?" → "Bên em đã dịch sẵn. Bên anh chỉ cần một người đọc lại phần tiếng Việt."
-• Nếu anh hỏi chi tiết kỹ thuật khó → "Em ghi lại và nhờ Yong trả lời bằng văn bản ngay sau cuộc gọi."
+• Nếu anh hỏi chi tiết kỹ thuật khó → "Em ghi lại và nhờ Xin trả lời bằng văn bản ngay sau cuộc gọi."
 
 F. ĐỪNG HỨA TRONG CUỘC GỌI
 • Không nói giá cụ thể.

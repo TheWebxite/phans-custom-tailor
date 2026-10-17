@@ -57,7 +57,7 @@ def deck(L):
     <div class="links">
       <div>{t("Bản mẫu website mới", "New website mock-up")}: <a href="{LINK}">phans-custom-tailor-demo.vercel.app</a></div>
       <div>{t("Website hiện tại", "Current website")}: <a href="https://tailormadesuit.net/">tailormadesuit.net</a></div>
-      <div class="date">{t("Thực hiện bởi Yong, TheWebxite · Tháng 10/2026", "Prepared by Yong, TheWebxite · October 2026")}</div>
+      <div class="date">{t("Thực hiện bởi Xin, TheWebxite · Tháng 10/2026", "Prepared by Xin, TheWebxite · October 2026")}</div>
     </div></div>
   <div class="right"><img src="img/cover.jpg" alt=""></div></section>''')
 
@@ -283,7 +283,7 @@ def deck(L):
       <p class="lead">{t("Mời anh chị trải nghiệm trực tiếp bản mẫu, nên mở trên điện thoại:", "Please try the mock-up yourselves, ideally on a phone:")}</p>
       <p class="biglink"><a href="{LINK}">phans-custom-tailor-demo.vercel.app</a></p>
       {why(t("Lưu ý", "Note"), t("Đây là bản mẫu để anh chị hình dung. Sản phẩm mẫu, ảnh minh hoạ và bản dịch sẽ hoàn thiện cùng anh chị trước khi chạy chính thức trên tailormadesuit.net.", "This is a preview. Sample products, placeholder photos and translations will be finalised with Phan's before it goes live on tailormadesuit.net."))}
-      <p class="sig">Yong · TheWebxite</p>
+      <p class="sig">Xin · TheWebxite</p>
     </div>
   </div></section>''')
 
