@@ -504,7 +504,10 @@
     "holidayBody": "We close for about two weeks over Tết, the Lunar New Year, and on some public holidays. If your trip falls in late January or February, message us before you book.",
     "formTitle": "Send an enquiry",
     "formIntro": "Tell us what you would like made and when you are in the city. We reply by email, or on WhatsApp if you leave a number.",
-    "mapTitle": "Map of Phan's Custom Tailor in Saigon Pearl"
+    "mapTitle": "Map of Phan's Custom Tailor in Saigon Pearl",
+    "calTitle": "Choose a time for your consultation",
+    "calIntro": "Pick a date and time below. It takes a minute, and you'll receive a confirmation by email.",
+    "calFrame": "Phan's booking calendar"
   },
   "form": {
     "name": "Name",

@@ -128,7 +128,7 @@ def deck(L):
         ring(835, 1230 - 880 + 0, 150, 100, 9), arrow(1150, 640, 930, 430, -40),
         note(1060, 700, t("WhatsApp cho khách nước ngoài,\nZalo cho khách Việt", "WhatsApp for overseas guests,\nZalo for local ones"), 54)]
   slide('booking', f'''<div class="top"><h2>{t("Đặt lịch vẫn như cũ", "Booking stays as it is")}</h2>
-  <p>{t("Nút đặt lịch có trên mọi trang và dẫn thẳng sang Koalendar. Không thêm hệ thống mới, anh chị quản lý lịch hẹn như bây giờ. Ai chưa muốn đặt lịch thì nhắn một tin là được.", "The booking button is on every page and goes straight to Koalendar. No new system: you manage appointments exactly as you do now. Anyone not ready to book can just send a message.")}</p></div>''' +
+  <p>{t("Như website hiện tại, khách chọn ngày giờ đến đo ngay trên trang Liên hệ, bằng chính lịch Koalendar anh chị đang dùng. Nút đặt lịch có trên mọi trang. Lịch hẹn vẫn về Koalendar, anh chị quản lý như bây giờ.", "As on your current site, customers pick a day and time to come in for measuring right on the Contact page, using the Koalendar calendar you already have. There's a booking button on every page, and appointments still arrive in Koalendar, managed as you do now.")}</p></div>''' +
     marked('img/contact_c.jpg', SZ['contact_c'], cm, 'width:1180px;margin-left:50px'))
 
   # 9 shop, marked up
@@ -356,7 +356,7 @@ def notes(L):
     (t("Bảng giá", "Prices"), t("Chỉ vào các ô còn trống: blazer, gilê, măng tô, đồ nữ. Hỏi luôn giá và hiện VND hay thêm USD. Ghi lại.", "Point at the blank prices (blazer, waistcoat, overcoat, women's). Ask for them and VND vs USD. Note it down.")),
     (t("Ba thứ tiếng", "Three languages"), t("Hỏi ai bên Phan's có thể đọc lại bản tiếng Việt.", "Ask who at Phan's can read the Vietnamese.")),
     (t("Hôm nay và sắp tới", "Today and next"), t("Không chê website cũ. Chỉ để anh chị tự so sánh.", "Don't criticise the old site; let them compare.")),
-    (t("Đặt lịch", "Booking"), t("Xác nhận link Koalendar hiện tại và ai đang quản lý lịch.", "Confirm the current Koalendar link and who manages it.")),
+    (t("Đặt lịch", "Booking"), t("Nếu có mạng, mở trang Liên hệ trên bản mẫu, kéo xuống “Chọn giờ hẹn tư vấn” để anh chị thấy lịch nằm ngay trong website. Đừng đặt thử (sẽ tạo lịch hẹn thật). Xác nhận ai đang quản lý lịch.", "If online, open the mock-up's Contact page and scroll to “Choose a time” so they see the calendar inside the site. Don't make a test booking (it creates a real appointment). Confirm who manages the calendar.")),
     (t("Cửa hàng", "Shop"), t("Nếu anh chị muốn bán online ngay: ghi nhận, nói Xin sẽ báo phương án và chi phí riêng cho giai đoạn sau. Đừng hứa ngày.", "If they want online sales now: note it, say Xin will send options and cost for a later phase. No dates.")),
     (t("Tên miền", "Domain"), t("Hỏi anh chị chọn tên nào làm chính và ai giữ tài khoản tên miền. Nhấn mạnh email không bị ảnh hưởng.", "Ask which domain they want as main and who holds the domain account. Stress that email isn't affected.")),
     (t("Đội 3D", "3D team"), t("Xin liên hệ đội 3D nếu anh chị muốn hai bên phối hợp.", "Ask for the 3D team's contact if they want us to coordinate.")),

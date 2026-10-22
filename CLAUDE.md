@@ -50,6 +50,7 @@
 - Assistant memory note: `~/.claude/projects/-Users-hengzhexin-Desktop-Client-PhanCustom/memory/phans-vercel-deploy.md`.
 
 ## Open items
+- Turnaround: Koalendar says “normal bespoke requires 7–10 days”, our copy (from the old site) says 5 working days in en/vi/zh. Confirm with the client and update `src/i18n/*.json`. Never make a test booking in the embedded Koalendar (creates a real appointment).
 - Meeting deck has no price slide: set `PRICE` in `pitch/meet/build_meeting.py` once the quote and monthly fee are decided. Kimlien should read the VI deck before the meeting.
 - AI fitting room: on phones the "AI fitting room" pill is hidden (widget collapses to the left edge); entry is via the "Try-On" badges, which open it full screen — test on a real phone before the demo. Widget shows "6 free passes" per visitor; check Decart usage limits/costs and the `domain=` parameter if the site moves to tailormadesuit.net.
 - Old copy of the site (pre-mobile-fix) still live at https://phans-custom-tailor.vercel.app on the other Vercel account (hengzhexin-7856, team `zxheng`) — delete it or leave it; don't send that link.
@@ -59,6 +60,7 @@
 - Before launch (see `CONFIRM.md`): Facebook page, final domain, "since 2013", founder names, missing prices (blazer, waistcoat, overcoat, women's), VND vs USD, Tết closure dates, six sample shop products, 23 stock photos to replace with client photos, geo coordinates, FormSubmit activation, native review of VI/ZH translations, set `indexable: true`, strip CONFIRM/PLACEHOLDER comments, connect WooCommerce.
 
 ## Change log
+- 2026-10-22 — Booking check: old site embeds Koalendar (koalendar.com/e/phantailor?embed=true) on its Working hours & appointments page. Demo contact page now embeds the same calendar (desktop/tablet; phones keep the button), tested to the time-slot step. Deck slide 8, Kimlien's handbook and notes updated. Found turnaround mismatch: Koalendar says 7–10 days, site copy says 5 working days (to confirm).
 - 2026-10-22 — Client couldn't open the large PDF: decks shrunk (meeting decks 11 MB to ~1.7 MB, 17-slide decks 4 MB to ~2.2 MB) via `pitch/shrink_pdf.py`, now run automatically by both deck builders; photos embedded as JPEG. Added Kimlien's beginner handbook (VI + EN, `pitch/meet/build_handbook.py`).
 - 2026-10-22 — In-person proposal for Kimlien to present at the villa: 15-slide VI + EN deck (`pitch/meet/`) rebuilt to the pitch-deck.md rules (varied layouts, hand-drawn markup on fresh screenshots without the try-on widget, prose, Prata/Hanken, QR to demo, no AI fitting room, no price yet) + presenter notes for Kimlien.
 - 2026-10-17 — Renamed Yong → Xin everywhere (briefing, pre-call message, both decks rebuilt). Briefing PDF trimmed to 4 pages for Kimlien (dropped client/TWX intro, Vercel, "where is TWX", message appendix; section 1 now answers Thinh's 3 points).

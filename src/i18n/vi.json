@@ -504,7 +504,10 @@
     "holidayBody": "Chúng tôi nghỉ khoảng hai tuần dịp Tết Nguyên Đán và một số ngày lễ. Nếu chuyến đi của bạn rơi vào cuối tháng 1 hoặc tháng 2, hãy nhắn tin trước khi đặt lịch.",
     "formTitle": "Gửi yêu cầu",
     "formIntro": "Hãy cho chúng tôi biết bạn muốn may gì và thời gian bạn ở thành phố. Chúng tôi sẽ phản hồi qua email, hoặc qua WhatsApp nếu bạn để lại số điện thoại.",
-    "mapTitle": "Bản đồ đến Phan's Custom Tailor tại Saigon Pearl"
+    "mapTitle": "Bản đồ đến Phan's Custom Tailor tại Saigon Pearl",
+    "calTitle": "Chọn giờ hẹn tư vấn",
+    "calIntro": "Chọn ngày và giờ bên dưới. Chỉ mất một phút, bạn sẽ nhận email xác nhận.",
+    "calFrame": "Lịch đặt hẹn của Phan's"
   },
   "form": {
     "name": "Họ và tên",

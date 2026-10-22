@@ -92,7 +92,7 @@ def build(L):
   inc = [
     (t("Website 3 ngôn ngữ: Anh (chính), Việt, Trung", "3-language site: English (main), Vietnamese, Chinese"), t("Có", "Yes")),
     (t("Bảng giá, quy trình may, thông tin vải", "Prices, the process, cloth"), t("Có", "Yes")),
-    (t("Nút đặt lịch (Koalendar), WhatsApp, Zalo", "Booking button (Koalendar), WhatsApp, Zalo"), t("Có", "Yes")),
+    (t("Đặt lịch hẹn đến đo ngay trên website (lịch Koalendar), WhatsApp, Zalo", "Booking a measuring visit on the site (Koalendar calendar), WhatsApp, Zalo"), t("Có, như web cũ", "Yes, as today")),
     (t("Cửa hàng trưng bày: khách xem rồi nhắn hoặc đặt lịch", "Showcase shop: customers browse, then message or book"), t("Có", "Yes")),
     (t("Chuyển 7 bài viết từ web cũ, tối ưu Google", "Move the 7 old articles, Google optimisation"), t("Có", "Yes")),
     (t("Hosting, sao lưu, bảo trì", "Hosting, backups, maintenance"), t("TheWebxite lo", "TheWebxite")),
@@ -120,6 +120,7 @@ def build(L):
       t("Mở link, bấm <b>MENU</b> góc trên bên trái để xem các trang: Vest và giá, Quy trình, Vải, Cửa hàng, Liên hệ.", "Open the link and tap <b>MENU</b> (top left) to see the pages: Suits & pricing, Process, Fabrics, Shop, Contact."),
       t("Bấm <b>EN</b> cạnh nút đặt lịch để đổi sang <b>VI</b> (tiếng Việt) hoặc <b>中文</b> (tiếng Trung). Trang đang xem giữ nguyên.", "Tap <b>EN</b> next to the booking button to switch to <b>VI</b> or <b>中文</b>. You stay on the same page."),
       t("Đưa điện thoại cho anh chị tự lướt, khách thường xem trên điện thoại.", "Hand them the phone to scroll themselves; most customers look on a phone."),
+      t("Trang <b>Liên hệ</b>, kéo xuống <b>“Chọn giờ hẹn tư vấn”</b>: lịch Koalendar của Phan's hiện ngay trong website, giống web cũ. Bấm “Book now” để anh chị thấy giờ trống, nhưng <b>đừng đặt hết các bước</b>: sẽ tạo lịch hẹn thật.", "On the <b>Contact</b> page, scroll to <b>“Choose a time for your consultation”</b>: Phan's Koalendar calendar shows right inside the site, like the old one. Tap “Book now” to show the free times, but <b>don't finish a booking</b>: it would create a real appointment."),
       t("Đừng gửi thử form “Gửi yêu cầu” trên trang Liên hệ: nó gửi email thật tới Phan's.", "Don't test the enquiry form on the Contact page: it sends a real email to Phan's."),
     ]))
 
@@ -128,6 +129,7 @@ def build(L):
     (t("Có phí hàng tháng không?", "Is there a monthly fee?"), t("“Có phí hosting và bảo trì, Xin sẽ ghi rõ trong báo giá.”", "“Yes, for hosting and maintenance. Xin will list it in the quote.”")),
     (t("Bao lâu xong?", "How long?"), t("“Khoảng 1 tuần sau khi anh chị gửi đủ ảnh và thông tin.”", "“About a week after you send all the photos and details.”")),
     (t("Tự sửa nội dung được không?", "Can we edit it ourselves?"), t("“Anh chị chỉ cần nhắn, bên em sửa trong gói bảo trì. Muốn tự sửa thì mình bàn thêm.”", "“Just message us and we update it under maintenance. If you want to edit it yourselves, we can discuss.”")),
+    (t("Khách còn đặt lịch hẹn đến đo được như web cũ không?", "Can customers still book a measuring appointment like on the old site?"), t("“Được ạ. Trang Liên hệ có lịch Koalendar ngay trong trang, khách chọn ngày giờ như bây giờ. Lịch hẹn vẫn về Koalendar của anh chị, không đổi gì. Nút đặt lịch còn có trên mọi trang.”", "“Yes. The Contact page has your Koalendar calendar built in, so customers pick a day and time as they do now. Appointments still go to your Koalendar, nothing changes. There's also a booking button on every page.”")),
     (t("Có mất thứ hạng Google không?", "Will we lose our Google ranking?"), t("“Không, link cũ tự chuyển sang trang mới.”", "“No, old links lead to the new pages.”")),
     (t("Email có bị ảnh hưởng không?", "Will email be affected?"), t("“Không, info@phantailor.com giữ nguyên.”", "“No, info@phantailor.com stays as it is.”")),
     (t("Khi nào ngưng Haravan?", "When do we cancel Haravan?"), t("“Sau khi website mới chạy ổn. Trước đó web cũ vẫn chạy bình thường.”", "“Once the new site runs smoothly. Until then the old one keeps working.”")),
@@ -144,7 +146,7 @@ def build(L):
     t("<b>Tên miền:</b> ai giữ tài khoản phanscustomtailor.com và tailormadesuit.net; chọn tên nào làm chính (bên mình đề xuất phanscustomtailor.com).", "<b>Domain:</b> who holds the account for phanscustomtailor.com and tailormadesuit.net; which one as main (we suggest phanscustomtailor.com)."),
     t("<b>Ảnh:</b> villa, anh chị, đồ đã may xong, vải; file logo gốc. Hỏi khi nào gửi được.", "<b>Photos:</b> the villa, the two of them, finished garments, cloth; the original logo. Ask when they can send them."),
     t("<b>Giá còn thiếu:</b> blazer, gilê, măng tô, đồ nữ. Hiện giá bằng VND hay thêm USD?", "<b>Missing prices:</b> blazer, waistcoat, overcoat, women's. VND only, or USD too?"),
-    t("<b>Chi tiết:</b> năm thành lập (web cũ ghi “từ 2013”), lịch nghỉ Tết, may một bộ mất bao lâu, khách ở nước ngoài đặt may lại được không.", "<b>Details:</b> the year they started (old site says “since 2013”), Tết closures, how long a suit takes, whether customers abroad can reorder."),
+    t("<b>Chi tiết:</b> năm thành lập (web cũ ghi “từ 2013”), lịch nghỉ Tết, khách ở nước ngoài đặt may lại được không. <b>Thời gian may:</b> web cũ ghi 5 ngày làm việc, nhưng lịch Koalendar ghi 7–10 ngày. Hỏi con số nào đúng.", "<b>Details:</b> the year they started (old site says “since 2013”), Tết closures, whether customers abroad can reorder. <b>Turnaround:</b> the old site says 5 working days but their Koalendar says 7–10 days. Ask which is right."),
     t("<b>Người đọc lại bản tiếng Việt</b> bên Phan's.", "<b>Someone at Phan's to read the Vietnamese.</b>"),
     t("<b>Tài khoản:</b> link Koalendar, trang Facebook chính thức, quyền Google Business.", "<b>Accounts:</b> the Koalendar link, the official Facebook page, Google Business access."),
     t("<b>Người liên hệ chính</b> và kênh (Zalo, WhatsApp, email).", "<b>Main contact person</b> and channel (Zalo, WhatsApp, email)."),

@@ -51,6 +51,32 @@ Primary keyword: **胡志明市 定制西装**
 - **reviewsIntro:** 客人试身后留下的评价。
 - **journalTitle:** 裁剪台札记
 - **journalLink:** 全部文章
+- **heroLinks**
+  - 1.
+    - **label:** 西装
+    - **to:** pricing
+    - **img:** stock-man-suit-1
+  - 2.
+    - **label:** 衬衫
+    - **to:** pricing
+    - **img:** stock-shirt-detail-1
+  - 3.
+    - **label:** 西裤
+    - **to:** pricing
+    - **img:** stock-trousers-1
+  - 4.
+    - **label:** 女士定制
+    - **to:** pricing
+    - **hash:** pct-women-title
+    - **img:** stock-woman-suit-1
+  - 5.
+    - **label:** 面料
+    - **to:** fabrics
+    - **img:** stock-fabric-swatches-1
+  - 6.
+    - **label:** 预约试衣
+    - **to:** booking
+    - **img:** villa-lounge
 
 ### steps
 
@@ -430,6 +456,9 @@ Primary keyword: **西贡 裁缝 平盛郡**
 - **formTitle:** 在线咨询
 - **formIntro:** 告诉我们您想定制什么，以及您在胡志明市的日期。我们会通过邮件回复；如留下号码，也会通过 WhatsApp 回复。
 - **mapTitle:** Phan's Custom Tailor 在 Saigon Pearl 的位置地图
+- **calTitle:** 选择预约时间
+- **calIntro:** 请在下方选择日期和时间。只需一分钟，您会收到确认邮件。
+- **calFrame:** Phan's 预约日历
 
 ### form
 
@@ -525,6 +554,9 @@ Primary keyword: **西贡 裁缝 平盛郡**
 - **waPricing:** 您好，Phan's Custom Tailor，我想咨询定制西装的价格。
 - **currency:** 越南盾
 - **opensNewTab:** 在新标签页中打开
+- **cursorView:** 查看
+- **cursorRead:** 阅读
+- **scroll:** 向下
 
 ### Footer
 

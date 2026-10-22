@@ -51,6 +51,32 @@ Primary keyword: **may đo vest TP.HCM**
 - **reviewsIntro:** Cảm nhận của khách sau các buổi thử đồ.
 - **journalTitle:** Ghi chép từ bàn cắt
 - **journalLink:** Tất cả bài viết
+- **heroLinks**
+  - 1.
+    - **label:** Vest & suit
+    - **to:** pricing
+    - **img:** stock-man-suit-1
+  - 2.
+    - **label:** Áo sơ mi
+    - **to:** pricing
+    - **img:** stock-shirt-detail-1
+  - 3.
+    - **label:** Quần tây
+    - **to:** pricing
+    - **img:** stock-trousers-1
+  - 4.
+    - **label:** May đo cho nữ
+    - **to:** pricing
+    - **hash:** pct-women-title
+    - **img:** stock-woman-suit-1
+  - 5.
+    - **label:** Vải
+    - **to:** fabrics
+    - **img:** stock-fabric-swatches-1
+  - 6.
+    - **label:** Đặt lịch thử đồ
+    - **to:** booking
+    - **img:** villa-lounge
 
 ### steps
 
@@ -430,6 +456,9 @@ Primary keyword: **tiệm may Bình Thạnh, Saigon Pearl**
 - **formTitle:** Gửi yêu cầu
 - **formIntro:** Hãy cho chúng tôi biết bạn muốn may gì và thời gian bạn ở thành phố. Chúng tôi sẽ phản hồi qua email, hoặc qua WhatsApp nếu bạn để lại số điện thoại.
 - **mapTitle:** Bản đồ đến Phan's Custom Tailor tại Saigon Pearl
+- **calTitle:** Chọn giờ hẹn tư vấn
+- **calIntro:** Chọn ngày và giờ bên dưới. Chỉ mất một phút, bạn sẽ nhận email xác nhận.
+- **calFrame:** Lịch đặt hẹn của Phan's
 
 ### form
 
@@ -525,6 +554,9 @@ Primary keyword: **tiệm may Bình Thạnh, Saigon Pearl**
 - **waPricing:** Xin chào Phan's Custom Tailor, tôi muốn hỏi giá may một bộ vest.
 - **currency:** ₫
 - **opensNewTab:** mở trong thẻ mới
+- **cursorView:** Xem
+- **cursorRead:** Đọc
+- **scroll:** Cuộn
 
 ### Footer
 

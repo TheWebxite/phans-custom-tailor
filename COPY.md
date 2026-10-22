@@ -49,6 +49,32 @@ Primary keyword: **bespoke tailor Ho Chi Minh City**
 - **reviewsIntro:** What visitors wrote after their fittings.
 - **journalTitle:** Notes from the cutting table
 - **journalLink:** All articles
+- **heroLinks**
+  - 1.
+    - **label:** Suits
+    - **to:** pricing
+    - **img:** stock-man-suit-1
+  - 2.
+    - **label:** Shirts
+    - **to:** pricing
+    - **img:** stock-shirt-detail-1
+  - 3.
+    - **label:** Trousers
+    - **to:** pricing
+    - **img:** stock-trousers-1
+  - 4.
+    - **label:** Women's tailoring
+    - **to:** pricing
+    - **hash:** pct-women-title
+    - **img:** stock-woman-suit-1
+  - 5.
+    - **label:** Fabrics
+    - **to:** fabrics
+    - **img:** stock-fabric-swatches-1
+  - 6.
+    - **label:** Book a fitting
+    - **to:** booking
+    - **img:** villa-lounge
 
 ### steps
 
@@ -428,6 +454,9 @@ Primary keyword: **tailor in Bình Thạnh, Saigon Pearl**
 - **formTitle:** Send an enquiry
 - **formIntro:** Tell us what you would like made and when you are in the city. We reply by email, or on WhatsApp if you leave a number.
 - **mapTitle:** Map of Phan's Custom Tailor in Saigon Pearl
+- **calTitle:** Choose a time for your consultation
+- **calIntro:** Pick a date and time below. It takes a minute, and you'll receive a confirmation by email.
+- **calFrame:** Phan's booking calendar
 
 ### form
 
@@ -523,6 +552,9 @@ Primary keyword: **tailor in Bình Thạnh, Saigon Pearl**
 - **waPricing:** Hello Phan's Custom Tailor, I'd like to ask about prices for a custom suit.
 - **currency:** VND
 - **opensNewTab:** opens in a new tab
+- **cursorView:** View
+- **cursorRead:** Read
+- **scroll:** Scroll
 
 ### Footer
 

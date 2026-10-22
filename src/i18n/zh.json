@@ -504,7 +504,10 @@
     "holidayBody": "越南春节（Tết）期间我们休息约两周，部分公众假期也会休息。如果您的行程在一月下旬或二月，请在预约前先联系我们。",
     "formTitle": "在线咨询",
     "formIntro": "告诉我们您想定制什么，以及您在胡志明市的日期。我们会通过邮件回复；如留下号码，也会通过 WhatsApp 回复。",
-    "mapTitle": "Phan's Custom Tailor 在 Saigon Pearl 的位置地图"
+    "mapTitle": "Phan's Custom Tailor 在 Saigon Pearl 的位置地图",
+    "calTitle": "选择预约时间",
+    "calIntro": "请在下方选择日期和时间。只需一分钟，您会收到确认邮件。",
+    "calFrame": "Phan's 预约日历"
   },
   "form": {
     "name": "姓名",

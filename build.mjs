@@ -921,6 +921,10 @@ ${pageHead(ctx, 'contact', { kicker: C.kicker, title: C.title, sub: C.sub })}
         </div>
       </div>
     </div>
+    <div class="pct-booking-embed" id="pct-book">
+      <h2 class="pct-h3">${esc(C.calTitle)}</h2><p>${esc(C.calIntro)}</p>
+      <iframe src="${c.booking}?embed=true" title="${esc(C.calFrame)}" loading="lazy"></iframe>
+    </div>
   </div>
 </section>
 <section class="pct-section pct-section--white" aria-label="${esc(C.visitTitle)}">
