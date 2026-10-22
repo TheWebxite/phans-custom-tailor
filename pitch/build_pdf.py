@@ -396,5 +396,6 @@ if __name__ == '__main__':
         return out; })''')
       print(L, 'issues:', issues[:12] or 'none')
       pg.pdf(path=f'{name}.pdf', width='1280px', height='720px', print_background=True, prefer_css_page_size=True)
+      import subprocess, sys; subprocess.run([sys.executable, 'shrink_pdf.py', f'{name}.pdf'])
     b.close()
   print('done')

@@ -5,7 +5,7 @@ Run from the project root:
   /Users/hengzhexin/anaconda3/bin/python3 pitch/meet/build_meeting.py
 Writes pitch/meet/Gap-mat-Phans-VI.pdf, Meeting-Phans-EN.pdf, Ghi-chu-trinh-bay-Kimlien-VI.pdf, Presenter-notes-Kimlien-EN.pdf.
 Rules: ~/Desktop/Website Skill Folder/fe-web-design-skills/library/pitch-deck.md (no AI-deck tells)."""
-import os, random, html
+import os, random, html, subprocess, sys
 from PIL import Image
 import qrcode
 from playwright.sync_api import sync_playwright
@@ -60,7 +60,7 @@ def deck(L):
   def slide(cls, body, num=True): S.append((cls, body, num))
 
   # 1 cover: the villa showroom
-  slide('cover', f'''<img class="bleed" src="{A}showroom.webp" alt="">
+  slide('cover', f'''<img class="bleed" src="img/showroom.jpg" alt="">
   <div class="shade"></div>
   <img class="logo" src="../logo-white.png" alt="PHAN'S">
   <div class="cover-txt"><h1>{t("Website mới<br>cho Phan's", "A new website<br>for Phan's")}</h1>
@@ -68,7 +68,7 @@ def deck(L):
   <p class="cover-by">TheWebxite</p>''', num=False)
 
   # 2 letter from Xin
-  slide('letter', f'''<div class="ph"><img src="{A}villa-lounge.webp" alt=""></div>
+  slide('letter', f'''<div class="ph"><img src="img/villa-lounge.jpg" alt=""></div>
   <div class="txt">
   <p class="salut">{t("Anh Thịnh, chị Thương thân mến,", "Dear Thinh and Thuong,")}</p>
   <p>{t("Cảm ơn anh chị đã xem bản mẫu và muốn trao đổi tiếp. Hôm nay Kimlien đến villa để cùng anh chị đi qua từng phần: website mới trông thế nào, giai đoạn đầu gồm những gì, chuyển từ website cũ sang ra sao, và bên em cần anh chị chuẩn bị những gì.",
@@ -152,7 +152,7 @@ def deck(L):
   <div class="addr"><p class="dn">phanscustomtailor.com</p><p>{t("tailormadesuit.net và các link cũ tự chuyển về đây", "tailormadesuit.net and the old links all lead here")}</p></div>''')
 
   # 11 the 3D team
-  slide('statement', f'''<img class="side-ph" src="{A}nobility-books.webp" alt="">
+  slide('statement', f'''<img class="side-ph" src="img/nobility-books.jpg" alt="">
   <div class="st"><p class="quote">{t("Website là ngôi nhà. Phần 3D có thể là một căn phòng đẹp trong đó.", "The website is the house. The 3D work can be a beautiful room inside it.")}</p>
   <p>{t("Anh có nhắc đang làm với một đội Web 3D. Hai phần này không giẫm chân nhau. Bên em sẵn sàng làm việc với đội 3D để đặt trải nghiệm của họ vào một trang riêng trên website.", "You mentioned you're working with a Web 3D team. The two don't overlap. We're happy to work with them and give their experience its own page on the site.")}</p></div>''')
 
@@ -200,7 +200,7 @@ def deck(L):
     slide('price', f'''<h2>{t("Chi phí", "Cost")}</h2><p class="pr">{PRICE.get('build', '')}</p><p>{PRICE.get('monthly', '')}</p>''')
 
   # 16 close
-  slide('close', f'''<img class="ph" src="{A}campaign-group.webp" alt="">
+  slide('close', f'''<img class="ph" src="img/campaign-group.jpg" alt="">
   <div class="txt">
   <h2>{t("Mở bản mẫu trên điện thoại", "Open the mock-up on your phone")}</h2>
   <div class="qr"><img src="img/qr.png" alt=""><p>{t("Quét mã để xem lại bất cứ lúc nào", "Scan to look again any time")}<br><a href="{LINK}">phans-custom-tailor-demo.vercel.app</a></p></div>
@@ -281,7 +281,6 @@ figcaption { font-size: 13px; color: var(--mute); margin-top: 12px; }
 .split .lead { position: absolute; left: 64px; top: 116px; width: 760px; font-size: 19px; color: var(--mute); }
 .split .pair { position: absolute; left: 64px; right: 0; top: 200px; display: grid; grid-template-columns: 520px 1fr; gap: 36px; align-items: start; }
 .split img { width: 100%; display: block; border: 1px solid var(--stone); }
-.split figure:first-child img { filter: saturate(.9); }
 
 .booking .top { position: absolute; left: 70px; right: 70px; top: 56px; display: grid; grid-template-columns: 400px 1fr; gap: 60px; align-items: start; }
 .booking .top p { font-size: 18.5px; }
@@ -399,6 +398,7 @@ if __name__ == '__main__':
       pg.pdf(path=f'{name}.pdf', width='1280px', height='720px', print_background=True, prefer_css_page_size=True)
       pg.emulate_media(media='screen')
       print(name, 'fonts ok' if ok else 'FONTS NOT LOADED', 'overflow:', issues or 'none')
+      subprocess.run([sys.executable, os.path.join(HERE, '..', 'shrink_pdf.py'), f'{name}.pdf'])
     for L, name in (('vi', 'Ghi-chu-trinh-bay-Kimlien-VI'), ('en', 'Presenter-notes-Kimlien-EN')):
       open(f'{name}.html', 'w', encoding='utf-8').write(notes(L))
       pg.goto('file://' + os.path.abspath(f'{name}.html'), wait_until='load', timeout=90000); pg.wait_for_timeout(1000)
