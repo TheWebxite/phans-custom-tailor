@@ -1,0 +1,195 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><title>Website mới cho Phan's</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Patrick+Hand&family=Prata&display=swap">
+<style>
+@page { size: 1280px 720px; margin: 0; }
+:root { --ink:#141414; --paper:#f7f6f3; --stone:#d8d5cf; --mute:#5f5f5f; --navy:#1e2a3a; --pen:#b5412f; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #888; }
+body { font-family: "Hanken Grotesk", sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: var(--paper); break-after: page; margin: 0 auto; }
+h1, h2, .big, .quote, .k, .salut, .h { font-family: "Prata", serif; font-weight: 400; }
+h2 { font-size: 40px; line-height: 1.12; letter-spacing: -.005em; }
+p { font-size: 17px; line-height: 1.55; }
+b { font-weight: 600; }
+.pg { position: absolute; right: 30px; bottom: 22px; font-size: 12px; color: var(--mute); }
+.marked { position: relative; }
+.marked img { display: block; width: 100%; }
+.marked svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+
+.cover .bleed { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cover .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,12,16,.82) 0%, rgba(10,12,16,.55) 45%, rgba(10,12,16,.05) 80%); }
+.cover .logo { position: absolute; left: 72px; top: 60px; width: 170px; }
+.cover-txt { position: absolute; left: 72px; bottom: 84px; color: #fff; }
+.cover h1 { font-size: 76px; line-height: 1.06; margin-bottom: 26px; }
+.cover-txt p { font-size: 17px; color: #e6e3dd; }
+.cover-by { position: absolute; right: 48px; bottom: 40px; color: #e6e3dd; font-size: 14px; letter-spacing: .04em; }
+
+.letter .ph { position: absolute; left: 0; top: 0; bottom: 0; width: 470px; }
+.letter .ph img { width: 100%; height: 100%; object-fit: cover; }
+.letter .txt { position: absolute; left: 540px; right: 90px; top: 74px; }
+.letter .txt p { font-size: 17.5px; margin-bottom: 16px; }
+.letter .salut { font-size: 26px !important; margin-bottom: 22px !important; }
+.letter .sign { font-family: "Patrick Hand", cursive; font-size: 34px !important; line-height: 1.05 !important; margin-top: 22px; color: var(--navy); }
+.letter .sign span { font-family: "Hanken Grotesk"; font-size: 14px; color: var(--mute); }
+
+.number { background: #efede8; }
+.number .big { position: absolute; left: 50px; top: 120px; font-size: 330px; line-height: 1; color: var(--navy); letter-spacing: -.02em; }
+.number .num-txt { position: absolute; left: 640px; right: 80px; top: 64px; }
+.number .lede { font-size: 24px; line-height: 1.4; margin-bottom: 30px; }
+.number blockquote { font-family: "Prata"; font-size: 22px; line-height: 1.45; border-top: 1px solid var(--ink); padding-top: 20px; margin-bottom: 12px; }
+.number cite { display: block; font-family: "Hanken Grotesk"; font-style: normal; font-size: 13px; color: var(--mute); margin-top: 12px; }
+.number .tr { font-size: 15px; color: var(--mute); margin-bottom: 22px; }
+.number .num-txt > p:last-child { font-size: 20px; }
+
+.hero { background: var(--ink); }
+.hero > img { position: absolute; left: 0; top: 4px; width: 1136px; }
+.hero .side { position: absolute; left: 1156px; right: 18px; bottom: 34px; color: #e6e3dd; }
+.hero .side p { font-size: 13px; line-height: 1.5; margin-bottom: 12px; }
+.hero .side .h { font-size: 21px; color: #fff; line-height: 1.2; }
+.hero .side .url { font-size: 11px; color: #9a978f; }
+
+.pricing .marked { position: absolute; left: 0; top: 0; }
+.pricing .col { position: absolute; left: 950px; right: 44px; top: 80px; }
+.pricing .col h2 { margin-bottom: 22px; }
+.pricing .col p { font-size: 18px; margin-bottom: 14px; }
+
+.phones .col { position: absolute; left: 70px; top: 90px; width: 360px; }
+.phones .col h2 { margin-bottom: 24px; }
+.phones .col p { margin-bottom: 14px; }
+.phones .row { position: absolute; left: 470px; right: 50px; top: 56px; display: flex; gap: 34px; justify-content: center; }
+.phones figure { width: 228px; }
+.phones figure.up { margin-top: -26px; }
+.phone { height: 494px; border: 9px solid var(--ink); border-radius: 36px; overflow: hidden; background: #fff; }
+.phone img { width: 100%; display: block; }
+figcaption { font-size: 13px; color: var(--mute); margin-top: 12px; }
+
+.split h2 { position: absolute; left: 64px; top: 52px; }
+.split .lead { position: absolute; left: 64px; top: 116px; width: 760px; font-size: 19px; color: var(--mute); }
+.split .pair { position: absolute; left: 64px; right: 0; top: 200px; display: grid; grid-template-columns: 520px 1fr; gap: 36px; align-items: start; }
+.split img { width: 100%; display: block; border: 1px solid var(--stone); }
+.split figure:first-child img { filter: saturate(.9); }
+
+.booking .top { position: absolute; left: 70px; right: 70px; top: 56px; display: grid; grid-template-columns: 400px 1fr; gap: 60px; align-items: start; }
+.booking .top p { font-size: 18.5px; }
+.booking .marked { position: absolute; top: 190px; border-top: 1px solid var(--stone); border-bottom: 1px solid var(--stone); }
+
+.shop .col { position: absolute; left: 56px; top: 64px; width: 340px; }
+.shop .col h2 { font-size: 36px; margin-bottom: 22px; }
+.shop .col p { font-size: 17px; margin-bottom: 14px; }
+.shop .marked { position: absolute; right: 0; top: 70px; border-left: 1px solid var(--stone); }
+
+.domain h2 { position: absolute; left: 70px; top: 64px; width: 900px; }
+.three { position: absolute; left: 70px; right: 70px; top: 150px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); }
+.three > div { padding: 26px 30px 0 0; }
+.three > div + div { padding-left: 30px; border-left: 1px solid var(--stone); }
+.k { font-size: 23px; line-height: 1.2; margin-bottom: 14px; }
+.three p:not(.k) { font-size: 17.5px; }
+.addr { position: absolute; left: 70px; right: 70px; bottom: 56px; display: flex; align-items: baseline; gap: 30px; border-top: 1px solid var(--stone); padding-top: 22px; }
+.addr .dn { font-family: Prata; font-size: 50px; color: var(--navy); }
+.addr p:not(.dn) { color: var(--mute); }
+
+.statement { background: #e9e6df; }
+.statement .side-ph { position: absolute; right: 0; top: 0; height: 100%; width: 430px; object-fit: cover; }
+.statement .st { position: absolute; left: 80px; top: 50%; transform: translateY(-50%); width: 680px; }
+.statement .quote { font-size: 50px; line-height: 1.2; margin-bottom: 34px; color: var(--navy); }
+.statement .st > p:last-child { font-size: 20px; width: 600px; }
+
+.table h2 { position: absolute; left: 70px; top: 54px; }
+.table table { position: absolute; left: 70px; right: 70px; top: 140px; border-collapse: collapse; font-size: 19px; }
+.table th { text-align: left; font-weight: 500; font-size: 14px; color: var(--mute); padding: 0 12px 10px 0; border-bottom: 1.5px solid var(--ink); }
+.table td { padding: 13px 12px 13px 0; border-bottom: 1px solid var(--stone); }
+.table td:first-child { width: 52%; }
+.table td:nth-child(2) { width: 18%; color: var(--navy); font-weight: 500; }
+.table td:nth-child(3) { color: var(--mute); }
+
+.need h2 { position: absolute; left: 70px; top: 58px; }
+.four { position: absolute; left: 70px; right: 70px; top: 190px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 70px; row-gap: 70px; }
+.four > div { border-top: 1px solid var(--ink); padding-top: 18px; }
+.four p:not(.k) { font-size: 19.5px; }
+.four .k { font-size: 27px; }
+
+.time h2 { position: absolute; left: 70px; top: 60px; }
+.time .line { position: absolute; left: 70px; right: 70px; top: 290px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; border-top: 2px solid var(--navy); }
+.time .st { position: relative; padding-top: 30px; }
+.time .tick { position: absolute; left: 0; top: -9px; width: 2px; height: 16px; background: var(--navy); }
+.time .st:nth-child(4) .tick { width: 8px; left: -3px; }
+.time .when { font-family: "Prata"; font-size: 24px; margin-bottom: 10px; line-height: 1.25; }
+.time .st p:not(.when) { font-size: 18px; }
+.time .foot { position: absolute; left: 70px; bottom: 70px; font-size: 18px; color: var(--mute); }
+
+.price h2 { position: absolute; left: 70px; top: 60px; }
+.price .pr { position: absolute; left: 70px; top: 200px; font-family: "Prata"; font-size: 56px; }
+
+.close .ph { position: absolute; left: 0; top: 0; width: 560px; height: 100%; object-fit: cover; object-position: 30% center; }
+.close .txt { position: absolute; left: 630px; right: 80px; top: 80px; }
+.close h2 { margin-bottom: 30px; }
+.close .qr { display: flex; gap: 24px; align-items: center; margin-bottom: 34px; }
+.close .qr img { width: 150px; height: 150px; }
+.close .qr p { font-size: 15px; color: var(--mute); }
+.close .qr a { color: var(--ink); }
+.close .txt > p { font-size: 18px; }
+.close .sign { font-family: "Patrick Hand"; font-size: 32px !important; line-height: 1.1; margin-top: 26px; color: var(--navy); }
+.close .sign span { font-family: "Hanken Grotesk"; font-size: 14px; color: var(--mute); }
+</style></head><body><section class="slide cover"><img class="bleed" src="../../assets/img/showroom.webp" alt="">
+  <div class="shade"></div>
+  <img class="logo" src="../logo-white.png" alt="PHAN'S">
+  <div class="cover-txt"><h1>Website mới<br>cho Phan's</h1>
+  <p>Kimlien gặp anh Thịnh và chị Thương tại villa, Saigon Pearl<br>Tháng 10 năm 2026</p></div>
+  <p class="cover-by">TheWebxite</p></section><section class="slide letter"><div class="ph"><img src="../../assets/img/villa-lounge.webp" alt=""></div>
+  <div class="txt">
+  <p class="salut">Anh Thịnh, chị Thương thân mến,</p>
+  <p>Cảm ơn anh chị đã xem bản mẫu và muốn trao đổi tiếp. Hôm nay Kimlien đến villa để cùng anh chị đi qua từng phần: website mới trông thế nào, giai đoạn đầu gồm những gì, chuyển từ website cũ sang ra sao, và bên em cần anh chị chuẩn bị những gì.</p>
+  <p>TheWebxite thiết kế và xây dựng website cho nhiều doanh nghiệp, trong đó có các công ty đa quốc gia và công ty niêm yết. Với Phan's, điều bên em muốn là một website xứng với những gì khách đã viết về anh chị.</p>
+  <p>Anh chị cứ hỏi Kimlien bất cứ điều gì. Câu nào cần trả lời kỹ hơn, em sẽ gửi lại bằng văn bản ngay sau buổi gặp.</p>
+  <p class="sign">Xin<br><span>TheWebxite</span></p></div></section><section class="slide number"><div class="big">975</div>
+  <div class="num-txt">
+  <p class="lede">đánh giá trên Tripadvisor, điểm 4,8. Trên Google là 1.115 đánh giá, điểm 4,9.</p>
+  <blockquote>“Finding a truly exceptional tailor is a rare feat, but finding one that pairs flawless technical precision with genuinely warm, selfless hospitality is nearly impossible.”
+  <cite>Benjamin C., Vancouver · Tripadvisor, tháng 6/2026</cite></blockquote>
+  <p class="tr">Tạm dịch: “Tìm được một thợ may thật sự giỏi đã hiếm, tìm được nơi vừa chuẩn xác về kỹ thuật vừa hiếu khách chân thành gần như là không thể.”</p>
+  <p>Khách nước ngoài tìm Phan's trên mạng trước khi lên máy bay. Website là nơi đầu tiên họ gặp anh chị, nên nó cần tốt như chính bộ vest.</p></div><span class="pg">3</span></section><section class="slide hero"><img src="img/hero.jpg" alt="">
+  <div class="side"><p class="h">Trang chủ</p>
+  <p>Mở ra là ảnh của chính Phan's. Không khẩu hiệu, không chữ thừa. Khách bấm thẳng vào vest, sơ mi, vải hoặc đặt lịch.</p>
+  <p class="url">phans-custom-tailor-demo<br>.vercel.app</p></div><span class="pg">4</span></section><section class="slide pricing"><div class="marked" style="width:910px"><img src="img/pricing_c.jpg" alt=""><svg viewBox="0 0 2060 1630" preserveAspectRatio="none"><path d="M1057,285 L1025,284 L993,282 L963,276 L941,265 L920,254 L892,245 L887,229 L881,214 L870,199 L884,184 L891,169 L913,157 L935,145 L965,139 L992,130 L1024,125 L1058,127 L1091,128 L1122,134 L1145,146 L1176,153 L1194,167 L1204,182 L1208,197 L1221,212 L1210,228 L1202,243 L1187,258 L1162,269 L1136,280 L1102,284 L1070,291 L1036,289 L1001,290 L968,285 L944,272 L919,262 L898,250" fill="none" stroke="#b5412f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M1290,610 Q1192,454 1190,270" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round"/><path d="M1205,300 L1190,270 L1176,301" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="1260" y="680" font-family="Patrick Hand" font-size="62" fill="#b5412f" text-anchor="start"><tspan x="1260" dy="0">Khách biết giá</tspan><tspan x="1260" dy="67">trước khi bay sang</tspan></text><path d="M927,1056 L891,1052 L871,1041 L843,1033 L830,1022 L827,1010 L817,998 L830,987 L836,975 L860,966 L884,957 L910,948 L941,941 L980,941 L1016,940 L1055,939 L1093,942 L1124,950 L1150,959 L1182,966 L1185,980 L1209,991 L1203,1003 L1196,1015 L1185,1027 L1170,1038 L1152,1050 L1115,1055 L1084,1063 L1047,1067 L1008,1067 L970,1066 L935,1060 L902,1055 L871,1048 L840,1040 L824,1028 L814,1015 L805,1003" fill="none" stroke="#b5412f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M1300,960 Q1249,962 1215,1000" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round"/><path d="M1224,967 L1215,1000 L1246,987" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="1260" y="900" font-family="Patrick Hand" font-size="62" fill="#b5412f" text-anchor="start"><tspan x="1260" dy="0">Còn trống, anh chị</tspan><tspan x="1260" dy="67">bổ sung giúp</tspan></text><path d="M176,1549 L146,1534 L161,1518 L173,1502 L199,1487 L253,1475 L297,1462 L359,1452 L430,1444 L511,1445 L588,1443 L663,1447 L746,1448 L813,1457 L855,1472 L929,1481 L964,1496 L973,1513 L976,1529 L949,1545 L919,1560 L895,1576 L830,1585 L771,1596 L701,1603 L624,1606 L546,1610 L466,1608 L383,1606 L317,1595 L251,1585 L204,1571 L161,1557 L145,1540 L144,1524 L127,1506 L152,1489 L198,1474 L255,1462" fill="none" stroke="#b5412f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="1000" y="1545" font-family="Patrick Hand" font-size="62" fill="#b5412f" text-anchor="start"><tspan x="1000" dy="0">Đặt lịch hoặc nhắn ngay tại đây</tspan></text></svg></div>
+  <div class="col"><h2>Bảng giá</h2>
+  <p>Câu khách hỏi nhiều nhất trước chuyến đi là may một bộ vest hết bao nhiêu. Trang này trả lời ngay, kèm những gì đã gồm trong giá: thử đồ, sửa miễn phí trọn đời.</p>
+  <p>Giá đang lấy từ website hiện tại. Mấy món còn trống, anh chị cho bên em giá là xong.</p></div><span class="pg">5</span></section><section class="slide phones"><div class="col"><h2>Ba thứ tiếng,<br>ngay trên điện thoại</h2>
+  <p>Tiếng Anh là chính vì phần lớn khách là người nước ngoài. Có thêm tiếng Việt và tiếng Trung. Khách đổi ngôn ngữ thì vẫn ở đúng trang đang xem.</p>
+  <p>Bên em tự dịch cả ba. Anh chị chỉ cần một người đọc lại bản tiếng Việt.</p></div>
+  <div class="row">
+    <figure><div class="phone"><img src="cap/m_vi_home.png" alt=""></div><figcaption>Tiếng Việt</figcaption></figure>
+    <figure class="up"><div class="phone"><img src="cap/m_zh_pricing.png" alt=""></div><figcaption>Tiếng Trung, trang giá</figcaption></figure>
+    <figure><div class="phone"><img src="cap/m_vi_contact.png" alt=""></div><figcaption>Liên hệ và đặt lịch</figcaption></figure>
+  </div><span class="pg">6</span></section><section class="slide split"><h2>Hôm nay, và sắp tới</h2>
+  <p class="lead">Cùng một villa, cùng những bộ vest. Chỉ khác lần đầu khách nhìn thấy Phan's trên mạng.</p>
+  <div class="pair">
+    <figure><img src="../img/old_en_desktop.jpg" alt=""><figcaption>tailormadesuit.net hiện tại</figcaption></figure>
+    <figure><img src="img/vi_home_d.jpg" alt=""><figcaption>Website mới, bản tiếng Việt</figcaption></figure>
+  </div><span class="pg">7</span></section><section class="slide booking"><div class="top"><h2>Đặt lịch vẫn như cũ</h2>
+  <p>Nút đặt lịch có trên mọi trang và dẫn thẳng sang Koalendar. Không thêm hệ thống mới, anh chị quản lý lịch hẹn như bây giờ. Ai chưa muốn đặt lịch thì nhắn một tin là được.</p></div><div class="marked" style="width:1180px;margin-left:50px"><img src="img/contact_c.jpg" alt=""><svg viewBox="0 0 2100 570" preserveAspectRatio="none"><path d="M80,267 L115,259 L156,252 L203,249 L250,246 L295,252 L342,253 L390,256 L425,265 L461,274 L470,287 L493,298 L495,310 L500,323 L489,335 L458,345 L435,356 L401,365 L367,375 L320,379 L270,377 L222,380 L178,374 L130,371 L97,362 L67,352 L25,344 L20,331 L11,318 L-5,305 L8,292 L38,281 L54,268 L96,260 L136,252 L185,250 L231,243 L282,244 L333,245" fill="none" stroke="#b5412f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M260,640 Q288,517 256,395" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round"/><path d="M278,421 L256,395 L249,428" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="690" font-family="Patrick Hand" font-size="56" fill="#b5412f" text-anchor="start"><tspan x="70" dy="0">Dẫn sang lịch Koalendar</tspan><tspan x="70" dy="60">anh chị đang dùng</tspan></text><path d="M691,373 L690,354 L681,334 L700,317 L706,298 L719,280 L748,272 L769,258 L797,251 L827,253 L856,250 L886,252 L911,262 L938,271 L953,289 L970,305 L979,324 L989,342 L994,363 L984,382 L974,401 L953,416 L935,433 L905,439 L879,448 L850,456 L819,456 L790,450 L764,439 L737,430 L717,416 L699,400 L680,383 L681,361 L671,341 L677,320 L698,304 L711,285 L731,269" fill="none" stroke="#b5412f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M1150,640 Q1012,564 930,430" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round"/><path d="M959,448 L930,430 L933,464" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="1060" y="700" font-family="Patrick Hand" font-size="54" fill="#b5412f" text-anchor="start"><tspan x="1060" dy="0">WhatsApp cho khách nước ngoài,</tspan><tspan x="1060" dy="58">Zalo cho khách Việt</tspan></text></svg></div><span class="pg">8</span></section><section class="slide shop"><div class="col"><h2>Cửa hàng có cần thanh toán online?</h2>
+  <p>Giai đoạn đầu thì chưa cần. Khách xem vải Nobility và đồ may sẵn, rồi nhắn hỏi hoặc đặt lịch đến villa. Với đồ may đo, khách vẫn phải đến lấy số đo.</p>
+  <p>Bán online cần người xử lý đơn mỗi ngày, đóng gói, gửi hàng ra nước ngoài, đổi trả và cổng thanh toán như OnePay hay VNPay. Khi anh chị sẵn sàng, mình làm ở giai đoạn sau.</p></div><div class="marked" style="width:850px"><img src="img/shop_c.jpg" alt=""><svg viewBox="0 0 2060 1430" preserveAspectRatio="none"><path d="M1053,1201 L1011,1199 L969,1194 L940,1180 L909,1168 L885,1153 L866,1137 L846,1120 L854,1101 L852,1083 L871,1066 L890,1050 L915,1035 L944,1020 L985,1013 L1028,1013 L1069,1009 L1111,1012 L1156,1012 L1194,1022 L1228,1034 L1257,1049 L1276,1067 L1293,1085 L1295,1105 L1281,1124 L1279,1144 L1253,1160 L1229,1177 L1193,1188 L1153,1196 L1112,1202 L1069,1205 L1025,1202 L985,1196 L939,1192 L903,1180 L870,1166 L852,1147" fill="none" stroke="#b5412f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M1330,230 Q1357,642 1150,1000" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round"/><path d="M1153,966 L1150,1000 L1178,981" fill="none" stroke="#b5412f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="1200" y="110" font-family="Patrick Hand" font-size="58" fill="#b5412f" text-anchor="start"><tspan x="1200" dy="0">Sản phẩm mẫu. Sẽ thay bằng</tspan><tspan x="1200" dy="63">vải và đồ thật của Phan&#x27;s</tspan></text></svg></div><span class="pg">9</span></section><section class="slide domain"><h2>Tên miền và hosting, nói cho dễ hiểu</h2>
+  <div class="three">
+    <div><p class="k">Tên miền là địa chỉ</p>
+    <p>Phan's đã có <b>phanscustomtailor.com</b>, cái tên đang hiện trên Google Maps. Bên em đề xuất dùng tên này làm địa chỉ chính, còn tailormadesuit.net tự chuyển về. Không cần mua tên mới, và tên miền luôn đứng tên Phan's.</p></div>
+    <div><p class="k">Hosting là ngôi nhà</p>
+    <p>Nơi chứa toàn bộ nội dung và hình ảnh để website mở 24/7. TheWebxite lo hết: mua, bảo mật, sao lưu, cập nhật. Máy chủ đặt ở nhiều nước nên khách ở đâu mở cũng nhanh.</p></div>
+    <div><p class="k">Email giữ nguyên</p>
+    <p>info@phantailor.com nằm ở chỗ khác và không bị đụng tới. Website cũ trên Haravan vẫn chạy đến ngày chuyển, và các link cũ trên Google sẽ tự dẫn sang trang mới.</p></div>
+  </div>
+  <div class="addr"><p class="dn">phanscustomtailor.com</p><p>tailormadesuit.net và các link cũ tự chuyển về đây</p></div><span class="pg">10</span></section><section class="slide statement"><img class="side-ph" src="../../assets/img/nobility-books.webp" alt="">
+  <div class="st"><p class="quote">Website là ngôi nhà. Phần 3D có thể là một căn phòng đẹp trong đó.</p>
+  <p>Anh có nhắc đang làm với một đội Web 3D. Hai phần này không giẫm chân nhau. Bên em sẵn sàng làm việc với đội 3D để đặt trải nghiệm của họ vào một trang riêng trên website.</p></div><span class="pg">11</span></section><section class="slide table"><h2>Làm gì trước, để gì sau</h2>
+  <table><thead><tr><th></th><th>Giai đoạn đầu</th><th>Để sau</th></tr></thead><tbody><tr><td>Website tiếng Anh, Việt, Trung</td><td>Có</td><td></td></tr><tr><td>Bảng giá, quy trình may, thông tin vải</td><td>Có</td><td></td></tr><tr><td>Đặt lịch Koalendar, nút WhatsApp và Zalo</td><td>Có</td><td></td></tr><tr><td>Cửa hàng trưng bày vải Nobility và đồ may sẵn</td><td>Có</td><td></td></tr><tr><td>Chuyển 7 bài viết từ website cũ</td><td>Có</td><td></td></tr><tr><td>Tối ưu Google, chuyển link cũ sang trang mới</td><td>Có</td><td></td></tr><tr><td>Hosting, sao lưu, bảo trì</td><td>TheWebxite lo</td><td></td></tr><tr><td>Giỏ hàng và thanh toán online</td><td></td><td>Khi anh chị muốn bán online</td></tr><tr><td>Tài khoản khách hàng</td><td></td><td>Đi cùng bán online</td></tr></tbody></table><span class="pg">12</span></section><section class="slide need"><h2>Bên em cần anh chị chuẩn bị</h2>
+  <div class="four">
+    <div><p class="k">Tên miền</p><p>Tài khoản đang quản lý phanscustomtailor.com và tailormadesuit.net, hoặc mời bên em vào. Và anh chị chọn địa chỉ nào làm chính.</p></div>
+    <div><p class="k">Hình ảnh</p><p>Ảnh villa, ảnh anh chị, đồ đã may xong và vải. File logo gốc nếu còn. Ảnh chụp điện thoại cũng được, miễn rõ nét.</p></div>
+    <div><p class="k">Giá và vài chi tiết</p><p>Giá blazer, gilê, măng tô và đồ nữ. Hiện giá bằng VND hay thêm USD. Năm thành lập, lịch nghỉ Tết, thời gian may một bộ.</p></div>
+    <div><p class="k">Tài khoản</p><p>Link Koalendar, trang Facebook chính thức, quyền vào Google Business. Và một người đọc lại bản tiếng Việt.</p></div>
+  </div><span class="pg">13</span></section><section class="slide time"><h2>Từ hôm nay đến ngày ra mắt</h2>
+  <div class="line"><div class="st"><span class="tick"></span><p class="when">Hôm nay</p><p>Thống nhất những phần anh chị muốn làm</p></div><div class="st"><span class="tick"></span><p class="when">Sau buổi gặp</p><p>Xin gửi báo giá và lịch trình</p></div><div class="st"><span class="tick"></span><p class="when">Khi anh chị sẵn sàng</p><p>Anh chị gửi ảnh và thông tin</p></div><div class="st"><span class="tick"></span><p class="when">Khoảng 1 tuần sau</p><p>Bên em hoàn thiện, kiểm tra trên máy tính và điện thoại</p></div><div class="st"><span class="tick"></span><p class="when">Ngày ra mắt</p><p>Anh chị duyệt, website chạy trên tên miền chính</p></div><div class="st"><span class="tick"></span><p class="when">Sau đó</p><p>Bên em bảo trì, cập nhật khi anh chị cần</p></div></div><p class="foot">Một tuần tính từ lúc bên em nhận đủ ảnh và thông tin.</p><span class="pg">14</span></section><section class="slide close"><img class="ph" src="../../assets/img/campaign-group.webp" alt="">
+  <div class="txt">
+  <h2>Mở bản mẫu trên điện thoại</h2>
+  <div class="qr"><img src="img/qr.png" alt=""><p>Quét mã để xem lại bất cứ lúc nào<br><a href="https://phans-custom-tailor-demo.vercel.app/">phans-custom-tailor-demo.vercel.app</a></p></div>
+  <p>Nếu anh chị thấy hợp, bên em rất mong được làm cùng Phan's. Còn nếu chưa, cảm ơn anh chị đã dành thời gian tiếp Kimlien hôm nay.</p>
+  <p class="sign">Xin, TheWebxite<br><span>và Kimlien</span></p></div></section></body></html>
