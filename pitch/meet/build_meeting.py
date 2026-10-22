@@ -109,9 +109,9 @@ def deck(L):
   <p>{t("Tiếng Anh là chính vì phần lớn khách là người nước ngoài. Có thêm tiếng Việt và tiếng Trung. Khách đổi ngôn ngữ thì vẫn ở đúng trang đang xem.", "English comes first because most customers are from overseas, with Vietnamese and Chinese alongside. Switching language keeps the visitor on the same page.")}</p>
   <p>{t("Bên em tự dịch cả ba. Anh chị chỉ cần một người đọc lại bản tiếng Việt.", "We translate all three ourselves. You only need someone to read through the Vietnamese.")}</p></div>
   <div class="row">
-    <figure><div class="phone"><img src="cap/m_vi_home.png" alt=""></div><figcaption>{t("Tiếng Việt", "Vietnamese")}</figcaption></figure>
-    <figure class="up"><div class="phone"><img src="cap/m_zh_pricing.png" alt=""></div><figcaption>{t("Tiếng Trung, trang giá", "Chinese, prices")}</figcaption></figure>
-    <figure><div class="phone"><img src="cap/m_vi_contact.png" alt=""></div><figcaption>{t("Liên hệ và đặt lịch", "Contact and booking")}</figcaption></figure>
+    <figure><div class="phone"><img src="img/m_vi_home.jpg" alt=""></div><figcaption>{t("Tiếng Việt", "Vietnamese")}</figcaption></figure>
+    <figure class="up"><div class="phone"><img src="img/m_zh_pricing.jpg" alt=""></div><figcaption>{t("Tiếng Trung, trang giá", "Chinese, prices")}</figcaption></figure>
+    <figure><div class="phone"><img src="img/m_vi_contact.jpg" alt=""></div><figcaption>{t("Liên hệ và đặt lịch", "Contact and booking")}</figcaption></figure>
   </div>''')
 
   # 7 before / after
@@ -211,7 +211,7 @@ def deck(L):
   for i, (cls, b, num) in enumerate(S, 1):
     body += f'<section class="slide {cls}">{b}' + (f'<span class="pg">{i}</span>' if num else '') + '</section>'
   return f'''<!doctype html><html lang="{L}"><head><meta charset="utf-8"><title>{t("Website mới cho Phan's", "A new website for Phan's")}</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Patrick+Hand&family=Prata&display=swap">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>{CSS}</style></head><body>{body}</body></html>'''
 
 CSS = r'''
@@ -373,7 +373,7 @@ def notes(L):
             "After the meeting, send Xin: what they agreed, the main domain, the missing prices, unanswered questions, and when they'll send photos and details.")
   rows = ''.join(f'<tr><td>{i}</td><td>{a}</td><td>{b}</td></tr>' for i, (a, b) in enumerate(N, 1))
   return f'''<!doctype html><html lang="{L}"><head><meta charset="utf-8"><title>{t("Ghi chú trình bày", "Presenter notes")}</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Prata&display=swap">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>@page {{ size: A4; margin: 16mm 15mm; }} body {{ font-family: "Hanken Grotesk"; font-size: 10.5pt; line-height: 1.45; color: #141414; }}
 h1 {{ font-family: Prata; font-weight: 400; font-size: 21pt; margin: 0 0 4px; }} .sub {{ color: #5f5f5f; margin: 0 0 14px; }}
 table {{ width: 100%; border-collapse: collapse; }} td {{ border-bottom: 1px solid #d8d5cf; padding: 6px 8px 6px 0; vertical-align: top; }}
@@ -392,8 +392,8 @@ if __name__ == '__main__':
     b = p.chromium.launch(); pg = b.new_page(viewport={'width': 1280, 'height': 720})
     for L, name in (('vi', 'Gap-mat-Phans-VI'), ('en', 'Meeting-Phans-EN')):
       open(f'{name}.html', 'w', encoding='utf-8').write(deck(L))
-      pg.goto('file://' + os.path.abspath(f'{name}.html'), wait_until='load', timeout=90000); pg.wait_for_timeout(1500)
-      ok = pg.evaluate("""document.fonts.check('20px Prata') && document.fonts.check('16px "Hanken Grotesk"') && document.fonts.check('30px "Patrick Hand"', 'ữ')""")
+      pg.goto('file://' + os.path.abspath(f'{name}.html'), wait_until='load', timeout=90000); pg.evaluate("""Promise.all(['20px Prata','16px "Hanken Grotesk"','600 16px "Hanken Grotesk"','30px "Patrick Hand"'].map(f=>document.fonts.load(f,'Aăữ西')))"""); pg.wait_for_timeout(800)
+      ok = pg.evaluate("""document.fonts.check('20px Prata','ữ') && document.fonts.check('16px "Hanken Grotesk"','ữ') && document.fonts.check('30px "Patrick Hand"', 'ữ')""")
       issues = pg.evaluate("""[...document.querySelectorAll('.slide')].flatMap((s,i)=>{const r=s.getBoundingClientRect();return [...s.querySelectorAll('p,h1,h2,table,figure,.four,.three,.line')].filter(e=>{const b=e.getBoundingClientRect();return b.bottom>r.bottom+1||b.right>r.right+1}).map(e=>(i+1)+':'+e.tagName+':'+e.textContent.slice(0,30))})""")
       pg.emulate_media(media='print')
       pg.pdf(path=f'{name}.pdf', width='1280px', height='720px', print_background=True, prefer_css_page_size=True)
