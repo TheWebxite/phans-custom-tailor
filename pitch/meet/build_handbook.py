@@ -42,48 +42,29 @@ def build(L):
 
   cover = f'''<header class="top">
   <p class="kicker">{t("Nội bộ · Dành cho Kimlien · Không đưa cho khách", "Internal · For Kimlien · Not for the client")}</p>
-  <h1>{t("Cẩm nang trước buổi gặp Phan's", "Handbook for the Phan's meeting")}</h1>
-  <p class="sub">{t("Mọi thứ em cần biết, viết cho người không làm kỹ thuật. Đọc một lần trước khi đi, mang theo để tra khi cần.", "Everything you need to know, written for someone who isn't technical. Read it once before you go, and keep it handy.")}</p>
-  <p class="sub">{t("Xin, TheWebxite · tháng 10/2026", "Xin, TheWebxite · October 2026")}</p></header>
-  <div class="box"><h3>{t("Nếu chỉ nhớ được 5 điều", "If you remember only five things")}</h3>
+  <h1>{t("Cẩm nang kỹ thuật", "Tech cheat sheet")}</h1>
+  <p class="sub">{t("Để tra nhanh khi anh chị hỏi về tên miền, hosting, email, đặt lịch hay chuyển sang website mới. Câu nào không có ở đây, cứ nói: “Em ghi lại, Xin sẽ trả lời bằng tin nhắn sau buổi gặp.”", "For quick answers when they ask about the domain, hosting, email, booking or switching to the new site. If a question isn't here, say: “I'll note it and Xin will reply in writing after the meeting.”")}</p></header>
+  <div class="box"><h3>{t("Trả lời nhanh", "Quick answers")}</h3>
   <ol>
-    <li>{t("Mục tiêu hôm nay: cho anh chị xem, thống nhất phần việc, và lấy thông tin. <b>Không ký, không chốt giá.</b>", "Today's goal: show them, agree what we'll build, collect information. <b>No signing, no prices.</b>")}</li>
-    <li>{t("Giá do Xin gửi sau buổi gặp. Nếu hỏi giá, nói: “Xin sẽ gửi báo giá chi tiết ngay sau hôm nay.”", "Xin sends the price after the meeting. If they ask: “Xin will send a detailed quote right after today.”")}</li>
-    <li>{t("Tên miền là địa chỉ, hosting là ngôi nhà. Email không bị ảnh hưởng. Đặt lịch giữ Koalendar như cũ.", "The domain is the address, hosting is the house. Email isn't affected. Booking stays on Koalendar.")}</li>
-    <li>{t("Giai đoạn đầu cửa hàng chỉ để trưng bày, chưa thanh toán online.", "In the first phase the shop is a showcase only, no online payment.")}</li>
-    <li>{t("Câu nào không chắc: “Em ghi lại, Xin sẽ trả lời bằng tin nhắn sau buổi gặp.” Không sao cả.", "Not sure of an answer? “I'll note it and Xin will reply in writing after the meeting.” That's completely fine.")}</li>
+    <li>{t("<b>Tên miền</b> là địa chỉ, <b>hosting</b> là ngôi nhà. Phan's đã có tên miền, không cần mua mới, và tên miền luôn đứng tên Phan's.", "The <b>domain</b> is the address, <b>hosting</b> is the house. Phan's already owns its domains, nothing new to buy, and they always stay in Phan's name.")}</li>
+    <li>{t("<b>Email</b> info@phantailor.com không bị ảnh hưởng gì.", "<b>Email</b> (info@phantailor.com) isn't affected at all.")}</li>
+    <li>{t("<b>Đặt lịch</b> vẫn bằng Koalendar như bây giờ, lịch hiện ngay trên trang Liên hệ.", "<b>Booking</b> stays on Koalendar as now, with the calendar right on the Contact page.")}</li>
+    <li>{t("<b>Web cũ</b> chạy đến ngày đổi. Link cũ trên Google tự dẫn sang trang mới, không mất khách.", "The <b>old site</b> runs until switch-over day. Old Google links lead to the new pages, so no customers are lost.")}</li>
+    <li>{t("<b>Thanh toán online</b> để giai đoạn sau. Giai đoạn đầu cửa hàng chỉ trưng bày.", "<b>Online payment</b> comes in a later phase. At first the shop is a showcase only.")}</li>
   </ol></div>'''
 
-  s1 = sec(t("1. Câu chuyện đến giờ", "1. The story so far"), ul([
-    t("<b>Phan's Custom Tailor</b> là tiệm may vest trong một villa ở Saigon Pearl, Bình Thạnh, do anh Thịnh và chị Thương (đều học kiến trúc) làm chủ. Khách chủ yếu là người nước ngoài: 975 đánh giá Tripadvisor (4,8 điểm), 1.115 đánh giá Google (4,9 điểm).", "<b>Phan's Custom Tailor</b> is a tailor in a villa in Saigon Pearl, Binh Thanh, run by Thinh and Thuong Phan (both trained as architects). Most customers are from overseas: 975 Tripadvisor reviews (4.8), 1,115 Google reviews (4.9)."),
-    t("Website hiện tại của họ là <b>tailormadesuit.net</b>, làm trên Haravan, khá cũ.", "Their current site is <b>tailormadesuit.net</b>, built on Haravan, and dated."),
-    t("Xin làm sẵn một <b>bản mẫu</b> (demo) website mới để họ xem: " + f'<a href="{DEMO}">phans-custom-tailor-demo.vercel.app</a>' + ". Em đã gửi bản mẫu và tin nhắn cho anh Thịnh, và đã nói chuyện qua điện thoại.", "Xin built a <b>mock-up</b> (demo) of a new site for them to see: " + f'<a href="{DEMO}">phans-custom-tailor-demo.vercel.app</a>' + ". You've sent it to Thinh with our messages and spoken on the phone."),
-    t("Anh chị muốn làm tiếp. Hôm nay em đến villa để trình bày trực tiếp.", "They want to go ahead. Today you present in person at the villa."),
-    t("Anh Thịnh có làm việc với một đội <b>Web 3D</b> khác. Mình không cạnh tranh với họ (xem mục 8).", "Thinh also works with a separate <b>Web 3D</b> team. We're not competing with them (see section 8)."),
-  ]))
-
-  s2 = sec(t("2. Mang theo và chuẩn bị trước", "2. What to bring and prepare"), ul([
-    t("Tải sẵn file <b>Gap-mat-Phans-VI.pdf</b> vào laptop hoặc iPad (đừng phụ thuộc wifi của khách). Mở thử một lần ở nhà.", "Download <b>Gap-mat-Phans-VI.pdf</b> onto your laptop or iPad beforehand (don't rely on their wifi). Open it once at home to check."),
-    t("Mở sẵn bản mẫu trên trình duyệt (Chrome hoặc Safari). Bật 4G/phát wifi từ điện thoại phòng khi mạng chậm.", "Have the mock-up open in a browser (Chrome or Safari). Keep your phone hotspot ready in case the internet is slow."),
-    t("Sạc đầy máy. Mang theo sổ và bút, hoặc in mục 7 (checklist) của cẩm nang này để đánh dấu.", "Charge your devices. Bring a notebook and pen, or print section 7 (the checklist) to tick off."),
-    t("Để điện thoại có ghi chú trình bày (Ghi-chu-trinh-bay-Kimlien-VI.pdf) để liếc khi cần.", "Keep the presenter notes (Ghi-chu-trinh-bay-Kimlien-VI.pdf) on your phone to glance at."),
-    t("Hỏi trước anh chị có muốn gửi file trình bày không. File giờ chỉ khoảng 2 MB, gửi qua Zalo được.", "Offer to send them the deck afterwards. It's only about 2 MB now and goes through Zalo easily."),
-  ], 'check') + tip(t("Lưu ý: bản mẫu đang có nút <b>“Try-On”</b> (thử đồ bằng AI) trên ảnh sản phẩm. Mình <b>chưa</b> giới thiệu tính năng này. Nếu anh chị bấm vào hoặc hỏi: “Đó là tính năng bên em đang thử nghiệm, chưa nằm trong đề xuất. Xin sẽ báo thêm.”", "Note: the mock-up shows <b>“Try-On”</b> buttons (AI try-on) on product photos. We are <b>not</b> offering this yet. If they tap it or ask: “It's a feature we're testing, not part of the proposal yet. Xin will follow up.”")))
-
   gl = [
-    (t("Website", "Website"), t("“Cửa hàng trên mạng” của Phan's. Khách ở nước ngoài xem giá, vải, cách đặt lịch trước khi bay sang.", "Phan's “shop on the internet”. Overseas customers check prices, cloth and booking before they fly.")),
-    (t("Bản mẫu (demo / mock-up)", "Mock-up (demo)"), t("Bản xem thử Xin làm sẵn. Một số ảnh và sản phẩm là mẫu, sẽ thay bằng ảnh thật của Phan's.", "A preview Xin built. Some photos and products are samples, to be swapped for Phan's real ones.")),
     (t("Tên miền (domain)", "Domain"), t("Địa chỉ website, như địa chỉ nhà. Phan's đã có phanscustomtailor.com và tailormadesuit.net. Trả phí theo năm, luôn đứng tên Phan's.", "The site's address, like a street address. Phan's already owns phanscustomtailor.com and tailormadesuit.net. Paid yearly, always in Phan's name.")),
     ("Hosting", t("Ngôi nhà chứa website (nội dung, hình ảnh) để mở được 24/7. TheWebxite lo hết.", "The house the website lives in, so it's open 24/7. TheWebxite looks after it.")),
     (t("DNS / trỏ tên miền", "DNS / pointing the domain"), t("Tấm biển chỉ đường: đổi biển để địa chỉ cũ dẫn đến nhà mới. Bên mình làm, chỉ cần quyền vào tài khoản tên miền.", "The signpost: we change it so the address leads to the new house. We do it; we just need access to the domain account.")),
     (t("Chuyển hướng (redirect)", "Redirects"), t("Ai bấm link cũ trên Google vẫn tới đúng trang mới. Nên Phan's không mất khách tìm kiếm.", "Anyone clicking an old Google link still lands on the right new page, so Phan's keeps its search visitors.")),
     ("Haravan", t("Nơi đang chứa website cũ. Vẫn chạy cho tới ngày đổi, sau đó anh chị ngưng gói.", "Where the old site lives now. It keeps running until switch-over, then they can cancel it.")),
-    ("Koalendar", t("Lịch đặt hẹn Phan's đang dùng. Website mới chỉ gắn nút dẫn sang đó, không đổi gì.", "The booking calendar Phan's already uses. The new site just links to it, nothing changes.")),
+    ("Koalendar", t("Lịch đặt hẹn Phan's đang dùng. Website mới hiện lịch này ngay trên trang Liên hệ (như web cũ) và có nút đặt lịch trên mọi trang. Lịch hẹn vẫn về Koalendar, không đổi gì.", "The booking calendar Phan's already uses. The new site shows it on the Contact page (like the old site) with a booking button on every page. Appointments still go to Koalendar, nothing changes.")),
     (t("Cổng thanh toán", "Payment gateway"), t("Dịch vụ để khách trả tiền bằng thẻ trên mạng (ở Việt Nam: OnePay, VNPay). Chỉ cần nếu sau này bán online.", "A service for paying by card online (in Vietnam: OnePay, VNPay). Only needed if they sell online later.")),
     (t("Bảo trì", "Maintenance"), t("Sau khi website chạy: bên mình theo dõi, sao lưu, sửa lỗi, cập nhật nội dung nhỏ khi anh chị nhắn.", "After launch we watch over it, back it up, fix problems and make small updates when they ask.")),
     ("Google Business", t("Trang của Phan's trên Google Maps (giờ mở cửa, đánh giá). Cần quyền để gắn website mới vào.", "Phan's page on Google Maps (hours, reviews). We need access to link the new site to it.")),
   ]
-  s3 = sec(t("3. Website hoạt động thế nào (giải thích như kể chuyện)", "3. How a website works, explained simply"),
+  s3 = sec(t("1. Website hoạt động thế nào", "1. How a website works"),
     p(t("Hình dung website như một căn nhà. Có ba thứ: <b>địa chỉ</b> (tên miền), <b>ngôi nhà</b> (hosting), và <b>tấm biển chỉ đường</b> (DNS) để khách gõ địa chỉ là tới đúng nhà. Email là hộp thư riêng, không nằm trong nhà nên không bị ảnh hưởng.",
           "Think of a website as a house. There are three parts: the <b>address</b> (domain), the <b>house</b> (hosting), and the <b>signpost</b> (DNS) that sends visitors who type the address to the right house. Email is a separate mailbox, not inside the house, so it's not affected.")) +
     dia + p(t("Khi đổi sang website mới, mình chỉ dựng nhà mới rồi đổi biển chỉ đường. Địa chỉ giữ nguyên, khách không thấy gián đoạn.", "When we switch, we build the new house and change the signpost. The address stays the same, so customers notice no break.")) +
@@ -99,33 +80,22 @@ def build(L):
     (t("Bán online, giỏ hàng, thanh toán thẻ", "Online sales, cart, card payment"), t("Để sau", "Later")),
     (t("Phòng thử đồ AI", "AI fitting room"), t("Chưa đề xuất", "Not offered yet")),
   ]
-  s4 = sec(t("4. Mình đề xuất gì", "4. What we're offering"),
+  s4 = sec(t("2. Website mới làm được gì", "2. What the new site does"),
     p(t("Biến bản mẫu thành website chính thức của Phan's. Khoảng <b>1 tuần</b> làm việc, tính từ khi anh chị gửi đủ ảnh và thông tin.", "Turn the mock-up into Phan's official website. About <b>one week</b> of work, counted from when they send all the photos and details.")) +
     table(inc, [t("Hạng mục", "Item"), t("Giai đoạn đầu", "First phase")], 'inc') +
     p(t("<b>Vì sao chưa bán online?</b> Bán online cần người xử lý đơn mỗi ngày, đóng gói, gửi hàng ra nước ngoài, đổi trả, và đăng ký cổng thanh toán. Còn may đo thì khách vẫn phải đến villa lấy số đo. Nên giai đoạn đầu trưng bày là đủ; khi nào anh chị muốn bán online thì làm sau.",
           "<b>Why no online sales yet?</b> It needs someone handling orders every day, packing, overseas shipping, returns and a payment gateway. And for made-to-measure, customers still have to come in to be measured. So a showcase is enough for now; online sales can come later.")))
 
-  flow = [
-    ("1–2", t("Bìa và thư của Xin", "Cover and Xin's letter"), t("Chào, cảm ơn. Để anh chị tự đọc thư.", "Greet, thank them. Let them read the letter.")),
-    ("3", "975", t("Khách nước ngoài tìm Phan's trên mạng trước khi bay. Website là nơi gặp đầu tiên.", "Overseas customers look Phan's up before flying. The site is where they meet Phan's first.")),
-    ("4–7", t("Trang chủ, giá, điện thoại, cũ và mới", "Home, prices, phones, old vs new"), t("Cho xem website. Hỏi giá còn thiếu. Hỏi ai đọc lại bản tiếng Việt.", "Show the site. Ask for missing prices. Ask who can read the Vietnamese.")),
-    ("8–9", t("Đặt lịch, cửa hàng", "Booking, shop"), t("Koalendar giữ nguyên. Cửa hàng chỉ trưng bày, bán online để sau.", "Koalendar stays. The shop is a showcase; online sales later.")),
-    ("10–11", t("Tên miền, đội 3D", "Domain, 3D team"), t("Giải thích bằng hình ngôi nhà. Hỏi chọn tên miền nào làm chính.", "Explain with the house picture. Ask which domain they want as main.")),
-    ("12–14", t("Giai đoạn, cần chuẩn bị, lịch trình", "Phases, what we need, timeline"), t("Đi qua checklist mục 7. Không hứa ngày cụ thể.", "Go through the section 7 checklist. No fixed dates.")),
-    ("15", t("Kết", "Close"), t("Cho quét mã QR. Xin gửi báo giá sau. Cảm ơn.", "Let them scan the QR. Xin sends the quote. Thank them.")),
-  ]
-  s5 = sec(t("5. Đi qua bản trình bày (khoảng 20 phút)", "5. Going through the deck (about 20 minutes)"),
-    table(flow, [t("Trang", "Slides"), t("Nội dung", "What's on it"), t("Em nói / hỏi gì", "What to say or ask")], 'flow') +
-    f'<h3>{t("Cho xem bản mẫu thật (nếu có mạng)", "Showing the live mock-up (if there’s internet)")}</h3>' + ul([
+  s5 = sec(t("4. Khi cho xem bản mẫu", "4. Showing the mock-up"), ul([
       t("Mở link, bấm <b>MENU</b> góc trên bên trái để xem các trang: Vest và giá, Quy trình, Vải, Cửa hàng, Liên hệ.", "Open the link and tap <b>MENU</b> (top left) to see the pages: Suits & pricing, Process, Fabrics, Shop, Contact."),
       t("Bấm <b>EN</b> cạnh nút đặt lịch để đổi sang <b>VI</b> (tiếng Việt) hoặc <b>中文</b> (tiếng Trung). Trang đang xem giữ nguyên.", "Tap <b>EN</b> next to the booking button to switch to <b>VI</b> or <b>中文</b>. You stay on the same page."),
       t("Đưa điện thoại cho anh chị tự lướt, khách thường xem trên điện thoại.", "Hand them the phone to scroll themselves; most customers look on a phone."),
       t("Trang <b>Liên hệ</b>, kéo xuống <b>“Chọn giờ hẹn tư vấn”</b>: lịch Koalendar của Phan's hiện ngay trong website, giống web cũ. Bấm “Book now” để anh chị thấy giờ trống, nhưng <b>đừng đặt hết các bước</b>: sẽ tạo lịch hẹn thật.", "On the <b>Contact</b> page, scroll to <b>“Choose a time for your consultation”</b>: Phan's Koalendar calendar shows right inside the site, like the old one. Tap “Book now” to show the free times, but <b>don't finish a booking</b>: it would create a real appointment."),
       t("Đừng gửi thử form “Gửi yêu cầu” trên trang Liên hệ: nó gửi email thật tới Phan's.", "Don't test the enquiry form on the Contact page: it sends a real email to Phan's."),
+      t("Nút <b>“Try-On”</b> (thử đồ bằng AI) trên ảnh sản phẩm: mình chưa giới thiệu. Nếu anh chị bấm hoặc hỏi, xem câu trả lời ở mục 3.", "The <b>“Try-On”</b> buttons (AI try-on) on product photos: we're not offering this yet. If they tap or ask, see the answer in section 3."),
     ]))
 
   qa = [
-    (t("Hết bao nhiêu tiền?", "How much?"), t("“Xin sẽ gửi báo giá chi tiết ngay sau hôm nay, theo những phần anh chị chọn.” Không nói con số.", "“Xin will send a detailed quote right after today, based on what you choose.” No numbers.")),
     (t("Có phí hàng tháng không?", "Is there a monthly fee?"), t("“Có phí hosting và bảo trì, Xin sẽ ghi rõ trong báo giá.”", "“Yes, for hosting and maintenance. Xin will list it in the quote.”")),
     (t("Bao lâu xong?", "How long?"), t("“Khoảng 1 tuần sau khi anh chị gửi đủ ảnh và thông tin.”", "“About a week after you send all the photos and details.”")),
     (t("Tự sửa nội dung được không?", "Can we edit it ourselves?"), t("“Anh chị chỉ cần nhắn, bên em sửa trong gói bảo trì. Muốn tự sửa thì mình bàn thêm.”", "“Just message us and we update it under maintenance. If you want to edit it yourselves, we can discuss.”")),
@@ -140,23 +110,18 @@ def build(L):
     (t("Ai dịch tiếng Trung?", "Who did the Chinese?"), t("“Bên em dịch. Anh chị chỉ cần một người đọc lại bản tiếng Việt.”", "“We did. You just need someone to read the Vietnamese.”")),
     (t("Có dùng AI không?", "Did you use AI?"), t("“Có. TheWebxite là công ty phần mềm và AI, dùng AI để làm nhanh và tốt hơn. Thiết kế, kiểm tra và hỗ trợ đều do người thật làm.”", "“Yes. TheWebxite is a software and AI company; AI helps us work faster and better. Design, testing and support are done by real people.”")),
   ]
-  s6 = sec(t("6. Câu anh chị có thể hỏi và cách trả lời", "6. Questions they may ask, and what to say"), table(qa, [t("Nếu anh chị hỏi", "If they ask"), t("Em trả lời", "You say")], 'qa'))
+  s6 = sec(t("3. Câu hỏi kỹ thuật và cách trả lời", "3. Technical questions and what to say"), table(qa, [t("Nếu anh chị hỏi", "If they ask"), t("Em trả lời", "You say")], 'qa'))
 
   ck = [
-    t("<b>Tên miền:</b> ai giữ tài khoản phanscustomtailor.com và tailormadesuit.net; chọn tên nào làm chính (bên mình đề xuất phanscustomtailor.com).", "<b>Domain:</b> who holds the account for phanscustomtailor.com and tailormadesuit.net; which one as main (we suggest phanscustomtailor.com)."),
-    t("<b>Ảnh:</b> villa, anh chị, đồ đã may xong, vải; file logo gốc. Hỏi khi nào gửi được.", "<b>Photos:</b> the villa, the two of them, finished garments, cloth; the original logo. Ask when they can send them."),
-    t("<b>Giá còn thiếu:</b> blazer, gilê, măng tô, đồ nữ. Hiện giá bằng VND hay thêm USD?", "<b>Missing prices:</b> blazer, waistcoat, overcoat, women's. VND only, or USD too?"),
-    t("<b>Chi tiết:</b> năm thành lập (web cũ ghi “từ 2013”), lịch nghỉ Tết, khách ở nước ngoài đặt may lại được không. <b>Thời gian may:</b> web cũ ghi 5 ngày làm việc, nhưng lịch Koalendar ghi 7–10 ngày. Hỏi con số nào đúng.", "<b>Details:</b> the year they started (old site says “since 2013”), Tết closures, whether customers abroad can reorder. <b>Turnaround:</b> the old site says 5 working days but their Koalendar says 7–10 days. Ask which is right."),
-    t("<b>Người đọc lại bản tiếng Việt</b> bên Phan's.", "<b>Someone at Phan's to read the Vietnamese.</b>"),
-    t("<b>Tài khoản:</b> link Koalendar, trang Facebook chính thức, quyền Google Business.", "<b>Accounts:</b> the Koalendar link, the official Facebook page, Google Business access."),
-    t("<b>Người liên hệ chính</b> và kênh (Zalo, WhatsApp, email).", "<b>Main contact person</b> and channel (Zalo, WhatsApp, email)."),
-    t("<b>Đội 3D:</b> có muốn hai bên phối hợp không, xin liên hệ.", "<b>3D team:</b> do they want us to coordinate? Get a contact."),
+    t("<b>Tên miền:</b> ai giữ tài khoản quản lý phanscustomtailor.com và tailormadesuit.net (để bên mình được mời vào), và chọn tên nào làm chính. Bên mình đề xuất phanscustomtailor.com.", "<b>Domain:</b> who holds the account for phanscustomtailor.com and tailormadesuit.net (so they can invite us), and which one as main. We suggest phanscustomtailor.com."),
+    t("<b>Koalendar:</b> ai đang quản lý lịch. Lịch ghi may 7–10 ngày, còn web cũ ghi 5 ngày làm việc: hỏi con số nào đúng.", "<b>Koalendar:</b> who manages the calendar. It says 7–10 days for a suit, the old site says 5 working days: ask which is right."),
+    t("<b>Google Business</b> (trang Phan's trên Google Maps): ai có quyền quản lý, để gắn website mới vào.", "<b>Google Business</b> (Phan's page on Google Maps): who can manage it, so the new site can be linked."),
+    t("<b>Facebook:</b> trang chính thức là facebook.com/phanstailor hay /phantailor?", "<b>Facebook:</b> is the official page facebook.com/phanstailor or /phantailor?"),
+    t("<b>Đội 3D:</b> nếu anh chị muốn hai bên phối hợp, xin liên hệ người phụ trách kỹ thuật bên đó.", "<b>3D team:</b> if they want us to coordinate, get their technical contact."),
   ]
-  s7 = sec(t("7. Thông tin cần lấy (đánh dấu khi có)", "7. Information to collect (tick as you go)"),
-    p(t("Không cần có đủ hôm nay. Chỉ cần hỏi và ghi lại khi nào anh chị gửi.", "You don't need everything today. Just ask, and note when they'll send it.")) + ul(ck, 'check'))
+  s7 = sec(t("5. Thông tin kỹ thuật cần xin", "5. Technical details to ask for"), ul(ck, 'check'))
 
-  s8 = sec(t("8. Đừng hứa", "8. Don't promise"), ul([
-    t("Giá cụ thể, giảm giá, hay điều khoản thanh toán.", "A specific price, a discount or payment terms."),
+  s8 = sec(t("6. Đừng hứa", "6. Don't promise"), ul([
     t("Bán online hay thanh toán thẻ ở giai đoạn đầu.", "Online sales or card payment in the first phase."),
     t("Phòng thử đồ AI.", "The AI fitting room."),
     t("Ngày ra mắt cụ thể.", "A specific launch date."),
@@ -164,23 +129,8 @@ def build(L):
     t("Mua tên miền mới (Phan's đã có).", "Buying a new domain (Phan's already has one)."),
   ], 'no'))
 
-  s9 = sec(t("9. Khi bí, nói thế này", "9. When you're stuck, say this"), ul([
-    t("“Câu này hay, em ghi lại để Xin trả lời chính xác bằng tin nhắn nhé anh.”", "“Good question. I'll note it so Xin can answer properly in writing.”"),
-    t("“Phần kỹ thuật bên em lo hết, anh chị chỉ cần gửi ảnh và thông tin thôi ạ.”", "“We handle all the technical side. You only need to send photos and details.”"),
-    t("“Cái này nằm trong báo giá, Xin sẽ gửi ngay sau hôm nay.”", "“That will be in the quote, which Xin sends right after today.”"),
-  ]) + p(t("Trong buổi gặp, có gì gấp thì nhắn Xin qua WhatsApp.", "If something urgent comes up during the meeting, message Xin on WhatsApp.")))
-
-  s10 = sec(t("10. Sau buổi gặp, nhắn Xin", "10. After the meeting, send Xin"), ul([
-    t("Anh chị đồng ý những phần nào, muốn thêm hay bỏ gì.", "What they agreed to, and anything to add or drop."),
-    t("Tên miền chọn làm chính, và ai giữ tài khoản.", "The main domain, and who holds the account."),
-    t("Giá còn thiếu và các chi tiết đã có.", "The missing prices and details you got."),
-    t("Câu hỏi mình chưa trả lời được.", "Questions we couldn't answer."),
-    t("Khi nào anh chị gửi ảnh và thông tin, và muốn nhận báo giá lúc nào.", "When they'll send photos and details, and when they want the quote."),
-    t("Ấn tượng chung: anh chị có vẻ hài lòng không, lo ngại điều gì.", "Your overall feel: did they seem happy, what worried them."),
-  ]))
-
-  body = cover + s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10
-  return f'''<!doctype html><html lang="{L}"><head><meta charset="utf-8"><title>{t("Cẩm nang Kimlien", "Kimlien handbook")}</title>
+  body = cover + s3 + s4 + s6 + s5 + s7 + s8
+  return f'''<!doctype html><html lang="{L}"><head><meta charset="utf-8"><title>{t("Cẩm nang kỹ thuật", "Tech cheat sheet")}</title>
 <link rel="stylesheet" href="fonts/fonts.css"><style>{CSS}</style></head><body>{body}</body></html>'''
 
 CSS = r'''
@@ -224,7 +174,7 @@ ul.no li::after { transform: rotate(-45deg); }
 FOOT = '<div style="width:100%;font-family:Arial,sans-serif;font-size:7.5pt;color:#5f5f5f;padding:0 16mm;display:flex;justify-content:space-between"><span>{label}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>'
 
 if __name__ == '__main__':
-  outs = {'vi': ('Cam-nang-Kimlien-VI', "Cẩm nang buổi gặp Phan's · Nội bộ"), 'en': ('Handbook-Kimlien-EN', "Phan's meeting handbook · Internal")}
+  outs = {'vi': ('Cam-nang-Kimlien-VI', "Cẩm nang kỹ thuật · Phan's · Nội bộ"), 'en': ('Handbook-Kimlien-EN', "Tech cheat sheet · Phan's · Internal")}
   with sync_playwright() as p:
     b = p.chromium.launch(); pg = b.new_page()
     for L, (name, label) in outs.items():
