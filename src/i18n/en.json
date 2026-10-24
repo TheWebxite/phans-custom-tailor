@@ -741,6 +741,37 @@
     "demoTitle": "Booking preview",
     "demoBody": "This is the demo website, so no real appointment was made. Once Phan's booking account is connected, this step sends the confirmation email with a calendar invite.",
     "doneAgain": "Book another appointment",
-    "demoNote": "Demo website: these times are samples and nothing is booked."
+    "demoNote": "Demo website: these times are samples and nothing is booked.",
+    "facts": [
+      [
+        "7–10",
+        "working days for standard bespoke"
+      ],
+      [
+        "8%",
+        "rush fee for under 72 hours"
+      ],
+      [
+        "30 min",
+        "grace period for every appointment"
+      ],
+      [
+        "3%",
+        "courtesy discount for smooth cooperation"
+      ]
+    ],
+    "stepOf": "Step {n} of 3",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "left": "{n} left",
+    "few": "Few left",
+    "today": "Today",
+    "ack": "I have read the studio policies on this page.",
+    "urgentNote": "Urgent bespoke: the 8% expedited production fee applies automatically, and the order is subject to workshop capacity.",
+    "addCal": "Add to my calendar",
+    "summary": "Your appointment",
+    "where": "The villa, 08 D9 Street, Saigon Pearl, Bình Thạnh",
+    "selectService": "Choose the appointment you need"
   }
 }

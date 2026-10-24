@@ -22,12 +22,14 @@ if (root && dataEl) {
     root.querySelectorAll('[data-bdot]').forEach((d) => { const k = Number(d.dataset.bdot); d.classList.toggle('is-on', k === n); d.classList.toggle('is-done', k < n); d.setAttribute('aria-current', k === n ? 'step' : 'false'); });
     const panel = $('.pct-book__flow');
     if (panel && (window.matchMedia('(max-width: 899px)').matches || panel.getBoundingClientRect().top < 0)) window.scrollTo({ top: panel.getBoundingClientRect().top + scrollY - 96, behavior: 'smooth' });
+    const cnt = $('[data-bcount]'); if (cnt) { cnt.textContent = T.stepOf.replace('{n}', String(Math.min(n, 3))); cnt.parentElement.hidden = n > 3; }
     const h = steps[n - 1].querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
   };
   const chosen = () => {
     const s = T.services[st.service];
     const when = st.date ? `${new Intl.DateTimeFormat(loc, { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(st.date + 'T00:00:00Z'))}${st.time ? ', ' + st.time + ' ' + T.tz : ''}` : '';
-    root.querySelectorAll('[data-bchosen]').forEach((el) => { el.innerHTML = `<strong>${esc(s ? s[0] : '')}</strong>${when ? `<span>${esc(when)}</span>` : ''}`; });
+    root.querySelectorAll('[data-bchosen]').forEach((el) => { el.innerHTML = `<p class="pct-book__cs">${esc(s ? s[0] : '')}</p>${when ? `<p class="pct-book__cw">${esc(when)}</p>` : ''}`; });
+    const u = $('[data-burgent]'); if (u) u.hidden = st.service !== 'urgent';
   };
 
   // ---------- step 1 ----------
@@ -91,7 +93,9 @@ if (root && dataEl) {
       const closed = sys.closedDates.includes(date) || !sys.hours[new Date(date + 'T00:00:00Z').getUTCDay()];
       const open = date >= today && !closed && list.some((s) => s.count < MAX);
       const label = new Intl.DateTimeFormat(loc, { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(date + 'T00:00:00Z'));
-      cells += `<button type="button" class="pct-book__day${st.date === date ? ' is-on' : ''}${closed && date >= today ? ' is-closed' : ''}" data-day="${date}" ${open ? '' : 'disabled'} aria-pressed="${st.date === date}" aria-label="${esc(label)}${closed ? ', ' + esc(T.closed) : ''}">${d}</button>`;
+      const free = list.reduce((a, x) => a + Math.max(0, MAX - x.count), 0), cap = list.length * MAX || 1;
+      const lvl = !open ? '' : free / cap > 0.55 ? ' is-many' : ' is-few';
+      cells += `<button type="button" class="pct-book__day${st.date === date ? ' is-on' : ''}${closed && date >= today ? ' is-closed' : ''}${date === today ? ' is-today' : ''}${lvl}" data-day="${date}" ${open ? '' : 'disabled'} aria-pressed="${st.date === date}" aria-label="${esc(label)}${closed ? ', ' + esc(T.closed) : ''}"><span>${d}</span><i aria-hidden="true"></i></button>`;
     }
     const grid = box.querySelector('.pct-book__grid');
     grid.classList.remove('is-loading'); grid.innerHTML = cells;
@@ -102,10 +106,14 @@ if (root && dataEl) {
     const list = (st.cache[`${st.service}|${st.month}`]?.[st.date] || []).filter((s) => st.date > today || s.time > nowHM());
     const box = $('[data-bslots]');
     if (!list.length) { box.innerHTML = `<p class="pct-book__hint">${esc(T.noSlots)}</p>`; return; }
-    box.innerHTML = `<p class="pct-book__tz">${esc(T.tz)}</p><div class="pct-book__slots">${list.map((s) => {
-      const full = s.count >= MAX;
-      return `<button type="button" class="pct-book__slot" data-slot="${s.time}" data-start="${s.start}"${full ? ' disabled' : ''}>${s.time}${full ? `<span>${esc(T.full)}</span>` : ''}</button>`;
-    }).join('')}</div>`;
+    const part = (t) => (t < '12:00' ? 'morning' : t < '17:00' ? 'afternoon' : 'evening');
+    const groups = ['morning', 'afternoon', 'evening'].map((g) => [g, list.filter((x) => part(x.time) === g)]).filter(([, l]) => l.length);
+    box.innerHTML = `<p class="pct-book__tz"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>${esc(T.tz)}</p>` + groups.map(([g, l]) =>
+      `<div class="pct-book__period"><p>${esc(T[g])}</p><div class="pct-book__slots">${l.map((x) => {
+        const left = MAX - x.count, full = left <= 0;
+        const note = full ? T.full : left < MAX ? T.left.replace('{n}', String(left)) : '';
+        return `<button type="button" class="pct-book__slot${full ? '' : left === 1 ? ' is-last' : ''}" data-slot="${x.time}" data-start="${x.start}"${full ? ' disabled' : ''} aria-label="${x.time} ${esc(T.tz)}${note ? ', ' + esc(note) : ''}"><b>${x.time}</b>${note ? `<span>${esc(note)}</span>` : ''}</button>`;
+      }).join('')}</div></div>`).join('');
   }
 
   // ---------- step 3: details ----------
@@ -130,6 +138,10 @@ if (root && dataEl) {
       fld('email', F.email, text('email', 'email', true, ' autocomplete="email" inputmode="email"')) +
       fld('phone', F.phone, `<div class="pct-book__phone"><select id="pb-cc" name="cc" aria-label="Country code">${CC.map((c) => `<option>${c}</option>`).join('')}</select>${text('phone', 'tel', true, ' autocomplete="tel-national" inputmode="tel"')}</div>`, true, F.phoneHint) +
       fld('guest', F.guest, text('guest', 'text', false), false, F.guestHint) + statusR + dyn;
+    const meas = $('[data-field="measure"]');
+    const syncMeas = () => { if (meas) meas.hidden = ($('input[name="status"]:checked') || {}).value !== F.statusOpts[0]; };
+    root.querySelectorAll('input[name="status"]').forEach((r) => r.addEventListener('change', syncMeas)); syncMeas();
+    const ack = $('#pb-ack'); if (ack) ack.checked = false;
     try { const saved = JSON.parse(localStorage.getItem('pct-book-client') || 'null'); if (saved) ['name', 'email', 'phone', 'cc'].forEach((k) => { const el = $(`#pb-${k}`); if (el && saved[k]) el.value = saved[k]; }); } catch (e) { /* storage blocked */ }
   }
   const setErr = (name, msg) => { const e = $(`#pb-${name}-err`); if (e) e.textContent = msg || ''; const i = $(`#pb-${name}`); if (i) i.setAttribute('aria-invalid', msg ? 'true' : 'false'); return !msg; };
@@ -147,6 +159,7 @@ if (root && dataEl) {
     const f = fd.get('ref');
     if (f && f.size) { if (!/^image\/(jpeg|png)$/.test(f.type)) bad('ref', T.err.fileType); else bad('ref', f.size > 10 * 1024 * 1024 ? T.err.file : ''); }
     else if (kind === 'female') bad('ref', T.err.required);
+    bad('ack', fd.get('ack') ? '' : T.err.policy);
     if (firstBad) $(`#pb-${firstBad}`)?.focus();
     return ok;
   }
@@ -183,8 +196,17 @@ if (root && dataEl) {
     if (window.dataLayer) window.dataLayer.push({ event: 'booking_confirmed', service: st.service, demo: !!res.demo });
     $('[data-bdone-title]').textContent = res.demo ? T.demoTitle : T.doneTitle;
     $('[data-bdone-body]').textContent = res.demo ? T.demoBody : T.doneBody;
+    st.lastDemo = !!res.demo;
+    const ics = $('[data-bics]'); if (ics) ics.hidden = !!res.demo;
     chosen(); show(4);
   });
+  root.querySelector('[data-bics]')?.addEventListener('click', () => {
+    const s = new Date(st.start), e = new Date(s.getTime() + 60 * 60000), f = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Phans Custom Tailor//Booking//EN', 'BEGIN:VEVENT', `UID:${f(s)}-${st.service}@phanscustomtailor`, `DTSTAMP:${f(new Date())}`, `DTSTART:${f(s)}`, `DTEND:${f(e)}`,
+      `SUMMARY:Phan's Custom Tailor: ${T.services[st.service][0]}`, `LOCATION:${T.where}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = 'phans-appointment.ics'; a.click();
+  });
+  root.querySelector('[data-bpolicies]')?.addEventListener('click', (e) => { const d = $('.pct-book__info'); if (d) d.open = true; });
   root.querySelector('[data-bagain]').addEventListener('click', () => { st.service = st.date = st.time = null; root.querySelectorAll('[data-service]').forEach((b) => b.setAttribute('aria-pressed', 'false')); show(1); });
   if (window.matchMedia('(max-width: 899px)').matches) { const d = $('.pct-book__info'); if (d) d.open = false; }
 }

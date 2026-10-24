@@ -555,32 +555,54 @@ ${pageHead(ctx, 'process', { kicker: P.kicker, title: P.title, sub: P.sub, aside
   return { body, jsonld: [ld, breadcrumbLD(ctx, [{ name: T.nav.process, href: pagePath(lang, 'process') }])] };
 }
 
+const BOOK_ICON = {
+  consult: '<path d="M12 3l-4 3-3 1 1 14h12l1-14-3-1-4-3zM12 3v18M8 6l4 6 4-6"/>',
+  urgent: '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M10 2h4"/>',
+  group: '<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2 21c0-4 3-7 6-7s6 3 6 7M12 21c0-4 2-7 4-7s6 3 6 7"/>',
+  female: '<circle cx="12" cy="5" r="3"/><path d="M9 9l-3 12h12L15 9M9 9h6M10 9l2 5 2-5"/>',
+  fitting: '<path d="M4 20l7-7M14 4l6 6-4 1-3 3-3-3 3-3 1-4zM6 14l4 4"/>',
+  pickup: '<path d="M5 8h14l-1 13H6L5 8zM9 8V6a3 3 0 016 0v2M9 14l2 2 4-4"/>',
+  repair: '<path d="M6 3l12 12M4 20c3 0 5-2 5-5M14 4a3 3 0 014 4M18 21l-4-4"/>',
+};
+const bookIcon = (k) => `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${BOOK_ICON[k]}</svg>`;
+
 function pageBook(ctx) {
   const { lang, T } = ctx;
   const K = T.book;
   const sys = config.bookingSystem;
-  const info = `<details class="pct-book__info" open><summary>${esc(K.readMore)}</summary><div class="pct-book__infobody">
-      <p class="pct-book__welcome">${esc(K.welcome)}</p><p class="pct-book__wsub">${esc(K.welcomeSub)}</p>
-      ${K.policies.map((x) => `<h2>${esc(x.t)}</h2><ul>${x.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`).join('')}</div></details>`;
-  const dots = `<ol class="pct-book__dots">${K.steps.map((x, i) => `<li data-bdot="${i + 1}"${i === 0 ? ' class="is-on" aria-current="step"' : ''}><span>${String(i + 1).padStart(2, '0')}</span>${esc(x)}</li>`).join('')}</ol>`;
-  const services = sys.services.map((k) => `<button type="button" class="pct-book__svc" data-service="${k}" aria-pressed="false"><strong>${esc(K.services[k][0])}</strong><span>${esc(K.services[k][1])}</span></button>`).join('');
-  const chosen = `<div class="pct-book__chosen"><p data-bchosen></p><button type="button" class="pct-text-link" data-bback="1">${esc(K.change)}</button></div>`;
+  const facts = `<div class="pct-book__facts">${K.facts.map(([n, t]) => `<div><strong>${esc(n)}</strong><span>${esc(t)}</span></div>`).join('')}</div>`;
+  const info = `<details class="pct-book__info" open><summary><span>${esc(K.readMore)}</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg></summary>
+      ${facts}<div class="pct-book__policies">${K.policies.map((x, i) => `<section><h2><span>${String(i + 1).padStart(2, '0')}</span>${esc(x.t)}</h2><ul>${x.items.map((it) => `<li>${esc(it)}</li>`).join('')}</ul></section>`).join('')}</div></details>`;
+  const side = `<aside class="pct-book__side" id="pct-book-policies">
+    <figure class="pct-book__photo"><img src="${imgSmall('villa-lounge')}" alt="" width="${IMAGES['villa-lounge'].w}" height="${IMAGES['villa-lounge'].h}" decoding="async"><figcaption><span>${esc(K.kicker)}</span><strong>${esc(K.welcome)}</strong><em>${esc(K.welcomeSub)}</em></figcaption></figure>
+    ${info}</aside>`;
+  const progress = `<div class="pct-book__progress"><p class="pct-book__count" data-bcount>${esc(K.stepOf.replace('{n}', '1'))}</p><ol class="pct-book__dots">${K.steps.map((x, i) => `<li data-bdot="${i + 1}"${i === 0 ? ' class="is-on" aria-current="step"' : ''}><i></i><span>${esc(x)}</span></li>`).join('')}</ol></div>`;
+  const services = sys.services.map((k) => `<button type="button" class="pct-book__svc pct-book__svc--${k}" data-service="${k}" aria-pressed="false"><span class="pct-book__svcicon">${bookIcon(k)}</span><span class="pct-book__svctext"><strong>${esc(K.services[k][0])}</strong><span>${esc(K.services[k][1])}</span></span><span class="pct-book__svcgo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>`).join('');
+  const chosen = `<div class="pct-book__chosen"><div data-bchosen></div><button type="button" class="pct-book__change" data-bback="1">${esc(K.change)}</button></div>`;
   const data = { lang, T: K, api: '/api/booking', sys: { timeZone: sys.timeZone, maxPerSlot: sys.maxPerSlot, slotMinutes: sys.slotMinutes, hours: sys.hours, lastStartBeforeClose: sys.lastStartBeforeClose, closedDates: sys.closedDates, fieldsFor: sys.fieldsFor } };
   const body = `
 ${pageHead(ctx, 'book', { kicker: K.kicker, title: K.title, sub: '' })}
-<section class="pct-section" style="padding-top:0">
+<section class="pct-section pct-book-section" style="padding-top:0">
   <div class="pct-wrap pct-book" data-pct-book>
-    <aside class="pct-book__side">${info}</aside>
+    ${side}
     <div class="pct-book__flow">
-      ${dots}
+      ${progress}
       <noscript><p class="pct-book__hint">${esc(T.contact.chatBody)} <a class="pct-text-link" href="${wa(T.ui.waGeneral)}">WhatsApp</a> · <a class="pct-text-link" href="${config.contact.phoneHref}">${esc(config.contact.phoneDisplay)}</a></p></noscript>
-      <div data-bstep="1"><h2 class="pct-h3">${esc(K.steps[0])}</h2><div class="pct-book__svcs">${services}</div></div>
-      <div data-bstep="2" hidden><h2 class="pct-h3">${esc(K.steps[1])}</h2>${chosen}<p class="pct-book__demo" data-bdemo hidden>${esc(K.demoNote)}</p><div data-bcal></div><div data-bslots></div></div>
-      <div data-bstep="3" hidden><h2 class="pct-h3">${esc(K.steps[2])}</h2>${chosen}
-        <form data-bformwrap novalidate><div data-bform></div><p class="pct-book__almost">${esc(K.almost)}</p><p class="pct-book__err" data-bformerr aria-live="assertive"></p>
+      <div class="pct-book__step" data-bstep="1"><h2 class="pct-book__h">${esc(K.selectService)}</h2><div class="pct-book__svcs">${services}</div></div>
+      <div class="pct-book__step" data-bstep="2" hidden><h2 class="pct-book__h">${esc(K.steps[1])}</h2>${chosen}<p class="pct-book__demo" data-bdemo hidden>${esc(K.demoNote)}</p>
+        <div class="pct-book__when"><div class="pct-book__cal" data-bcal></div><div class="pct-book__times" data-bslots></div></div></div>
+      <div class="pct-book__step" data-bstep="3" hidden><h2 class="pct-book__h">${esc(K.steps[2])}</h2>${chosen}
+        <p class="pct-book__notice" data-burgent hidden>${esc(K.urgentNote)}</p>
+        <form data-bformwrap novalidate><div class="pct-book__form" data-bform></div>
+        <div class="pct-book__field pct-book__ack" data-field="ack"><label class="pct-book__check"><input type="checkbox" id="pb-ack" name="ack" required aria-describedby="pb-ack-err"> <span>${esc(K.ack)} <a class="pct-text-link" href="#pct-book-policies" data-bpolicies>${esc(K.readMore)}</a></span></label><p class="pct-book__err" id="pb-ack-err" aria-live="polite"></p></div>
+        <p class="pct-book__almost">${esc(K.almost)}</p><p class="pct-book__err" data-bformerr aria-live="assertive"></p>
         <div class="pct-book__actions"><button type="button" class="pct-btn pct-btn--ghost" data-bback="2">${esc(K.back)}</button><button type="submit" class="pct-btn">${esc(K.confirm)}</button></div></form></div>
-      <div data-bstep="4" hidden><h2 class="pct-h3" data-bdone-title></h2><div class="pct-book__chosen"><p data-bchosen></p></div><p data-bdone-body></p>
-        <div class="pct-btns"><a class="pct-btn pct-btn--ghost" href="${wa(T.ui.waGeneral)}" target="_blank" rel="noopener">${ICON.whatsapp}${esc(T.ui.whatsapp)}</a><button type="button" class="pct-text-link" data-bagain>${esc(K.doneAgain)}</button></div></div>
+      <div class="pct-book__step pct-book__done" data-bstep="4" hidden>
+        <span class="pct-book__tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+        <h2 class="pct-book__h" data-bdone-title></h2><p class="pct-book__donebody" data-bdone-body></p>
+        <div class="pct-book__ticket"><p class="pct-book__ticketk">${esc(K.summary)}</p><div data-bchosen></div><p class="pct-book__where">${esc(K.where)}</p></div>
+        <div class="pct-btns"><button type="button" class="pct-btn" data-bics hidden>${esc(K.addCal)}</button><a class="pct-btn pct-btn--ghost" href="${wa(T.ui.waGeneral)}" target="_blank" rel="noopener">${ICON.whatsapp}${esc(T.ui.whatsapp)}</a></div>
+        <button type="button" class="pct-text-link pct-book__again" data-bagain>${esc(K.doneAgain)}</button></div>
     </div>
   </div>
   <script type="application/json" id="pct-book-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>

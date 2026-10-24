@@ -741,6 +741,37 @@
     "demoTitle": "Bản xem trước",
     "demoBody": "Đây là website mẫu nên chưa có lịch hẹn thật nào được tạo. Khi tài khoản đặt lịch của Phan's được kết nối, bước này sẽ gửi email xác nhận kèm lời mời lịch.",
     "doneAgain": "Đặt lịch khác",
-    "demoNote": "Website mẫu: giờ trống chỉ là ví dụ, chưa có lịch hẹn thật nào được tạo."
+    "demoNote": "Website mẫu: giờ trống chỉ là ví dụ, chưa có lịch hẹn thật nào được tạo.",
+    "facts": [
+      [
+        "7–10",
+        "ngày làm việc cho may đo tiêu chuẩn"
+      ],
+      [
+        "8%",
+        "phụ phí may gấp dưới 72 giờ"
+      ],
+      [
+        "30 phút",
+        "thời gian du di mỗi lịch hẹn"
+      ],
+      [
+        "3%",
+        "ưu đãi cho sự hợp tác suôn sẻ"
+      ]
+    ],
+    "stepOf": "Bước {n}/3",
+    "morning": "Buổi sáng",
+    "afternoon": "Buổi chiều",
+    "evening": "Buổi tối",
+    "left": "Còn {n}",
+    "few": "Sắp hết",
+    "today": "Hôm nay",
+    "ack": "Tôi đã đọc các quy định của tiệm trên trang này.",
+    "urgentNote": "May gấp: tự động áp dụng phụ phí may gấp 8%, và đơn tuỳ thuộc khả năng của xưởng.",
+    "addCal": "Thêm vào lịch của tôi",
+    "summary": "Lịch hẹn của bạn",
+    "where": "Villa, 08 Đường D9, Saigon Pearl, Bình Thạnh",
+    "selectService": "Chọn loại lịch hẹn bạn cần"
   }
 }
