@@ -865,7 +865,7 @@ textarea.pct-input { min-height: 150px; resize: vertical; }
 .pct-cfg__sw { width: 22px; height: 22px; border: 1px solid rgba(0,0,0,.15); flex: none; }
 .pct-cfg__fabrics { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; margin-top: 16px; }
 .pct-cfg__fab { padding: 0 0 10px; display: flex; flex-direction: column; gap: 8px; }
-.pct-cfg__fab img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.pct-cfg__fabimg { width: 100%; aspect-ratio: 1; background: var(--pct-stone) center / cover no-repeat; display: block; } /* background, not <img>, so the try-on widget leaves swatches alone */
 .pct-cfg__fab span { padding: 0 10px; font-size: 13px; }
 .pct-cfg__mono { display: flex; flex-direction: column; gap: 8px; }
 .pct-cfg__mono input { font: inherit; font-family: var(--pct-serif); font-size: 22px; letter-spacing: .3em; text-transform: uppercase; width: 9.5em; padding: 10px 14px; border: 1px solid var(--pct-stone); background: var(--pct-white); color: var(--pct-ink); }

@@ -625,7 +625,7 @@ function pageDesign(ctx) {
   const group = (g) => `<fieldset class="pct-cfg__group"><legend>${esc(lbl(g.label))}</legend><div class="pct-cfg__opts${g.thumb ? ' pct-cfg__opts--thumbs' : o_sw(g)}" role="radiogroup" aria-label="${esc(lbl(g.label))}">${g.options.map((o) => opt(g, o)).join('')}</div></fieldset>`;
   const o_sw = (g) => (g.options[0].swatch ? ' pct-cfg__opts--swatches' : '');
   const fabrics = `<p class="pct-cfg__note">${esc(D.fabricNote)}</p><div class="pct-cfg__fabrics" role="radiogroup" aria-label="${esc(D.steps.fabric)}">${CFG.fabrics.map((f) =>
-    `<button type="button" class="pct-cfg__fab${st.fabric === f.id ? ' is-on' : ''}" role="radio" aria-checked="${st.fabric === f.id}" data-k="fabric" data-v="${f.id}"><img src="/assets/img/cfg/${f.id}.jpg" alt="" width="128" height="128" loading="lazy"><span>${esc(lbl(f.name))}</span></button>`).join('')}</div>`;
+    `<button type="button" class="pct-cfg__fab${st.fabric === f.id ? ' is-on' : ''}" role="radio" aria-checked="${st.fabric === f.id}" data-k="fabric" data-v="${f.id}"><i class="pct-cfg__fabimg" style="background-image:url(/assets/img/cfg/${f.id}.jpg)" aria-hidden="true"></i><span>${esc(lbl(f.name))}</span></button>`).join('')}</div>`;
   const pane = (k) => CFG.groups.filter((g) => g.step === k).map(group).join('');
   const nav = (i) => `<div class="pct-cfg__nav">${i > 0 ? `<button type="button" class="pct-btn pct-btn--ghost" data-go="${steps[i - 1]}">${esc(D.prev)}</button>` : '<span></span>'}${i < steps.length - 1 ? `<button type="button" class="pct-btn" data-go="${steps[i + 1]}">${esc(D.next)}: ${esc(D.steps[steps[i + 1]])}</button>` : ''}</div>`;
   const panes = {
