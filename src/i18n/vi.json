@@ -58,7 +58,8 @@
     "about": "Giới thiệu",
     "faq": "Hỏi đáp",
     "contact": "Liên hệ",
-    "design": "Thiết kế bộ vest"
+    "design": "Thiết kế bộ vest",
+    "book": "Đặt lịch hẹn"
   },
   "footer": {
     "visit": "Ghé thăm biệt thự",
@@ -68,7 +69,7 @@
       "Việt Nam"
     ],
     "hours": "Thứ Hai đến Thứ Bảy, 9:00 – 19:00",
-    "hoursNote": "Chủ Nhật và ngày lễ vui lòng hẹn trước",
+    "hoursNote": "Chủ Nhật, 11:00 – 15:00",
     "contact": "Liên hệ",
     "explore": "Khám phá",
     "follow": "Theo dõi",
@@ -140,6 +141,11 @@
       "slug": "design-your-suit",
       "title": "Thiết kế bộ vest của bạn | Phan's Custom Tailor",
       "description": "Tự thiết kế bộ vest may đo: chọn vải, ve áo, nút, túi, xẻ tà và quần, rồi gửi thiết kế cho Phan's qua WhatsApp hoặc đặt lịch thử đồ tại Sài Gòn."
+    },
+    "book": {
+      "slug": "book-an-appointment",
+      "title": "Đặt lịch hẹn | Phan's Custom Tailor, Sài Gòn",
+      "description": "Đặt lịch tư vấn may vest, may gấp, may theo nhóm, tư vấn vest nữ, thử đồ hoặc sửa đồ tại Phan's Custom Tailor, Saigon Pearl, TP. Hồ Chí Minh."
     }
   },
   "home": {
@@ -590,6 +596,151 @@
     "labels": {
       "fabric": "Vải",
       "monogram": "Thêu chữ"
-    }
+    },
+    "tryTitle": "Thử thiết kế này trên người bạn",
+    "tryBody": "Bấm “Try-On” trên hình bên dưới và bật camera: phòng thử đồ AI sẽ cho bạn thấy bộ vest này trên người mình, chuyển động theo bạn.",
+    "tryAlt": "Thiết kế vest của bạn, sẵn sàng cho phòng thử đồ AI"
+  },
+  "book": {
+    "kicker": "Saigon Pearl, Bình Thạnh",
+    "title": "Đặt lịch hẹn",
+    "welcome": "Chào mừng đến Phan's Custom Tailor",
+    "welcomeSub": "Vui lòng đọc kỹ để buổi may đo diễn ra suôn sẻ.",
+    "policies": [
+      {
+        "t": "Thời gian may và dịch vụ may gấp",
+        "items": [
+          "May đo tiêu chuẩn: 7 đến 10 ngày làm việc.",
+          "May gấp (dưới 72 giờ): chỉ nhận khi xưởng còn khả năng. Phụ phí may gấp 8% áp dụng cho đơn cần trong 48 giờ (mùa thường) hoặc 72 giờ (mùa cao điểm).",
+          "Lịch bay: nếu bạn rời đi trong vòng 4 ngày, hãy trả lời ngay email xác nhận kèm thông tin chuyến bay. Không có email này, đơn gấp không được đảm bảo."
+        ]
+      },
+      {
+        "t": "Quy định lịch hẹn và không gian chung",
+        "items": [
+          "Đúng giờ: mỗi lịch hẹn có 30 phút du di. Quá thời gian này mà không báo qua WhatsApp hoặc email, tiệm có thể ưu tiên khách vãng lai.",
+          "Không gian chung: xưởng phục vụ nhiều khách cùng lúc."
+        ]
+      },
+      {
+        "t": "Đặt lịch trước hơn 3 tháng",
+        "items": [
+          "Vải và giá sẽ được xác nhận lại 30 ngày trước khi bạn đến."
+        ]
+      },
+      {
+        "t": "Ưu đãi hợp tác",
+        "items": [
+          "Giảm 3% để cảm ơn sự hợp tác suôn sẻ. Phụ phí may gấp 8% (nếu có) được tính riêng."
+        ]
+      },
+      {
+        "t": "Giờ mở cửa",
+        "items": [
+          "Thứ Hai đến Thứ Bảy: 9:00 đến 19:00",
+          "Chủ Nhật: 11:00 đến 15:00"
+        ]
+      }
+    ],
+    "readMore": "Đọc trước khi đặt lịch",
+    "steps": [
+      "Dịch vụ",
+      "Ngày và giờ",
+      "Thông tin của bạn"
+    ],
+    "services": {
+      "consult": [
+        "Vest nam may đo: tư vấn",
+        "Buổi tiêu chuẩn cho 1–2 người. Chọn vải, tư vấn kiểu dáng và lấy số đo. 45–60 phút."
+      ],
+      "urgent": [
+        "May gấp (dưới 72 giờ)",
+        "Dịch vụ may siêu gấp. Tự động áp dụng phụ phí 8%. Tuỳ khả năng của xưởng."
+      ],
+      "group": [
+        "Vest nam: cặp đôi và nhóm",
+        "Buổi chung cho từ 2 khách nam (phù rể, bạn bè). Ghi rõ các món cần may."
+      ],
+      "female": [
+        "Vest nữ may đo: tư vấn trước",
+        "Chỉ nhận vest 2 hoặc 3 món, không may đầm. Tải ảnh mẫu để thợ cả xem trước."
+      ],
+      "fitting": [
+        "Buổi thử đồ",
+        "Thử lần một hoặc lần hai. Ghim và chỉnh chi tiết cho đúng tỉ lệ."
+      ],
+      "pickup": [
+        "Thử lần cuối và nhận đồ",
+        "Lần thử cuối trước khi bạn mang đồ về."
+      ],
+      "repair": [
+        "Sửa và chỉnh đồ",
+        "Chỉnh sửa chuyên nghiệp áo vest, quần hoặc sơ mi bạn đang có."
+      ]
+    },
+    "tz": "(ICT) Giờ TP. Hồ Chí Minh",
+    "pickDay": "Chọn một ngày để xem giờ trống.",
+    "noSlots": "Ngày này đã hết giờ.",
+    "full": "Đã đủ",
+    "closed": "Nghỉ",
+    "prevMonth": "Tháng trước",
+    "nextMonth": "Tháng sau",
+    "change": "Đổi",
+    "f": {
+      "name": "Họ tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "phoneHint": "Ưu tiên số có WhatsApp",
+      "guest": "Thêm người đi cùng",
+      "guestHint": "Tên hoặc email (không bắt buộc)",
+      "status": "Bạn là",
+      "statusOpts": [
+        "Khách mới",
+        "Khách cũ",
+        "Được bạn bè giới thiệu"
+      ],
+      "items": "Bạn cần may gì?",
+      "itemOpts": [
+        "Vest",
+        "Sơ mi",
+        "Quần",
+        "Gilê",
+        "Áo khoác dài"
+      ],
+      "flight": "Ngày bay",
+      "measure": "Chiều cao, cân nặng và dáng mong muốn",
+      "measureHint": "Cho khách mới, ví dụ 178 cm, 74 kg, dáng ôm",
+      "refImg": "Tải ảnh mẫu",
+      "refHint": "JPG hoặc PNG, tối đa 10 MB",
+      "groupItems": "Tổng số món và người mặc",
+      "groupHint": "Ví dụ 1 tuxedo chú rể, 3 vest phù rể",
+      "event": "Ngày sự kiện",
+      "fit": "Mô tả dáng bạn muốn",
+      "refStyles": "Tải ảnh mẫu kiểu dáng",
+      "dressPolicy": "Tôi xác nhận tôi đặt may vest, không phải đầm.",
+      "order": "Tên đơn hoặc số biên nhận",
+      "concerns": "Vấn đề cần chỉnh hoặc yêu cầu sửa",
+      "required": "Bắt buộc",
+      "optional": "Không bắt buộc"
+    },
+    "almost": "Sắp xong. Sau khi bấm Xác nhận, email xác nhận kèm lời mời lịch sẽ được gửi vào hộp thư của bạn. Bạn có thể đổi giờ hoặc huỷ bất cứ lúc nào bằng đường link trong email đó.",
+    "back": "Quay lại",
+    "confirm": "Xác nhận",
+    "sending": "Đang đặt…",
+    "err": {
+      "required": "Vui lòng điền mục này.",
+      "email": "Vui lòng nhập email hợp lệ, ví dụ name@example.com.",
+      "phone": "Vui lòng nhập số điện thoại có ít nhất 8 chữ số.",
+      "file": "Tệp này lớn hơn 10 MB.",
+      "fileType": "Vui lòng chọn ảnh JPG hoặc PNG.",
+      "policy": "Vui lòng xác nhận để tiếp tục.",
+      "server": "Chưa đặt được lịch. Vui lòng thử lại hoặc nhắn tiệm qua WhatsApp."
+    },
+    "doneTitle": "Bạn đã đặt lịch",
+    "doneBody": "Email xác nhận kèm lời mời lịch đang được gửi. Bạn có thể đổi giờ hoặc huỷ bằng đường link trong email.",
+    "demoTitle": "Bản xem trước",
+    "demoBody": "Đây là website mẫu nên chưa có lịch hẹn thật nào được tạo. Khi tài khoản đặt lịch của Phan's được kết nối, bước này sẽ gửi email xác nhận kèm lời mời lịch.",
+    "doneAgain": "Đặt lịch khác",
+    "demoNote": "Website mẫu: giờ trống chỉ là ví dụ, chưa có lịch hẹn thật nào được tạo."
   }
 }

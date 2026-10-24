@@ -58,7 +58,8 @@
     "about": "About",
     "faq": "FAQ",
     "contact": "Contact",
-    "design": "Design your suit"
+    "design": "Design your suit",
+    "book": "Book an appointment"
   },
   "footer": {
     "visit": "Visit the villa",
@@ -68,7 +69,7 @@
       "Vietnam"
     ],
     "hours": "Monday to Saturday, 9:00 AM to 7:00 PM",
-    "hoursNote": "Sundays and public holidays by appointment",
+    "hoursNote": "Sunday, 11:00 AM to 3:00 PM",
     "contact": "Contact",
     "explore": "Explore",
     "follow": "Follow",
@@ -140,6 +141,11 @@
       "slug": "design-your-suit",
       "title": "Design Your Custom Suit | Phan's Custom Tailor",
       "description": "Design your custom suit online: choose the cloth, lapels, buttons, pockets, vents and trousers, then send the design to Phan's on WhatsApp or book a fitting in Saigon."
+    },
+    "book": {
+      "slug": "book-an-appointment",
+      "title": "Book an Appointment | Phan's Custom Tailor, Saigon",
+      "description": "Book a bespoke suit consultation, urgent order, group session, women's suit consultation, fitting or alteration at Phan's Custom Tailor in Saigon Pearl, Ho Chi Minh City."
     }
   },
   "home": {
@@ -590,6 +596,151 @@
     "labels": {
       "fabric": "Cloth",
       "monogram": "Monogram"
-    }
+    },
+    "tryTitle": "Try this design on yourself",
+    "tryBody": "Tap “Try-On” on the picture below and turn on your camera: the AI fitting room shows this suit on you, moving as you move.",
+    "tryAlt": "Your suit design, ready for the AI fitting room"
+  },
+  "book": {
+    "kicker": "Saigon Pearl, Bình Thạnh",
+    "title": "Book an appointment",
+    "welcome": "Welcome to Phan's Custom Tailor",
+    "welcomeSub": "Please read this before you book, so everything goes smoothly at the villa.",
+    "policies": [
+      {
+        "t": "Production timeline and expedited service",
+        "items": [
+          "Standard bespoke: 7 to 10 working days.",
+          "Extreme rush (under 72 hours): strictly subject to workshop capacity. An 8% expedited production fee applies to orders needed within 48 hours (standard season) or 72 hours (peak season).",
+          "Flight deadlines: if you leave within 4 days, reply to your confirmation email straight away with your flight details. Rush orders are not guaranteed without that email."
+        ]
+      },
+      {
+        "t": "Appointments and the shared studio",
+        "items": [
+          "Punctuality: each appointment has a 30-minute grace period. After that, without notice on WhatsApp or email, walk-in clients may be served first.",
+          "Shared space: the studio serves several clients at the same time."
+        ]
+      },
+      {
+        "t": "Booking more than 3 months ahead",
+        "items": [
+          "Fabric availability and pricing are re-confirmed 30 days before you arrive."
+        ]
+      },
+      {
+        "t": "Cooperation benefit",
+        "items": [
+          "A 3% courtesy discount is offered for smooth cooperation. The 8% expedited fee, if it applies, is calculated separately."
+        ]
+      },
+      {
+        "t": "Studio hours",
+        "items": [
+          "Monday to Saturday: 9:00 AM to 7:00 PM",
+          "Sunday: 11:00 AM to 3:00 PM"
+        ]
+      }
+    ],
+    "readMore": "Read before booking",
+    "steps": [
+      "Service",
+      "Date and time",
+      "Your details"
+    ],
+    "services": {
+      "consult": [
+        "Men's bespoke suit: consultation",
+        "Standard session for 1–2 people. Fabric selection, styling and professional measurements. 45–60 minutes."
+      ],
+      "urgent": [
+        "Urgent bespoke (under 72 hours)",
+        "Extreme rush service. The 8% expedited fee applies automatically. Subject to workshop capacity."
+      ],
+      "group": [
+        "Men's suits: couple and group",
+        "Joint session for 2 or more men (groomsmen, friends). Tell us exactly which pieces you need."
+      ],
+      "female": [
+        "Women's bespoke suit: pre-consultation",
+        "2-piece or 3-piece suits only, no dresses. Upload reference styles for the master tailor to review."
+      ],
+      "fitting": [
+        "Fitting session",
+        "First or second fitting. We pin and adjust the details for the right proportions."
+      ],
+      "pickup": [
+        "Final fitting and pickup",
+        "Your last fitting before you take your order home."
+      ],
+      "repair": [
+        "Alteration and repair",
+        "Professional adjustments to jackets, trousers or shirts you already own."
+      ]
+    },
+    "tz": "(ICT) Ho Chi Minh City Time",
+    "pickDay": "Choose a day to see the times.",
+    "noSlots": "No times left on this day.",
+    "full": "Full",
+    "closed": "Closed",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "change": "Change",
+    "f": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone number",
+      "phoneHint": "A number with WhatsApp, if you have one",
+      "guest": "Add a guest",
+      "guestHint": "Their name or email (optional)",
+      "status": "Client status",
+      "statusOpts": [
+        "New client",
+        "Returning client",
+        "Referred by a friend"
+      ],
+      "items": "What do you need to order?",
+      "itemOpts": [
+        "Suit",
+        "Shirt",
+        "Trousers",
+        "Waistcoat",
+        "Overcoat"
+      ],
+      "flight": "Flight departure date",
+      "measure": "Height, weight and preferred fit",
+      "measureHint": "For new clients, e.g. 178 cm, 74 kg, slim fit",
+      "refImg": "Upload a reference image",
+      "refHint": "JPG or PNG, up to 10 MB",
+      "groupItems": "Total pieces and who they are for",
+      "groupHint": "e.g. 1 groom tuxedo, 3 groomsmen suits",
+      "event": "Event date",
+      "fit": "Describe the fit you'd like",
+      "refStyles": "Upload reference styles",
+      "dressPolicy": "I confirm I am ordering a suit, not a dress.",
+      "order": "Order name or receipt number",
+      "concerns": "Specific concerns or alterations needed",
+      "required": "Required",
+      "optional": "Optional"
+    },
+    "almost": "Almost done. After you click Confirm, a confirmation email with a calendar invite is sent to your inbox. You can reschedule or cancel at any time with the links in that email.",
+    "back": "Back",
+    "confirm": "Confirm",
+    "sending": "Booking…",
+    "err": {
+      "required": "Please fill this in.",
+      "email": "Please enter an email we can reach, like name@example.com.",
+      "phone": "Please enter a phone number with at least 8 digits.",
+      "file": "This file is over 10 MB.",
+      "fileType": "Please choose a JPG or PNG image.",
+      "policy": "Please confirm this to continue.",
+      "server": "We couldn't complete the booking. Please try again, or message us on WhatsApp."
+    },
+    "doneTitle": "You're booked",
+    "doneBody": "A confirmation email with a calendar invite is on its way. Reschedule or cancel any time with the links in that email.",
+    "demoTitle": "Booking preview",
+    "demoBody": "This is the demo website, so no real appointment was made. Once Phan's booking account is connected, this step sends the confirmation email with a calendar invite.",
+    "doneAgain": "Book another appointment",
+    "demoNote": "Demo website: these times are samples and nothing is booked."
   }
 }

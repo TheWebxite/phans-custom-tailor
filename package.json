@@ -11,5 +11,9 @@
     "images": "python3 scripts/prepare-images.py",
     "copy": "python3 scripts/copy-deck.py",
     "deploy": "npm run build && npx vercel deploy dist"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@vercel/blob": "^0.27.0"
   }
 }

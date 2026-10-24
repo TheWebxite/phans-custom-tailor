@@ -512,6 +512,7 @@ Primary keyword: **西贡 裁缝 平盛郡**
 - **faq:** 常见问题
 - **contact:** 联系我们
 - **design:** 设计您的西装
+- **book:** 预约
 
 ### Buttons and labels
 
@@ -567,7 +568,7 @@ Primary keyword: **西贡 裁缝 平盛郡**
   - Saigon Pearl 区
   - D9 街 08 号别墅
 - **hours:** 周一至周六 9:00–19:00
-- **hoursNote:** 周日及公众假期需提前预约
+- **hoursNote:** 周日 11:00–15:00
 - **contact:** 联系
 - **explore:** 浏览
 - **follow:** 关注

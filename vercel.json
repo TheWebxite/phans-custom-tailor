@@ -2,6 +2,14 @@
   "buildCommand": "node build.mjs",
   "outputDirectory": "dist",
   "framework": null,
+  "functions": {
+    "api/suit.js": {
+      "includeFiles": "{assets/img/cfg/**,src/data/configurator.json,src/js/suit-svg.mjs}"
+    },
+    "api/booking.js": {
+      "includeFiles": "src/config.json"
+    }
+  },
   "trailingSlash": true,
   "cleanUrls": false,
   "redirects": [
@@ -17,12 +25,12 @@
     },
     {
       "source": "/pages/working-hours-appointments",
-      "destination": "/contact/",
+      "destination": "/book-an-appointment/",
       "permanent": true
     },
     {
       "source": "/pages/working-hours-appointments/",
-      "destination": "/contact/",
+      "destination": "/book-an-appointment/",
       "permanent": true
     },
     {

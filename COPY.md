@@ -510,6 +510,7 @@ Primary keyword: **tailor in Bình Thạnh, Saigon Pearl**
 - **faq:** FAQ
 - **contact:** Contact
 - **design:** Design your suit
+- **book:** Book an appointment
 
 ### Buttons and labels
 
@@ -565,7 +566,7 @@ Primary keyword: **tailor in Bình Thạnh, Saigon Pearl**
   - Bình Thạnh, Ho Chi Minh City
   - Vietnam
 - **hours:** Monday to Saturday, 9:00 AM to 7:00 PM
-- **hoursNote:** Sundays and public holidays by appointment
+- **hoursNote:** Sunday, 11:00 AM to 3:00 PM
 - **contact:** Contact
 - **explore:** Explore
 - **follow:** Follow

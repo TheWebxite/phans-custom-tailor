@@ -29,5 +29,71 @@
     "storeApiBase": "",
     "wooBase": "https://shop.tailormadesuit.net",
     "checkoutEnabled": false
+  },
+  "bookingSystem": {
+    "note": "New booking page (/book-an-appointment/). Cal.com runs slots, the 3-per-slot limit (seats), emails with calendar invites and reschedule/cancel links. Fill calUsername and one event-type slug per service, and set CAL_API_KEY (optional) and BLOB_READ_WRITE_TOKEN (for uploads) in Vercel. Empty calUsername = demo mode (sample availability, no real booking).",
+    "calUsername": "",
+    "events": {
+      "consult": "consultation",
+      "urgent": "urgent-bespoke",
+      "group": "couple-group",
+      "female": "female-pre-consultation",
+      "fitting": "fitting",
+      "pickup": "final-fitting-pickup",
+      "repair": "alteration-repair"
+    },
+    "timeZone": "Asia/Ho_Chi_Minh",
+    "maxPerSlot": 3,
+    "slotMinutes": 30,
+    "hours": {
+      "0": [
+        "11:00",
+        "15:00"
+      ],
+      "1": [
+        "09:00",
+        "19:00"
+      ],
+      "2": [
+        "09:00",
+        "19:00"
+      ],
+      "3": [
+        "09:00",
+        "19:00"
+      ],
+      "4": [
+        "09:00",
+        "19:00"
+      ],
+      "5": [
+        "09:00",
+        "19:00"
+      ],
+      "6": [
+        "09:00",
+        "19:00"
+      ]
+    },
+    "lastStartBeforeClose": 60,
+    "closedDates": [],
+    "services": [
+      "consult",
+      "urgent",
+      "group",
+      "female",
+      "fitting",
+      "pickup",
+      "repair"
+    ],
+    "fieldsFor": {
+      "consult": "bespoke",
+      "urgent": "bespoke",
+      "group": "group",
+      "female": "female",
+      "fitting": "followup",
+      "pickup": "followup",
+      "repair": "followup"
+    }
   }
 }

@@ -461,7 +461,7 @@ function pageHome(ctx) {
     description: T.pages.home.description, url: abs(pathFor(lang)), logo: abs('/assets/brand/logo.png'), image: abs('/assets/img/villa-lounge.webp'),
     telephone: '+84826977888', email: config.contact.email,
     address: { '@type': 'PostalAddress', streetAddress: 'Villa, 08 D9 Street, Saigon Pearl', addressLocality: 'Bình Thạnh', addressRegion: 'Ho Chi Minh City', addressCountry: 'VN' },
-    openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '19:00' }],
+    openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '19:00' }, { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Sunday'], opens: '11:00', closes: '15:00' }],
     priceRange: '1,300,000–8,400,000 VND', currenciesAccepted: 'VND',
     founder: [{ '@type': 'Person', name: 'Thinh Phan' }, { '@type': 'Person', name: 'Thuong Phan' }],
     sameAs: [config.social.instagram, config.social.facebook, config.social.tripadvisor],
@@ -555,6 +555,39 @@ ${pageHead(ctx, 'process', { kicker: P.kicker, title: P.title, sub: P.sub, aside
   return { body, jsonld: [ld, breadcrumbLD(ctx, [{ name: T.nav.process, href: pagePath(lang, 'process') }])] };
 }
 
+function pageBook(ctx) {
+  const { lang, T } = ctx;
+  const K = T.book;
+  const sys = config.bookingSystem;
+  const info = `<details class="pct-book__info" open><summary>${esc(K.readMore)}</summary><div class="pct-book__infobody">
+      <p class="pct-book__welcome">${esc(K.welcome)}</p><p class="pct-book__wsub">${esc(K.welcomeSub)}</p>
+      ${K.policies.map((x) => `<h2>${esc(x.t)}</h2><ul>${x.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`).join('')}</div></details>`;
+  const dots = `<ol class="pct-book__dots">${K.steps.map((x, i) => `<li data-bdot="${i + 1}"${i === 0 ? ' class="is-on" aria-current="step"' : ''}><span>${String(i + 1).padStart(2, '0')}</span>${esc(x)}</li>`).join('')}</ol>`;
+  const services = sys.services.map((k) => `<button type="button" class="pct-book__svc" data-service="${k}" aria-pressed="false"><strong>${esc(K.services[k][0])}</strong><span>${esc(K.services[k][1])}</span></button>`).join('');
+  const chosen = `<div class="pct-book__chosen"><p data-bchosen></p><button type="button" class="pct-text-link" data-bback="1">${esc(K.change)}</button></div>`;
+  const data = { lang, T: K, api: '/api/booking', sys: { timeZone: sys.timeZone, maxPerSlot: sys.maxPerSlot, slotMinutes: sys.slotMinutes, hours: sys.hours, lastStartBeforeClose: sys.lastStartBeforeClose, closedDates: sys.closedDates, fieldsFor: sys.fieldsFor } };
+  const body = `
+${pageHead(ctx, 'book', { kicker: K.kicker, title: K.title, sub: '' })}
+<section class="pct-section" style="padding-top:0">
+  <div class="pct-wrap pct-book" data-pct-book>
+    <aside class="pct-book__side">${info}</aside>
+    <div class="pct-book__flow">
+      ${dots}
+      <noscript><p class="pct-book__hint">${esc(T.contact.chatBody)} <a class="pct-text-link" href="${wa(T.ui.waGeneral)}">WhatsApp</a> · <a class="pct-text-link" href="${config.contact.phoneHref}">${esc(config.contact.phoneDisplay)}</a></p></noscript>
+      <div data-bstep="1"><h2 class="pct-h3">${esc(K.steps[0])}</h2><div class="pct-book__svcs">${services}</div></div>
+      <div data-bstep="2" hidden><h2 class="pct-h3">${esc(K.steps[1])}</h2>${chosen}<p class="pct-book__demo" data-bdemo hidden>${esc(K.demoNote)}</p><div data-bcal></div><div data-bslots></div></div>
+      <div data-bstep="3" hidden><h2 class="pct-h3">${esc(K.steps[2])}</h2>${chosen}
+        <form data-bformwrap novalidate><div data-bform></div><p class="pct-book__almost">${esc(K.almost)}</p><p class="pct-book__err" data-bformerr aria-live="assertive"></p>
+        <div class="pct-book__actions"><button type="button" class="pct-btn pct-btn--ghost" data-bback="2">${esc(K.back)}</button><button type="submit" class="pct-btn">${esc(K.confirm)}</button></div></form></div>
+      <div data-bstep="4" hidden><h2 class="pct-h3" data-bdone-title></h2><div class="pct-book__chosen"><p data-bchosen></p></div><p data-bdone-body></p>
+        <div class="pct-btns"><a class="pct-btn pct-btn--ghost" href="${wa(T.ui.waGeneral)}" target="_blank" rel="noopener">${ICON.whatsapp}${esc(T.ui.whatsapp)}</a><button type="button" class="pct-text-link" data-bagain>${esc(K.doneAgain)}</button></div></div>
+    </div>
+  </div>
+  <script type="application/json" id="pct-book-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>
+</section>`;
+  return { body, noBand: true, scripts: `<script type="module" src="/assets/js/booking.mjs?v=${ASSET_V}"></script>`, jsonld: [breadcrumbLD(ctx, [{ name: T.nav.book, href: pagePath(lang, 'book') }])] };
+}
+
 function pageDesign(ctx) {
   const { lang, T } = ctx;
   const D = T.design;
@@ -582,7 +615,8 @@ function pageDesign(ctx) {
       <div class="pct-cfg__price"><span>${esc(D.priceFrom)}</span><strong data-cfg-price></strong></div><p class="pct-cfg__note">${esc(D.priceNote)}</p>
       <div class="pct-btns"><a class="pct-btn" data-cfg-wa href="${wa(D.waIntro)}" target="_blank" rel="noopener" data-pct-track="whatsapp_click" data-pct-where="designer">${ICON.whatsapp}${esc(D.send)}</a>
       <a class="pct-btn pct-btn--ghost" href="${config.contact.booking}" target="_blank" rel="noopener" data-pct-track="book_click" data-pct-where="designer">${esc(D.book)}</a></div>
-      <button type="button" class="pct-text-link pct-cfg__copy" data-cfg-copy data-done="${esc(D.copied)}">${esc(D.copy)}</button>`,
+      <button type="button" class="pct-text-link pct-cfg__copy" data-cfg-copy data-done="${esc(D.copied)}">${esc(D.copy)}</button>
+      <div class="pct-cfg__tryon"><h3>${esc(D.tryTitle)}</h3><p>${esc(D.tryBody)}</p><img data-cfg-tryimg src="/api/suit?fabric=${st.fabric}" alt="${esc(D.tryAlt)}" width="330" height="752" loading="lazy" decoding="async"></div>`,
   };
   const data = {
     lang, fabrics: CFG.fabrics, groups: CFG.groups, D, defaults: CFG_DEFAULTS, wa: config.contact.whatsapp,
@@ -607,7 +641,7 @@ ${pageHead(ctx, 'design', { kicker: D.kicker, title: D.title, sub: D.sub })}
   </div>
   <script type="application/json" id="pct-cfg-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>
 </section>`;
-  return { body, scripts: `<script type="module" src="/assets/js/configurator.mjs?v=${ASSET_V}"></script>`, jsonld: [breadcrumbLD(ctx, [{ name: T.nav.design, href: pagePath(lang, 'design') }])] };
+  return { body, tryon: true, scripts: `<script type="module" src="/assets/js/configurator.mjs?v=${ASSET_V}"></script>`, jsonld: [breadcrumbLD(ctx, [{ name: T.nav.design, href: pagePath(lang, 'design') }])] };
 }
 
 function pagePricing(ctx) {
@@ -764,7 +798,7 @@ ${pageHead(ctx, 'shop', { kicker: S.kicker, title: S.title, sub: S.sub })}
     </div>
   </div>
 </section>`;
-  return { body, jsonld: [breadcrumbLD(ctx, [{ name: T.nav.shop, href: pagePath(lang, 'shop') }])] };
+  return { body, tryon: true, jsonld: [breadcrumbLD(ctx, [{ name: T.nav.shop, href: pagePath(lang, 'shop') }])] };
 }
 function pageProduct(ctx, p, products) {
   const { lang, T } = ctx;
@@ -804,7 +838,7 @@ ${related.length ? `<section class="pct-section pct-section--white" aria-labelle
     brand: { '@type': 'Brand', name: attr(p, 'Brand')?.terms?.[0]?.name || 'Nobility' },
     ...(pPrice(p) && !p.sample ? { offers: { '@type': 'Offer', price: pPrice(p), priceCurrency: 'VND', availability: p.is_in_stock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock', url: abs(pathFor(lang, `shop/${p.slug}`)) } } : {}),
   };
-  return { body, title: seoTitle(name), description: pField(p, lang, 'short_description').replace(/<[^>]+>/g, '').slice(0, 155), jsonld: [ld, breadcrumbLD(ctx, [{ name: T.nav.shop, href: pagePath(lang, 'shop') }, { name, href: pathFor(lang, `shop/${p.slug}`) }])], ogImage: p.images?.[0]?.src };
+  return { body, tryon: true, title: seoTitle(name), description: pField(p, lang, 'short_description').replace(/<[^>]+>/g, '').slice(0, 155), jsonld: [ld, breadcrumbLD(ctx, [{ name: T.nav.shop, href: pagePath(lang, 'shop') }, { name, href: pathFor(lang, `shop/${p.slug}`) }])], ogImage: p.images?.[0]?.src };
 }
 
 // --- Journal ---
@@ -980,10 +1014,6 @@ ${pageHead(ctx, 'contact', { kicker: C.kicker, title: C.title, sub: C.sub })}
         </div>
       </div>
     </div>
-    <div class="pct-booking-embed" id="pct-book">
-      <h2 class="pct-h3">${esc(C.calTitle)}</h2><p>${esc(C.calIntro)}</p>
-      <iframe src="${c.booking}?embed=true" title="${esc(C.calFrame)}" loading="lazy"></iframe>
-    </div>
   </div>
 </section>
 <section class="pct-section pct-section--white" aria-label="${esc(C.visitTitle)}">
@@ -1103,7 +1133,7 @@ ${footer(ctx)}
 <script src="/assets/vendor/SplitText.min.js?v=3.13.0" defer></script>
 <script src="/assets/js/motion.js?v=${ASSET_V}" defer></script>
 ${page.scripts || ''}
-<script src="https://anywear.decart.ai/widget/latest/anywear.js?domain=phans-custom-tailor-demo.vercel.app" async></script>
+${page.tryon ? '<script src="https://anywear.decart.ai/widget/latest/anywear.js?domain=phans-custom-tailor-demo.vercel.app" async></script>' : ''}
 </body>
 </html>
 `;
@@ -1130,7 +1160,7 @@ function copyDir(from, to) {
 function redirects(products) {
   const r = [
     ['/pages/about-us', '/about/'],
-    ['/pages/working-hours-appointments', '/contact/'],
+    ['/pages/working-hours-appointments', '/book-an-appointment/'],
     ['/pages/lien-he', '/contact/'],
     ['/pages/frequently-asked-questions-faqs', '/faq/'],
     ['/pages/frequently-asked-questions-faqs-1', '/faq/'],
@@ -1177,7 +1207,7 @@ function hostingFiles(r) {
   };
   write('vercel.json', JSON.stringify(vercel, null, 2));
   // Root vercel.json for Git deployments: Vercel runs the build and serves dist/
-  fs.writeFileSync(path.join(ROOT, 'vercel.json'), JSON.stringify({ buildCommand: 'node build.mjs', outputDirectory: 'dist', framework: null, ...vercel }, null, 2) + '\n');
+  fs.writeFileSync(path.join(ROOT, 'vercel.json'), JSON.stringify({ buildCommand: 'node build.mjs', outputDirectory: 'dist', framework: null, functions: { 'api/suit.js': { includeFiles: '{assets/img/cfg/**,src/data/configurator.json,src/js/suit-svg.mjs}' }, 'api/booking.js': { includeFiles: 'src/config.json' } }, ...vercel }, null, 2) + '\n');
   write('.vercelignore', '_hosting\n.env*\n.gitignore\n');
   const htaccess = ['# Phan\'s Custom Tailor: Apache rules (copy to the web root as .htaccess)', 'ErrorDocument 404 /404.html', 'RewriteEngine On',
     ...r.map(([s, d]) => `RedirectMatch 301 ^${s.replace(/[.]/g, '\\.')}/?$ ${d}`),
@@ -1201,11 +1231,13 @@ async function main() {
   const motion = fs.readFileSync(path.join(SRC, 'js/motion.js'), 'utf8');
   const suit = fs.readFileSync(path.join(SRC, 'js/suit-svg.mjs'), 'utf8');
   const cfgjs = fs.readFileSync(path.join(SRC, 'js/configurator.mjs'), 'utf8');
-  ASSET_V = crypto.createHash('md5').update(css + js + motion + suit + cfgjs).digest('hex').slice(0, 8);
+  const bookjs = fs.readFileSync(path.join(SRC, 'js/booking.mjs'), 'utf8');
+  ASSET_V = crypto.createHash('md5').update(css + js + motion + suit + cfgjs + bookjs).digest('hex').slice(0, 8);
   write('assets/css/site.css', css);
   write('assets/js/site.js', js);
   write('assets/js/motion.js', motion);
   write('assets/js/suit-svg.mjs', suit);
+  write('assets/js/booking.mjs', bookjs);
   write('assets/js/configurator.mjs', cfgjs.replace('./suit-svg.mjs', `./suit-svg.mjs?v=${ASSET_V}`));
   copyDir(path.join(SRC, 'vendor'), path.join(DIST, 'assets/vendor'));
   copyDir(path.join(ROOT, 'assets/img'), path.join(DIST, 'assets/img'));
@@ -1213,7 +1245,7 @@ async function main() {
   if (fs.existsSync(path.join(ROOT, 'assets/brand-out/favicon.ico'))) fs.copyFileSync(path.join(ROOT, 'assets/brand-out/favicon.ico'), path.join(DIST, 'favicon.ico'));
   if (fs.existsSync(path.join(ROOT, 'assets/share.jpg'))) fs.copyFileSync(path.join(ROOT, 'assets/share.jpg'), path.join(DIST, 'assets/share.jpg'));
 
-  const PAGES = { home: pageHome, about: pageAbout, process: pageProcess, pricing: pagePricing, design: pageDesign, fabrics: pageFabrics, journal: pageJournal, faq: pageFaq, contact: pageContact, thanks: pageThanks };
+  const PAGES = { home: pageHome, about: pageAbout, process: pageProcess, pricing: pagePricing, design: pageDesign, book: pageBook, fabrics: pageFabrics, journal: pageJournal, faq: pageFaq, contact: pageContact, thanks: pageThanks };
   const sitemap = [];
   let count = 0;
   for (const lang of LANGS) {
@@ -1223,7 +1255,10 @@ async function main() {
       return { lang, T, current, alt, pathname: pathFor(lang, slug), ...extra };
     };
     const emit = (ctx, page) => {
-      write(path.join(ctx.pathname, 'index.html'), documentHTML(ctx, page));
+      const KOA = config.contact.booking, BK = pagePath(lang, 'book');
+      const html = documentHTML(ctx, page).split(`${esc(T.ui.book)}<span class="pct-sr"> (${esc(T.ui.opensNewTab)})</span>`).join(esc(T.ui.book))
+        .split(`href="${KOA}" target="_blank" rel="noopener"`).join(`href="${BK}"`).split(`href="${KOA}"`).join(`href="${BK}"`);
+      write(path.join(ctx.pathname, 'index.html'), html);
       if (!page.robots) sitemap.push(ctx);
       count++;
     };

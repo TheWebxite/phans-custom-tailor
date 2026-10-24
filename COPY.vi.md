@@ -512,6 +512,7 @@ Primary keyword: **tiệm may Bình Thạnh, Saigon Pearl**
 - **faq:** Hỏi đáp
 - **contact:** Liên hệ
 - **design:** Thiết kế bộ vest
+- **book:** Đặt lịch hẹn
 
 ### Buttons and labels
 
@@ -567,7 +568,7 @@ Primary keyword: **tiệm may Bình Thạnh, Saigon Pearl**
   - Bình Thạnh, Thành phố Hồ Chí Minh
   - Việt Nam
 - **hours:** Thứ Hai đến Thứ Bảy, 9:00 – 19:00
-- **hoursNote:** Chủ Nhật và ngày lễ vui lòng hẹn trước
+- **hoursNote:** Chủ Nhật, 11:00 – 15:00
 - **contact:** Liên hệ
 - **explore:** Khám phá
 - **follow:** Theo dõi

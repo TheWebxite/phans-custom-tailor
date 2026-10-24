@@ -67,6 +67,12 @@ if (root && dataEl) {
     const text = [D.waIntro, `- ${s.waistcoat === 'yes' ? D.threePiece : D.twoPiece}`, ...r.map(([k, v]) => `- ${k}: ${v}`), `${D.waLink}: ${shareURL()}`].join('\n');
     waBtn.href = `https://wa.me/${data.wa}?text=${encodeURIComponent(text)}`;
     try { history.replaceState(null, '', shareURL().replace(location.origin, '')); } catch (e) { /* file:// or sandboxed */ }
+    const tryImg = root.querySelector('[data-cfg-tryimg]');
+    if (tryImg) {
+      const q = new URLSearchParams(); for (const k of ['fabric', 'fit', 'closure', 'lapel', 'pockets', 'breast', 'waistcoat', 'pleats', 'hem', 'buttons']) q.set(k, s[k]);
+      const src = `/api/suit?${q}`;
+      if (tryImg.getAttribute('src') !== src) { clearTimeout(tryImg._t); tryImg._t = setTimeout(() => tryImg.setAttribute('src', src), 400); }
+    }
   }
   const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
