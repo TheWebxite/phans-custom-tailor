@@ -57,7 +57,8 @@
     "journal": "Cẩm nang",
     "about": "Giới thiệu",
     "faq": "Hỏi đáp",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "design": "Thiết kế bộ vest"
   },
   "footer": {
     "visit": "Ghé thăm biệt thự",
@@ -134,6 +135,11 @@
     "notFound": {
       "title": "Không tìm thấy trang | Phan's Custom Tailor",
       "description": "Trang này đã được chuyển sang địa chỉ mới."
+    },
+    "design": {
+      "slug": "design-your-suit",
+      "title": "Thiết kế bộ vest của bạn | Phan's Custom Tailor",
+      "description": "Tự thiết kế bộ vest may đo: chọn vải, ve áo, nút, túi, xẻ tà và quần, rồi gửi thiết kế cho Phan's qua WhatsApp hoặc đặt lịch thử đồ tại Sài Gòn."
     }
   },
   "home": {
@@ -549,5 +555,41 @@
   "notFound": {
     "title": "Trang này đã được chuyển",
     "body": "Website của chúng tôi có bố cục mới, nên một số địa chỉ cũ không còn hoạt động. Bạn có thể bắt đầu từ những trang dưới đây."
+  },
+  "design": {
+    "kicker": "Thiết kế vest trực tuyến",
+    "title": "Thiết kế bộ vest của bạn",
+    "sub": "Chọn vải và từng chi tiết, xem bộ vest hiện ra, rồi gửi thiết kế cho anh Thịnh và chị Thương. Số đo được lấy tại villa.",
+    "steps": {
+      "fabric": "Vải",
+      "jacket": "Áo vest",
+      "trousers": "Quần và gilê",
+      "details": "Hoàn thiện",
+      "review": "Xem lại"
+    },
+    "fabricNote": "Vải mẫu để xem trước. Toàn bộ vải Nobility, Vitale Barberis Canonico và Holland & Sherry có tại villa.",
+    "previewNote": "Hình minh hoạ theo lựa chọn của bạn. Vải và đường cắt cuối cùng sẽ được thống nhất khi tư vấn.",
+    "front": "Mặt trước",
+    "back": "Mặt sau",
+    "next": "Tiếp",
+    "prev": "Quay lại",
+    "monogram": "Thêu chữ bên trong áo",
+    "monogramHint": "Tối đa 3 chữ cái, thêu trên vải lót",
+    "monogramNone": "Không thêu",
+    "reviewTitle": "Bộ vest của bạn",
+    "priceFrom": "Giá từ",
+    "priceNote": "Giá cuối cùng tuỳ loại vải. Đã gồm các lần thử đồ và sửa miễn phí trọn đời.",
+    "send": "Gửi thiết kế qua WhatsApp",
+    "book": "Đặt lịch thử đồ",
+    "copy": "Sao chép link thiết kế",
+    "copied": "Đã sao chép",
+    "waIntro": "Chào Phan's, tôi vừa thiết kế một bộ vest trên website:",
+    "waLink": "Link thiết kế",
+    "twoPiece": "Bộ vest 2 món",
+    "threePiece": "Bộ vest 3 món",
+    "labels": {
+      "fabric": "Vải",
+      "monogram": "Thêu chữ"
+    }
   }
 }

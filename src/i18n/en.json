@@ -57,7 +57,8 @@
     "journal": "Journal",
     "about": "About",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "design": "Design your suit"
   },
   "footer": {
     "visit": "Visit the villa",
@@ -134,6 +135,11 @@
     "notFound": {
       "title": "Page Not Found | Phan's Custom Tailor",
       "description": "This page has moved."
+    },
+    "design": {
+      "slug": "design-your-suit",
+      "title": "Design Your Custom Suit | Phan's Custom Tailor",
+      "description": "Design your custom suit online: choose the cloth, lapels, buttons, pockets, vents and trousers, then send the design to Phan's on WhatsApp or book a fitting in Saigon."
     }
   },
   "home": {
@@ -549,5 +555,41 @@
   "notFound": {
     "title": "This page has moved",
     "body": "Our website has a new layout, so some old addresses no longer work. These pages are a good place to start."
+  },
+  "design": {
+    "kicker": "Online suit designer",
+    "title": "Design your suit",
+    "sub": "Choose the cloth and every detail, see it come together, then send the design to Thinh and Thuong. Measurements are taken at the villa.",
+    "steps": {
+      "fabric": "Cloth",
+      "jacket": "Jacket",
+      "trousers": "Trousers and waistcoat",
+      "details": "Finishing",
+      "review": "Review"
+    },
+    "fabricNote": "Sample cloths for this preview. The full Nobility, Vitale Barberis Canonico and Holland & Sherry range is at the villa.",
+    "previewNote": "An illustration of your choices. The cloth and the final cut are confirmed with you at the consultation.",
+    "front": "Front",
+    "back": "Back",
+    "next": "Next",
+    "prev": "Back",
+    "monogram": "Monogram inside the jacket",
+    "monogramHint": "Up to 3 letters, sewn into the lining",
+    "monogramNone": "No monogram",
+    "reviewTitle": "Your suit",
+    "priceFrom": "Starting price",
+    "priceNote": "The final price depends on the cloth. Fittings and lifetime alterations are included.",
+    "send": "Send my design on WhatsApp",
+    "book": "Book a fitting",
+    "copy": "Copy link to this design",
+    "copied": "Link copied",
+    "waIntro": "Hello Phan's, I designed a suit on your website:",
+    "waLink": "Design link",
+    "twoPiece": "Two-piece suit",
+    "threePiece": "Three-piece suit",
+    "labels": {
+      "fabric": "Cloth",
+      "monogram": "Monogram"
+    }
   }
 }

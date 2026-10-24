@@ -511,6 +511,7 @@ Primary keyword: **tiệm may Bình Thạnh, Saigon Pearl**
 - **about:** Giới thiệu
 - **faq:** Hỏi đáp
 - **contact:** Liên hệ
+- **design:** Thiết kế bộ vest
 
 ### Buttons and labels
 

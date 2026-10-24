@@ -511,6 +511,7 @@ Primary keyword: **西贡 裁缝 平盛郡**
 - **about:** 关于我们
 - **faq:** 常见问题
 - **contact:** 联系我们
+- **design:** 设计您的西装
 
 ### Buttons and labels
 

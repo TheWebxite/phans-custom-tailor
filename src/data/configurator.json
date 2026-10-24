@@ -1,0 +1,65 @@
+{
+  "note": "Suit configurator data. Fabrics are illustrations (tiles from scripts/make-fabric-tiles.py) until Phan's sends photos of their own cloth. CONFIRM: real fabric list, names and which options Phan's offers.",
+  "fabrics": [
+    { "id": "navy-twill", "tone": "#1e2842", "scale": 110, "family": "wool", "name": { "en": "Nobility All Seasons, navy", "vi": "Nobility All Seasons, xanh navy", "zh": "Nobility 四季羊毛，藏青" } },
+    { "id": "mid-grey", "tone": "#76787c", "scale": 110, "family": "wool", "name": { "en": "Nobility All Seasons, mid grey", "vi": "Nobility All Seasons, xám vừa", "zh": "Nobility 四季羊毛，中灰" } },
+    { "id": "charcoal-flannel", "tone": "#3a3b3e", "scale": 110, "family": "wool", "name": { "en": "Nobility flannel, charcoal", "vi": "Nobility flannel, xám than", "zh": "Nobility 法兰绒，炭灰" } },
+    { "id": "light-grey", "tone": "#b0b1b5", "scale": 110, "family": "wool", "name": { "en": "Tropical wool, light grey", "vi": "Len mỏng, xám nhạt", "zh": "薄羊毛，浅灰" } },
+    { "id": "black", "tone": "#17171a", "scale": 110, "family": "wool", "name": { "en": "Fine wool, black", "vi": "Len mịn, đen", "zh": "精纺羊毛，黑色" } },
+    { "id": "navy-pinstripe", "tone": "#1c253e", "scale": 120, "family": "pattern", "name": { "en": "Navy pinstripe", "vi": "Xanh navy sọc kim", "zh": "藏青细条纹" } },
+    { "id": "grey-chalk", "tone": "#54565c", "scale": 150, "family": "pattern", "name": { "en": "Grey chalk stripe", "vi": "Xám sọc phấn", "zh": "灰色粉笔条纹" } },
+    { "id": "navy-check", "tone": "#1a2238", "scale": 150, "family": "pattern", "name": { "en": "Navy windowpane check", "vi": "Xanh navy kẻ ô", "zh": "藏青窗格纹" } },
+    { "id": "grey-glen", "tone": "#47494f", "scale": 150, "family": "pattern", "name": { "en": "Grey glen check", "vi": "Xám kẻ Glen", "zh": "灰色格伦格纹" } },
+    { "id": "green-linen", "tone": "#5d6a34", "scale": 120, "family": "linen", "name": { "en": "Cavani pure linen, green", "vi": "Linen Cavani, xanh rêu", "zh": "Cavani 纯亚麻，绿色" } },
+    { "id": "beige-linen", "tone": "#cbc4b6", "scale": 130, "family": "linen", "name": { "en": "Pure linen, sand", "vi": "Linen, màu cát", "zh": "纯亚麻，沙色" } },
+    { "id": "camel", "tone": "#ab7e56", "scale": 110, "family": "wool", "name": { "en": "Wool, camel", "vi": "Len, màu lạc đà", "zh": "羊毛，驼色" } },
+    { "id": "dark-brown", "tone": "#442f24", "scale": 110, "family": "wool", "name": { "en": "Wool, dark brown", "vi": "Len, nâu đậm", "zh": "羊毛，深棕" } }
+  ],
+  "groups": [
+    { "key": "fit", "step": "jacket", "label": { "en": "Fit", "vi": "Dáng áo", "zh": "版型" }, "options": [
+      { "v": "slim", "label": { "en": "Slim", "vi": "Ôm", "zh": "修身" } },
+      { "v": "regular", "label": { "en": "Regular", "vi": "Vừa", "zh": "标准" } } ] },
+    { "key": "closure", "step": "jacket", "thumb": "100 200 200 220", "label": { "en": "Buttons", "vi": "Kiểu cài", "zh": "纽扣" }, "options": [
+      { "v": "sb1", "label": { "en": "1 button", "vi": "1 nút", "zh": "单排一粒扣" } },
+      { "v": "sb2", "label": { "en": "2 buttons", "vi": "2 nút", "zh": "单排两粒扣" } },
+      { "v": "sb3", "label": { "en": "3 buttons", "vi": "3 nút", "zh": "单排三粒扣" } },
+      { "v": "db6", "label": { "en": "Double-breasted", "vi": "Hai hàng nút", "zh": "双排扣" } } ] },
+    { "key": "lapel", "step": "jacket", "thumb": "110 56 180 180", "label": { "en": "Lapels", "vi": "Ve áo", "zh": "驳领" }, "options": [
+      { "v": "notch", "label": { "en": "Notch", "vi": "Ve chữ K", "zh": "平驳领" } },
+      { "v": "peak", "label": { "en": "Peak", "vi": "Ve nhọn", "zh": "戗驳领" } },
+      { "v": "shawl", "label": { "en": "Shawl", "vi": "Ve tròn", "zh": "青果领" } } ] },
+    { "key": "pockets", "step": "jacket", "thumb": "90 320 120 110", "label": { "en": "Pockets", "vi": "Túi áo", "zh": "口袋" }, "options": [
+      { "v": "flap", "label": { "en": "Flap", "vi": "Có nắp", "zh": "有盖袋" } },
+      { "v": "jetted", "label": { "en": "Jetted", "vi": "Mổ viền", "zh": "嵌线袋" } },
+      { "v": "patch", "label": { "en": "Patch", "vi": "Túi đắp", "zh": "贴袋" } } ] },
+    { "key": "breast", "step": "jacket", "thumb": "210 150 100 90", "label": { "en": "Breast pocket", "vi": "Túi ngực", "zh": "胸袋" }, "options": [
+      { "v": "welt", "label": { "en": "Welt", "vi": "Túi mổ", "zh": "手巾袋" } },
+      { "v": "square", "label": { "en": "With pocket square", "vi": "Có khăn cài túi", "zh": "配口袋巾" } },
+      { "v": "none", "label": { "en": "None", "vi": "Không có", "zh": "无" } } ] },
+    { "key": "vents", "step": "jacket", "thumb": "84 336 232 124", "back": true, "label": { "en": "Vents (back)", "vi": "Xẻ tà (phía sau)", "zh": "开衩（背面）" }, "options": [
+      { "v": "side", "label": { "en": "Side vents", "vi": "Xẻ hai bên", "zh": "侧开衩" } },
+      { "v": "centre", "label": { "en": "Centre vent", "vi": "Xẻ giữa", "zh": "中开衩" } },
+      { "v": "none", "label": { "en": "No vent", "vi": "Không xẻ", "zh": "无开衩" } } ] },
+    { "key": "waistcoat", "step": "trousers", "thumb": "140 90 120 240", "label": { "en": "Waistcoat", "vi": "Gilê", "zh": "马甲" }, "options": [
+      { "v": "no", "label": { "en": "Two-piece", "vi": "Bộ 2 món", "zh": "两件套" } },
+      { "v": "yes", "label": { "en": "Three-piece", "vi": "Bộ 3 món (có gilê)", "zh": "三件套（含马甲）" } } ] },
+    { "key": "pleats", "step": "trousers", "thumb": "110 370 180 120", "label": { "en": "Pleats", "vi": "Ly quần", "zh": "褶裥" }, "options": [
+      { "v": "none", "label": { "en": "Flat front", "vi": "Không ly", "zh": "无褶" } },
+      { "v": "single", "label": { "en": "Single pleat", "vi": "Một ly", "zh": "单褶" } },
+      { "v": "double", "label": { "en": "Double pleat", "vi": "Hai ly", "zh": "双褶" } } ] },
+    { "key": "hem", "step": "trousers", "thumb": "110 660 180 110", "label": { "en": "Trouser hem", "vi": "Gấu quần", "zh": "裤脚" }, "options": [
+      { "v": "plain", "label": { "en": "Plain", "vi": "Gấu thường", "zh": "平脚" } },
+      { "v": "turnup", "label": { "en": "Turn-ups", "vi": "Gấu lật", "zh": "翻边" } } ] },
+    { "key": "buttons", "step": "details", "label": { "en": "Button colour", "vi": "Màu nút", "zh": "纽扣颜色" }, "options": [
+      { "v": "horn", "swatch": "#2a221e", "label": { "en": "Dark horn", "vi": "Sừng sẫm", "zh": "深色牛角" } },
+      { "v": "brown", "swatch": "#6b4a33", "label": { "en": "Brown horn", "vi": "Sừng nâu", "zh": "棕色牛角" } },
+      { "v": "pearl", "swatch": "#e8e3d8", "label": { "en": "Mother of pearl", "vi": "Xà cừ", "zh": "珍珠贝" } } ] },
+    { "key": "lining", "step": "details", "label": { "en": "Lining", "vi": "Vải lót", "zh": "里衬" }, "options": [
+      { "v": "burgundy", "swatch": "#6b1f2b", "label": { "en": "Burgundy", "vi": "Đỏ rượu", "zh": "酒红" } },
+      { "v": "navy", "swatch": "#1f2b4a", "label": { "en": "Navy", "vi": "Xanh navy", "zh": "藏青" } },
+      { "v": "emerald", "swatch": "#1f5a45", "label": { "en": "Emerald", "vi": "Xanh ngọc", "zh": "祖母绿" } },
+      { "v": "gold", "swatch": "#b48a3c", "label": { "en": "Old gold", "vi": "Vàng đồng", "zh": "古金" } },
+      { "v": "grey", "swatch": "#8a8a8a", "label": { "en": "Silver grey", "vi": "Xám bạc", "zh": "银灰" } },
+      { "v": "black", "swatch": "#161616", "label": { "en": "Black", "vi": "Đen", "zh": "黑色" } } ] }
+  ]
+}

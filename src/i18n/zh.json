@@ -57,7 +57,8 @@
     "journal": "着装指南",
     "about": "关于我们",
     "faq": "常见问题",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "design": "设计您的西装"
   },
   "footer": {
     "visit": "到访别墅",
@@ -134,6 +135,11 @@
     "notFound": {
       "title": "页面未找到 | Phan's Custom Tailor",
       "description": "此页面已迁移。"
+    },
+    "design": {
+      "slug": "design-your-suit",
+      "title": "在线设计您的定制西装 | Phan's Custom Tailor",
+      "description": "在线设计定制西装：选择面料、驳领、纽扣、口袋、开衩和西裤，然后通过 WhatsApp 发送给 Phan's，或预约在西贡试衣。"
     }
   },
   "home": {
@@ -549,5 +555,41 @@
   "notFound": {
     "title": "此页面已迁移",
     "body": "我们的网站采用了新版面，部分旧网址已失效。可以从以下页面开始浏览。"
+  },
+  "design": {
+    "kicker": "在线西装设计",
+    "title": "设计您的西装",
+    "sub": "选择面料和每个细节，看着西装逐步成形，再把设计发给 Thinh 和 Thuong。量体在别墅进行。",
+    "steps": {
+      "fabric": "面料",
+      "jacket": "上衣",
+      "trousers": "西裤与马甲",
+      "details": "细节",
+      "review": "确认"
+    },
+    "fabricNote": "此处为预览用的样布。Nobility、Vitale Barberis Canonico 和 Holland & Sherry 的全部面料可在别墅挑选。",
+    "previewNote": "根据您的选择绘制的示意图。面料和最终剪裁会在咨询时与您确认。",
+    "front": "正面",
+    "back": "背面",
+    "next": "下一步",
+    "prev": "上一步",
+    "monogram": "上衣内刺绣字母",
+    "monogramHint": "最多 3 个字母，绣在里衬上",
+    "monogramNone": "不刺绣",
+    "reviewTitle": "您的西装",
+    "priceFrom": "起价",
+    "priceNote": "最终价格取决于面料，已包含试衣和终身免费修改。",
+    "send": "通过 WhatsApp 发送设计",
+    "book": "预约试衣",
+    "copy": "复制设计链接",
+    "copied": "已复制",
+    "waIntro": "您好 Phan's，我在网站上设计了一套西装：",
+    "waLink": "设计链接",
+    "twoPiece": "两件套西装",
+    "threePiece": "三件套西装",
+    "labels": {
+      "fabric": "面料",
+      "monogram": "刺绣"
+    }
   }
 }

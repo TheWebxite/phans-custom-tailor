@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { suitSVG, DEFAULTS as CFG_DEFAULTS } from './src/js/suit-svg.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SRC = path.join(ROOT, 'src');
@@ -20,6 +21,8 @@ const I18N = Object.fromEntries(LANGS.map((l) => [l, readJSON(`i18n/${l}.json`)]
 const IMAGES = readJSON('data/images.json');
 const PRICES = readJSON('data/prices.json');
 const REVIEWS = readJSON('data/reviews.json');
+const CFG = readJSON('data/configurator.json');
+const CFG_FAB = Object.fromEntries(CFG.fabrics.map((f) => [f.id, { tile: `/assets/img/cfg/${f.id}.jpg`, tone: f.tone, scale: f.scale }]));
 const LOGO_SVG = fs.readFileSync(path.join(SRC, 'brand/logo.svg'), 'utf8')
   .replace('<svg ', '<svg aria-hidden="true" focusable="false" fill="currentColor" ');
 const JOURNAL = fs.readdirSync(path.join(SRC, 'data/journal')).filter((f) => f.endsWith('.json'))
@@ -118,10 +121,10 @@ const ICON = {
 // ---------------------------------------------------------------------------
 // Shared parts
 // ---------------------------------------------------------------------------
-const NAV = ['process', 'pricing', 'fabrics', 'shop', 'journal', 'about', 'contact'];
+const NAV = ['process', 'pricing', 'design', 'fabrics', 'shop', 'journal', 'about', 'contact'];
 
 const MENU = [
-  ['home', 'campaign-group'], ['process', 'stock-fitting-1'], ['pricing', 'stock-man-suit-1'], ['fabrics', 'stock-fabric-swatches-1'],
+  ['home', 'campaign-group'], ['process', 'stock-fitting-1'], ['pricing', 'stock-man-suit-1'], ['design', 'stock-man-suit-2'], ['fabrics', 'stock-fabric-swatches-1'],
   ['shop', 'cavani-blazer'], ['journal', 'stock-man-suit-2'], ['about', 'showroom'], ['faq', 'stock-fitting-2'], ['contact', 'villa-lounge'],
 ];
 const MONOGRAM = '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="20" fill="currentColor"/><text x="20" y="28.5" text-anchor="middle" font-family="Prata, Georgia, serif" font-size="23" fill="#fff">P</text></svg>';
@@ -552,6 +555,61 @@ ${pageHead(ctx, 'process', { kicker: P.kicker, title: P.title, sub: P.sub, aside
   return { body, jsonld: [ld, breadcrumbLD(ctx, [{ name: T.nav.process, href: pagePath(lang, 'process') }])] };
 }
 
+function pageDesign(ctx) {
+  const { lang, T } = ctx;
+  const D = T.design;
+  const lbl = (o) => o[lang] || o.en;
+  const st = { ...CFG_DEFAULTS };
+  const steps = ['fabric', 'jacket', 'trousers', 'details', 'review'];
+  const opt = (g, o) => {
+    const on = st[g.key] === o.v;
+    const thumb = g.thumb ? `<span class="pct-cfg__thumb" aria-hidden="true"></span>`
+      : o.swatch ? `<span class="pct-cfg__sw" style="background:${o.swatch}"></span>` : '';
+    return `<button type="button" class="pct-cfg__opt${on ? ' is-on' : ''}" role="radio" aria-checked="${on}" data-k="${g.key}" data-v="${o.v}"${g.thumb ? ` data-thumb="${g.thumb}"${g.back ? ' data-back="1"' : ''}` : ''}>${thumb}<span class="pct-cfg__optlabel">${esc(lbl(o.label))}</span></button>`;
+  };
+  const group = (g) => `<fieldset class="pct-cfg__group"><legend>${esc(lbl(g.label))}</legend><div class="pct-cfg__opts${g.thumb ? ' pct-cfg__opts--thumbs' : o_sw(g)}" role="radiogroup" aria-label="${esc(lbl(g.label))}">${g.options.map((o) => opt(g, o)).join('')}</div></fieldset>`;
+  const o_sw = (g) => (g.options[0].swatch ? ' pct-cfg__opts--swatches' : '');
+  const fabrics = `<p class="pct-cfg__note">${esc(D.fabricNote)}</p><div class="pct-cfg__fabrics" role="radiogroup" aria-label="${esc(D.steps.fabric)}">${CFG.fabrics.map((f) =>
+    `<button type="button" class="pct-cfg__fab${st.fabric === f.id ? ' is-on' : ''}" role="radio" aria-checked="${st.fabric === f.id}" data-k="fabric" data-v="${f.id}"><img src="/assets/img/cfg/${f.id}.jpg" alt="" width="128" height="128" loading="lazy"><span>${esc(lbl(f.name))}</span></button>`).join('')}</div>`;
+  const pane = (k) => CFG.groups.filter((g) => g.step === k).map(group).join('');
+  const nav = (i) => `<div class="pct-cfg__nav">${i > 0 ? `<button type="button" class="pct-btn pct-btn--ghost" data-go="${steps[i - 1]}">${esc(D.prev)}</button>` : '<span></span>'}${i < steps.length - 1 ? `<button type="button" class="pct-btn" data-go="${steps[i + 1]}">${esc(D.next)}: ${esc(D.steps[steps[i + 1]])}</button>` : ''}</div>`;
+  const panes = {
+    fabric: fabrics,
+    jacket: pane('jacket'),
+    trousers: pane('trousers'),
+    details: pane('details') + `<fieldset class="pct-cfg__group"><legend>${esc(D.monogram)}</legend><label class="pct-cfg__mono"><input type="text" maxlength="3" autocomplete="off" spellcheck="false" placeholder="ABC" data-k="monogram" aria-describedby="pct-cfg-mono-hint"><span id="pct-cfg-mono-hint">${esc(D.monogramHint)}</span></label></fieldset>`,
+    review: `<h2 class="pct-h3">${esc(D.reviewTitle)}</h2><dl class="pct-cfg__summary" data-cfg-summary></dl>
+      <div class="pct-cfg__price"><span>${esc(D.priceFrom)}</span><strong data-cfg-price></strong></div><p class="pct-cfg__note">${esc(D.priceNote)}</p>
+      <div class="pct-btns"><a class="pct-btn" data-cfg-wa href="${wa(D.waIntro)}" target="_blank" rel="noopener" data-pct-track="whatsapp_click" data-pct-where="designer">${ICON.whatsapp}${esc(D.send)}</a>
+      <a class="pct-btn pct-btn--ghost" href="${config.contact.booking}" target="_blank" rel="noopener" data-pct-track="book_click" data-pct-where="designer">${esc(D.book)}</a></div>
+      <button type="button" class="pct-text-link pct-cfg__copy" data-cfg-copy data-done="${esc(D.copied)}">${esc(D.copy)}</button>`,
+  };
+  const data = {
+    lang, fabrics: CFG.fabrics, groups: CFG.groups, D, defaults: CFG_DEFAULTS, wa: config.contact.whatsapp,
+    prices: Object.fromEntries(PRICES.items.filter((p) => p.from).map((p) => [p.key, p.from])), currency: T.ui.currency,
+  };
+  const body = `
+${pageHead(ctx, 'design', { kicker: D.kicker, title: D.title, sub: D.sub })}
+<section class="pct-section" style="padding-top:0">
+  <div class="pct-wrap pct-cfg" data-pct-cfg>
+    <div class="pct-cfg__stage">
+      <div class="pct-cfg__canvas" data-cfg-stage>${suitSVG(st, CFG_FAB, { label: D.title })}</div>
+      <div class="pct-cfg__bar">
+        <div class="pct-cfg__views" role="group" aria-label="${esc(D.front)} / ${esc(D.back)}"><button type="button" class="is-on" data-view="front" aria-pressed="true">${esc(D.front)}</button><button type="button" data-view="back" aria-pressed="false">${esc(D.back)}</button></div>
+        <p class="pct-cfg__caption" data-cfg-caption>${esc(lbl(CFG.fabrics[0].name))}</p>
+      </div>
+      <p class="pct-cfg__note">${esc(D.previewNote)}</p>
+    </div>
+    <div class="pct-cfg__panel">
+      <div class="pct-cfg__tabs" role="tablist">${steps.map((k, i) => `<button type="button" role="tab" id="pct-cfg-tab-${k}" aria-controls="pct-cfg-pane-${k}" aria-selected="${i === 0}" data-step="${k}"><span>${String(i + 1).padStart(2, '0')}</span>${esc(D.steps[k])}</button>`).join('')}</div>
+      ${steps.map((k, i) => `<div class="pct-cfg__pane" role="tabpanel" id="pct-cfg-pane-${k}" aria-labelledby="pct-cfg-tab-${k}" data-pane="${k}"${i ? ' hidden' : ''}>${panes[k]}${nav(i)}</div>`).join('')}
+    </div>
+  </div>
+  <script type="application/json" id="pct-cfg-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>
+</section>`;
+  return { body, scripts: `<script type="module" src="/assets/js/configurator.mjs?v=${ASSET_V}"></script>`, jsonld: [breadcrumbLD(ctx, [{ name: T.nav.design, href: pagePath(lang, 'design') }])] };
+}
+
 function pagePricing(ctx) {
   const { lang, T } = ctx;
   const P = T.pricing;
@@ -568,6 +626,7 @@ ${pageHead(ctx, 'pricing', { kicker: P.kicker, title: P.title, sub: P.sub, aside
         <a class="pct-btn" href="${config.contact.booking}" target="_blank" rel="noopener" data-pct-track="book_click" data-pct-where="pricing">${esc(T.ui.book)}</a>
         <a class="pct-btn pct-btn--ghost" href="${wa(T.ui.waPricing)}" target="_blank" rel="noopener" data-pct-track="whatsapp_click" data-pct-where="pricing">${ICON.whatsapp}${esc(T.ui.whatsapp)}</a>
       </div>
+      <p style="margin-top:22px"><a class="pct-link" href="${pagePath(lang, 'design')}">${esc(T.nav.design)}</a></p>
     </div>
     <div class="pct-col-5">
       <h2 class="pct-h3" style="margin-bottom:18px">${esc(P.includedTitle)}</h2>
@@ -1043,6 +1102,7 @@ ${footer(ctx)}
 <script src="/assets/vendor/ScrollTrigger.min.js?v=3.13.0" defer></script>
 <script src="/assets/vendor/SplitText.min.js?v=3.13.0" defer></script>
 <script src="/assets/js/motion.js?v=${ASSET_V}" defer></script>
+${page.scripts || ''}
 <script src="https://anywear.decart.ai/widget/latest/anywear.js?domain=phans-custom-tailor-demo.vercel.app" async></script>
 </body>
 </html>
@@ -1139,17 +1199,21 @@ async function main() {
   const css = fs.readFileSync(path.join(SRC, 'styles/site.css'), 'utf8');
   const js = fs.readFileSync(path.join(SRC, 'js/site.js'), 'utf8');
   const motion = fs.readFileSync(path.join(SRC, 'js/motion.js'), 'utf8');
-  ASSET_V = crypto.createHash('md5').update(css + js + motion).digest('hex').slice(0, 8);
+  const suit = fs.readFileSync(path.join(SRC, 'js/suit-svg.mjs'), 'utf8');
+  const cfgjs = fs.readFileSync(path.join(SRC, 'js/configurator.mjs'), 'utf8');
+  ASSET_V = crypto.createHash('md5').update(css + js + motion + suit + cfgjs).digest('hex').slice(0, 8);
   write('assets/css/site.css', css);
   write('assets/js/site.js', js);
   write('assets/js/motion.js', motion);
+  write('assets/js/suit-svg.mjs', suit);
+  write('assets/js/configurator.mjs', cfgjs.replace('./suit-svg.mjs', `./suit-svg.mjs?v=${ASSET_V}`));
   copyDir(path.join(SRC, 'vendor'), path.join(DIST, 'assets/vendor'));
   copyDir(path.join(ROOT, 'assets/img'), path.join(DIST, 'assets/img'));
   copyDir(path.join(ROOT, 'assets/brand-out'), path.join(DIST, 'assets/brand'));
   if (fs.existsSync(path.join(ROOT, 'assets/brand-out/favicon.ico'))) fs.copyFileSync(path.join(ROOT, 'assets/brand-out/favicon.ico'), path.join(DIST, 'favicon.ico'));
   if (fs.existsSync(path.join(ROOT, 'assets/share.jpg'))) fs.copyFileSync(path.join(ROOT, 'assets/share.jpg'), path.join(DIST, 'assets/share.jpg'));
 
-  const PAGES = { home: pageHome, about: pageAbout, process: pageProcess, pricing: pagePricing, fabrics: pageFabrics, journal: pageJournal, faq: pageFaq, contact: pageContact, thanks: pageThanks };
+  const PAGES = { home: pageHome, about: pageAbout, process: pageProcess, pricing: pagePricing, design: pageDesign, fabrics: pageFabrics, journal: pageJournal, faq: pageFaq, contact: pageContact, thanks: pageThanks };
   const sitemap = [];
   let count = 0;
   for (const lang of LANGS) {

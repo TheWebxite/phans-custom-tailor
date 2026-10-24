@@ -509,6 +509,7 @@ Primary keyword: **tailor in Bình Thạnh, Saigon Pearl**
 - **about:** About
 - **faq:** FAQ
 - **contact:** Contact
+- **design:** Design your suit
 
 ### Buttons and labels
 
