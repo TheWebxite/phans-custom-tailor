@@ -68,7 +68,7 @@ if (root && dataEl) {
     waBtn.href = `https://wa.me/${data.wa}?text=${encodeURIComponent(text)}`;
     try { history.replaceState(null, '', shareURL().replace(location.origin, '')); } catch (e) { /* file:// or sandboxed */ }
     const tryImg = root.querySelector('[data-cfg-tryimg]');
-    if (tryImg) {
+    if (tryImg && !tryImg.closest('[data-pane]').hidden) {
       const q = new URLSearchParams(); for (const k of ['fabric', 'fit', 'closure', 'lapel', 'pockets', 'breast', 'waistcoat', 'pleats', 'hem', 'buttons']) q.set(k, s[k]);
       const src = `/api/suit?${q}`;
       if (tryImg.getAttribute('src') !== src) { clearTimeout(tryImg._t); tryImg._t = setTimeout(() => tryImg.setAttribute('src', src), 400); }
@@ -79,6 +79,7 @@ if (root && dataEl) {
   function go(step) {
     root.querySelectorAll('[data-step]').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.step === step)));
     root.querySelectorAll('[data-pane]').forEach((p) => { p.hidden = p.dataset.pane !== step; });
+    if (step === 'review') render('review');
     if (window.matchMedia('(max-width: 899px)').matches) root.querySelector('.pct-cfg__panel').scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 

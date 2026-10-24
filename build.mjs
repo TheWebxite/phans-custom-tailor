@@ -638,7 +638,7 @@ function pageDesign(ctx) {
       <div class="pct-btns"><a class="pct-btn" data-cfg-wa href="${wa(D.waIntro)}" target="_blank" rel="noopener" data-pct-track="whatsapp_click" data-pct-where="designer">${ICON.whatsapp}${esc(D.send)}</a>
       <a class="pct-btn pct-btn--ghost" href="${config.contact.booking}" target="_blank" rel="noopener" data-pct-track="book_click" data-pct-where="designer">${esc(D.book)}</a></div>
       <button type="button" class="pct-text-link pct-cfg__copy" data-cfg-copy data-done="${esc(D.copied)}">${esc(D.copy)}</button>
-      <div class="pct-cfg__tryon"><h3>${esc(D.tryTitle)}</h3><p>${esc(D.tryBody)}</p><img data-cfg-tryimg src="/api/suit?fabric=${st.fabric}" alt="${esc(D.tryAlt)}" width="330" height="752" loading="lazy" decoding="async"></div>`,
+      <div class="pct-cfg__tryon"><h3>${esc(D.tryTitle)}</h3><p>${esc(D.tryBody)}</p><img data-cfg-tryimg alt="${esc(D.tryAlt)}" width="330" height="752" decoding="async"></div>`,
   };
   const data = {
     lang, fabrics: CFG.fabrics, groups: CFG.groups, D, defaults: CFG_DEFAULTS, wa: config.contact.whatsapp,
